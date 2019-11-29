@@ -19,7 +19,7 @@ export const Title = styled.p`
 
 export const StyledPara = styled.span`
 	width: 100%;
-	padding: 0.5% 0;
+	padding: 0.2em 0;
 	${IntroTextStyle};
 `;
 

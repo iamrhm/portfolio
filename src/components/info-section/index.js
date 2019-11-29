@@ -16,8 +16,8 @@ const InfoSection = () => {
 				<ContactMeButton> Contact Me </ContactMeButton>
 			</StyledBody>
 			<StyledBody>
-				iamRhM is my social alias. Work is still in progress, in the mean
-				time you can find more about me,
+				iamRhM is my social alias. Work is still in progress, in the mean time
+				you can find more about me,
 			</StyledBody>
 		</Animate>
 	);
