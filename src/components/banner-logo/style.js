@@ -7,6 +7,14 @@ export const BannerContainer = styled.div`
 	height: 100%;
 	justify-content: flex-start;
 	align-items: flex-end;
+
+	/* Laptop Screen */
+	@media screen and (min-width: 834px) and (max-width: 1600px) {
+		justify-content: flex-end;
+	}
+	/* iPad Screen */
+	@media only screen and (max-width: 833px) {
+	}
 `;
 
 export const StyledSvg = styled.svg`
@@ -16,6 +24,12 @@ export const StyledSvg = styled.svg`
 
 	display: flex;
 	justify-content: center;
+
+	/* iPad Screen */
+	@media only screen and (max-width: 833px) and (min-width: 414px) {
+		width: 20%;
+		height: 100%;
+	}
 `;
 
 export const StyledPath = styled.path`

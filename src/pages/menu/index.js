@@ -1,5 +1,7 @@
-import React, { useReducer } from "react";
-import { MenuIcon } from "./style";
+import React from "react";
+import { MenuIcon, Container } from "./style";
+
+import Header from "../../components/header";
 
 function MenuPage({ initialState }) {
 	return <MenuIcon />;

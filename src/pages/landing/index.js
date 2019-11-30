@@ -7,7 +7,8 @@ import {
 	BannerContainer,
 	TitleContainer,
 	InfoContainer,
-	SocialInfoContainer
+	SocialInfoContainer,
+	AuthorInfoContainer
 } from "./style";
 
 import BannerLogo from "../../components/banner-logo";
@@ -31,8 +32,7 @@ const LandingPage = ({}) => {
 			<SocialInfoContainer>
 				<SocialInfoSection />
 			</SocialInfoContainer>
-			<SocialInfoContainer></SocialInfoContainer>
-			<SocialInfoContainer></SocialInfoContainer>
+			<AuthorInfoContainer></AuthorInfoContainer>
 		</Container>
 	);
 };
