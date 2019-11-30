@@ -6,7 +6,6 @@ export const Container = styled.div`
 	background-color: #fefefe;
 	padding: 0 10%;
 
-
 	position: absolute;
 
 	display: flex;
@@ -27,7 +26,7 @@ export const Container = styled.div`
 
 export const BannerContainer = styled.div`
 	width: 100%;
-	height: 10%;
+	height: 15%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: flex-end;
@@ -62,7 +61,7 @@ export const TitleContainer = styled.div`
 	}
 
 	/* iPad Screen */
-	@media only screen and (max-width: 833px) and (min-width: 414px)  {
+	@media only screen and (max-width: 833px) and (min-width: 414px) {
 		width: 100%;
 		height: 20%;
 		padding: 2% 0;
