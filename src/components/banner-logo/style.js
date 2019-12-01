@@ -2,34 +2,32 @@ import styled from "styled-components";
 
 export const BannerContainer = styled.div`
 	position: relative;
-	width: 100%;
+	width: 234px;
+	height: 64px;
+
 	display: flex;
-	height: 100%;
 	justify-content: flex-start;
 	align-items: flex-end;
 
 	/* Laptop Screen */
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
+		display: flex;
 		justify-content: flex-end;
+		height: 100%;
 	}
 	/* iPad Screen */
-	@media only screen and (max-width: 833px) {
+	@media only screen and (max-width: 833px) and (min-width: 414px) {
+		height: 64px;
 	}
 `;
 
 export const StyledSvg = styled.svg`
-	width: 60%;
-	height: 60%;
+	width: 100%;
+	height: 100%;
 	text-align: left;
 
 	display: flex;
 	justify-content: center;
-
-	/* iPad Screen */
-	@media only screen and (max-width: 833px) and (min-width: 414px) {
-		width: 20%;
-		height: 100%;
-	}
 `;
 
 export const StyledPath = styled.path`

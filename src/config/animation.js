@@ -9,10 +9,10 @@ export const svgAnimation = {
 
 export const letterAnimation = {
 	opacity: [0, 1],
-	translateX: ["-4px", "0px"],
+	translateY: ["-4px", "0px"],
 	easing: "easeInOutExpo",
 	duration: 1000,
-	delay: (el, i) => 1000 + 100 * (i + 1),
+	delay: (el, i) => 1000 + 40 * (i + 1)
 };
 
 export const iconAnimation = {
@@ -20,7 +20,7 @@ export const iconAnimation = {
 	opacity: [0, 1],
 	easing: "easeInOutExpo",
 	duration: 1000,
-	delay: (el, i) => (1800 + 320 * (i + 1)) ^ 2
+	delay: (el, i) => (1900 + 320 * (i + 1)) ^ 2
 };
 
 export const textAnimation = {

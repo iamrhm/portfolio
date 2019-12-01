@@ -6,7 +6,7 @@ const IntroTextStyle = css`
 	color: #2e2e2e;
 `;
 
-export const Title = styled.p`
+export const Title = styled.div`
 	width: 100%;
 	height: 100%;
 
@@ -15,6 +15,8 @@ export const Title = styled.p`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+
+	position: relative;
 `;
 
 export const StyledPara = styled.span`

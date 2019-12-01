@@ -4,6 +4,7 @@ import { Title, StyledPara, StyledTextSpan, BlankSpan } from "./style";
 
 import Animate from "../animate-wrapper";
 import { letterAnimation } from "../../config/animation";
+import { MatrixBackground } from "../../assets/background-shapes/matrix-screen";
 
 const TitleSection = ({}) => {
 	const textHi = Array.prototype.map.call(`Hi,`, (char, index) => (
@@ -29,17 +30,17 @@ const TitleSection = ({}) => {
 
 	return (
 		// <Animate animeProps={letterAnimation}>
-			<Title>
-				<StyledPara>
-					<Animate animeProps={letterAnimation}>{textHi}</Animate>
-				</StyledPara>
-				<StyledPara>
-					<Animate animeProps={letterAnimation}>{textImRahul}</Animate>
-				</StyledPara>
-				<StyledPara>
-					<Animate animeProps={letterAnimation}>{textAWebDeveloper}</Animate>
-				</StyledPara>
-			</Title>
+		<Title>
+			<StyledPara>
+				<Animate animeProps={letterAnimation}>{textHi}</Animate>
+			</StyledPara>
+			<StyledPara>
+				<Animate animeProps={letterAnimation}>{textImRahul}</Animate>
+			</StyledPara>
+			<StyledPara>
+				<Animate animeProps={letterAnimation}>{textAWebDeveloper}</Animate>
+			</StyledPara>
+		</Title>
 		// </Animate>
 	);
 };

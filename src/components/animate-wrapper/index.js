@@ -5,6 +5,9 @@ class Animate extends React.Component {
 	constructor(props) {
 		super(props);
 		this.targets = [];
+		this.state = {
+			isReplay: false
+		};
 	}
 
 	componentDidMount() {

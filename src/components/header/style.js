@@ -6,15 +6,14 @@ export const Container = styled.div`
 	position: relative;
 	top: 0;
 
-
 	display: flex;
 	justify-content: space-between;
 	align-items: top;
 `;
 
 export const LogoContainer = styled.span`
-	width: 64px;
-	height: 64px;
+	width: 48px;
+	height: 48px;
 	display: flex;
 	align-items: center;
 `;

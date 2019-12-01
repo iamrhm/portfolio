@@ -1,13 +1,29 @@
 import React from "react";
 import LandingPage from "./pages/landing";
-import { GlobalStyle } from "./style";
+import Header from "./components/header";
+
+import {
+	GlobalStyle,
+	WrapperContainer,
+	BackgroundScreen,
+	BackgroundWrapper,
+	MaskLayer
+} from "./style";
+import { MatrixBackground } from "./assets/background-shapes/matrix-screen";
 
 function App() {
 	return (
-		<React.Fragment>
+		<WrapperContainer>
 			<GlobalStyle />
+			<Header />
+			<BackgroundScreen>
+				<BackgroundWrapper>
+					<MatrixBackground />
+					<MaskLayer />
+				</BackgroundWrapper>
+			</BackgroundScreen>
 			<LandingPage />
-		</React.Fragment>
+		</WrapperContainer>
 	);
 }
 

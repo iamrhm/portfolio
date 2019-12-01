@@ -10,9 +10,7 @@ const Header = () => {
 			<LogoContainer>
 				<BrandLogo />
 			</LogoContainer>
-			<ButtonContainer>
-				<Menu />
-			</ButtonContainer>
+			{/* <Menu /> */}
 		</Container>
 	);
 };

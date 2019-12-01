@@ -19,7 +19,6 @@ import SocialInfoSection from "../../components/social-info-section";
 const LandingPage = ({}) => {
 	return (
 		<Container>
-			<Header />
 			<BannerContainer>
 				<BannerLogo />
 			</BannerContainer>
