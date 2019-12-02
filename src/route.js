@@ -1,28 +1,23 @@
 import React from "react";
 import LandingPage from "./pages/landing";
+import MenuPage from "./pages/menu";
 import Header from "./components/header";
 
 import {
 	GlobalStyle,
 	WrapperContainer,
-	BackgroundScreen,
-	BackgroundWrapper,
-	MaskLayer
 } from "./style";
-import { MatrixBackground } from "./assets/background-shapes/matrix-screen";
+
+import ScreenOne from "./components/background-screen";
 
 function App() {
 	return (
 		<WrapperContainer>
 			<GlobalStyle />
 			<Header />
-			<BackgroundScreen>
-				<BackgroundWrapper>
-					<MatrixBackground />
-					<MaskLayer />
-				</BackgroundWrapper>
-			</BackgroundScreen>
+			<ScreenOne />
 			<LandingPage />
+			{/* <MenuPage /> */}
 		</WrapperContainer>
 	);
 }

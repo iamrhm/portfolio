@@ -1,13 +1,5 @@
 import React, { useReducer } from "react";
-import {
-	Container,
-	TitleBar,
-	MenuIcon,
-	MessageBox,
-	Message,
-	StyledLink,
-	ButtonContainer
-} from "./style";
+import { Container, MessageBox, Message, StyledLink } from "./style";
 
 import Animate from "../../components/animate-wrapper";
 
@@ -42,41 +34,18 @@ const InitialState = {
 
 function MenuPage({}) {
 	const [state, dispatch] = useReducer(reducer, InitialState);
-	if (state.isActive) {
-		return (
-			<Animate animeProps={state.activeAnimation}>
-				<Container>
-					<TitleBar>
-						<ButtonContainer
-							onClick={e => {
-								e.preventDefault();
-								dispatch({ type: "toggle-menu" });
-							}}
-						>
-							<MenuIcon />
-						</ButtonContainer>
-					</TitleBar>
-					<MessageBox>
-						<Message>
-							I am still working on this, mean while find more
-							<StyledLink>About Me</StyledLink>
-						</Message>
-					</MessageBox>
-				</Container>
-			</Animate>
-		);
-	} else {
-		return (
-			<ButtonContainer
-				onClick={e => {
-					e.preventDefault();
-					dispatch({ type: "toggle-menu" });
-				}}
-			>
-				<MenuIcon />
-			</ButtonContainer>
-		);
-	}
+	return (
+		<Animate animeProps={state.activeAnimation}>
+			<Container>
+				<MessageBox>
+					<Message>
+						I am still working on this, mean while find more
+						<StyledLink>About Me</StyledLink>
+					</Message>
+				</MessageBox>
+			</Container>
+		</Animate>
+	);
 }
 
 export default MenuPage;

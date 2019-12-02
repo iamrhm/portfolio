@@ -1,16 +1,16 @@
 import React from "react";
-import { Container, LogoContainer, ButtonContainer } from "./style";
+import { Container, LogoContainer, ButtonContainer, MenuIcon } from "./style";
 
-import { BrandLogo } from "../../assets/logo";
-import Menu from "../../pages/menu";
-
+import { BrandLogo } from "../utils/logo";
 const Header = () => {
 	return (
 		<Container>
 			<LogoContainer>
 				<BrandLogo />
 			</LogoContainer>
-			{/* <Menu /> */}
+			<ButtonContainer>
+				<MenuIcon />
+			</ButtonContainer>
 		</Container>
 	);
 };
