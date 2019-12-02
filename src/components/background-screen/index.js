@@ -5,7 +5,7 @@ import {
 	BackgroundWrapper,
 	MaskLayer
 } from "./style";
-import { MatrixBackground } from "../utils/background-shapes/matrix-screen";
+import { MatrixBackground } from "../utils/background-shapes/matrix-screen"
 
 function ScreenOne() {
 	return (
