@@ -8,62 +8,49 @@ export const Container = styled.div`
 	flex-direction: column;
 	justify-content: left;
 	align-items: flex-start;
+	margin-top: 42px;
 
 	/* Laptop  screen  */
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
 		justify-content: space-around;
 	}
+`;
+export const IntroSection = styled.div`
+	width: 100%;
+	height: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 
-	/* iPad Screen */
-	@media only screen and (max-width: 833px) and (min-width: 414px) {
-		justify-content: space-around;
+	/* Laptop  screen  */
+	@media screen and (min-width: 834px) and (max-width: 1600px) {
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		align-items: center;
 	}
 `;
 
 export const BannerContainer = styled.div`
 	width: 100%;
-	height: 15%;
+	height: 50%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 
 	/* Laptop  screen  */
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
-		position: absolute;
-		top: 10%;
-		width: 100%;
-		height: 15%;
-		display: flex;
+		height: 30%;
 		justify-content: flex-end;
-		align-items: center;
-	}
-
-	/* iPad Screen */
-	@media only screen and (max-width: 833px) and (min-width: 414px) {
-		width: 100%;
-		height: 15%;
 	}
 `;
 
 export const TitleContainer = styled.div`
 	width: 100%;
-	height: 20%;
-	padding: 5% 0%;
+	height: 50%;
 
 	/* Laptop  screen  */
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
-		width: 100%;
 		height: 30%;
-		padding: 0%;
-		padding-top: 0%;
-	}
-
-	/* iPad Screen */
-	@media only screen and (max-width: 833px) and (min-width: 414px) {
-		width: 100%;
-		height: 20%;
-		padding: 2% 0;
-
 		display: flex;
 		justify-content: center;
 	}
@@ -72,34 +59,29 @@ export const TitleContainer = styled.div`
 export const InfoContainer = styled.div`
 	width: 95%;
 	height: 40%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 
 	/* Laptop  screen  */
-	@media screen and (min-width: 834px) and (max-width: 1600px) {
-		width: 30%;
-		height: 50%;
-	}
-
-	@media only screen and (max-width: 833px) and (min-width: 664px) {
+	@media screen and (min-width: 834px) and (max-width: 1000px) {
 		width: 45%;
 		height: 50%;
+	}
+	/* Special Case One */
+	@media screen and (min-width: 500px) and (max-width: 833px) {
+		height: 40%;
+		width: 75%;
 		display: flex;
-		flex-direction: column;
 		justify-content: center;
 	}
-	
-	@media only screen and (max-width: 664px) and (min-width: 546px) {
-		width: 55%;
-		height: 50%;
-		display: flex;
-		flex-direction: column;
+	/*Special Case Two */
+	@media screen and (min-width: 1001px) and (max-width: 1290px) {
+		width: 35%;
 	}
-
-	/* iPad Screen */
-	@media only screen and (max-width: 546px) and (min-width: 414px) {
-		width: 70%;
-		height: 45%;
-		display: flex;
-		flex-direction: column;
+	/*Special Case Three */
+	@media screen and (min-width: 1291px) and (max-width: 1600px) {
+		width: 30%;
 	}
 `;
 
@@ -107,38 +89,23 @@ export const SocialInfoContainer = styled.div`
 	width: 100%;
 	height: 10%;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: flex-start;
 
 	/* Laptop  screen  */
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
-		height: 10%;
 		align-items: flex-end;
-	}
-
-	/* iPad Screen */
-	@media only screen and (max-width: 833px) and (min-width: 414px) {
-		height: 10%;
-		align-items: center;
 	}
 `;
 
 export const AuthorInfoContainer = styled.div`
 	width: 100%;
-	height: 20%;
+	height: 10%;
 	display: flex;
 	align-items: left;
 	justify-content: flex-start;
 
 	/* Laptop  screen  */
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
-		width: 100%;
-		height: 10%;
-	}
-
-	/* iPad Screen */
-	@media only screen and (max-width: 833px) and (min-width: 414px) {
-		width: 100%;
-		height: 5%;
 	}
 `;

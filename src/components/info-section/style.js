@@ -9,17 +9,15 @@ const BodyTextStyle = css`
 export const StyledBody = styled.span`
 	width: 100%;
 	padding: 5% 0;
-
 	${BodyTextStyle};
-
 	display: flex;
 	flex-direction: column;
 	justify-content: left;
 	align-items: flex-start;
 
-	/* iPad Screen */
-	@media only screen and (max-width: 833px) and (min-width: 414px) {
-		padding: 3% 0;
+	/* Special case */
+	@media screen and (min-width: 510px) and (max-width: 833px) {
+		padding: 2% 0;
 	}
 `;
 
@@ -30,16 +28,13 @@ export const ContactMeButton = styled.span`
 	outline: none;
 	border: none;
 	border-radius: 4px;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	align-self: flex-start;
-
 	${BodyTextStyle};
 	background-color: #020202;
 	color: #fefefe;
-
 	text-transform: uppercase;
 	:focus :active {
 		outline: none;

@@ -6,17 +6,14 @@ const BodyTextStyle = css`
 	color: #2e2e2ec4;
 `;
 
-export const Container = styled.div`
+export const HeaderContainer = styled.div`
 	position: absolute;
 	z-index: 999;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
 	width: 100%;
-	height: 100%;
-	padding: 0 6%;
-	top: 10%;
-	left: 0%;
+	height: 42px;
+	top: 0;
+	left: 0;
+	background: #ffffff4a;
 `;
 
 export const MessageBox = styled.div`
@@ -25,7 +22,7 @@ export const MessageBox = styled.div`
 	display: flex;
 	justify-content: center;
 
-	background: red;
+	/* background: red; */
 `;
 
 export const Message = styled.div`
@@ -36,3 +33,22 @@ export const Message = styled.div`
 `;
 
 export const StyledLink = styled.span``;
+
+export const Slider = styled.div`
+	position: absolute;
+	width: 0%;
+	height: 0%;
+	background: #fff;
+	z-index: 999;
+	top: 42px;
+	right: 0;
+	padding: 0 6%;
+`;
+
+export const MenuContainer = styled.div`
+	position: relative;
+	width: 100%;
+	height: 100%;
+	border-bottom: 2px solid #020202;
+	background: #fff;
+`;

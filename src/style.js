@@ -27,4 +27,6 @@ export const WrapperContainer = styled.div`
 	height: 100vh;
 	background-color: #fefefe;
 	padding: 0 6%;
+
+	position: absolute;
 `;

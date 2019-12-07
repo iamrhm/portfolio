@@ -1,23 +1,15 @@
 import React from "react";
 import LandingPage from "./pages/landing";
 import MenuPage from "./pages/menu";
-import Header from "./components/header";
 
-import {
-	GlobalStyle,
-	WrapperContainer,
-} from "./style";
-
-import ScreenOne from "./components/background-screen";
+import { GlobalStyle, WrapperContainer } from "./style";
 
 function App() {
 	return (
 		<WrapperContainer>
 			<GlobalStyle />
-			<Header />
-			<ScreenOne />
+			<MenuPage />
 			<LandingPage />
-			{/* <MenuPage /> */}
 		</WrapperContainer>
 	);
 }

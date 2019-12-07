@@ -1,18 +1,49 @@
 import React, { useReducer } from "react";
-import { Container, MessageBox, Message, StyledLink } from "./style";
+import {
+	HeaderContainer,
+	MessageBox,
+	Message,
+	StyledLink,
+	Slider,
+	MenuContainer
+} from "./style";
 
 import Animate from "../../components/animate-wrapper";
 
+import Header from "../../components/header";
+
 const menuOpen = {
-	translateX: ["100%", "0%"],
-	duration: 1000,
-	elasticity: 800
+	slider: [
+		{
+			width: "100%",
+			delay: 600,
+			duration: 200,
+			easing: "easeInCirc"
+		},
+		{
+			height: [0, "calc(100% - 42px)"],
+			delay: 200,
+			duration: 300,
+			easing: "easeInCirc"
+		}
+	]
 };
 
 const menuClose = {
-	translateX: ["100%"],
-	duration: 500,
-	elasticity: 800
+	slider: [
+		{
+			height: ["calc(100% - 42px)", "70%", 0],
+			delay: 200,
+			duration: 500,
+			easing: "easeOutSine"
+		},
+		{
+			width: ["100%", 0],
+			delay: 400,
+			duration: 200,
+			easing: "easeInCirc"
+		}
+	]
 };
 
 function reducer(state, action) {
@@ -34,17 +65,26 @@ const InitialState = {
 
 function MenuPage({}) {
 	const [state, dispatch] = useReducer(reducer, InitialState);
+	console.log(state.activeAnimation.slider);
 	return (
-		<Animate animeProps={state.activeAnimation}>
-			<Container>
-				<MessageBox>
-					<Message>
-						I am still working on this, mean while find more
-						<StyledLink>About Me</StyledLink>
-					</Message>
-				</MessageBox>
-			</Container>
-		</Animate>
+		<React.Fragment>
+			<HeaderContainer>
+				<Header
+					isActive={state.isActive}
+					onClick={e => {
+						e.preventDefault();
+						dispatch({ type: "toggle-menu" });
+					}}
+				/>
+			</HeaderContainer>
+			<Animate animeProps={state.activeAnimation.slider}>
+				<Slider>
+					{/* <Animate animeProps={state.activeAnimation.slider}> */}
+					<MenuContainer></MenuContainer>
+					{/* </Animate> */}
+				</Slider>
+			</Animate>
+		</React.Fragment>
 	);
 }
 

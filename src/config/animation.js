@@ -30,3 +30,143 @@ export const textAnimation = {
 	loop: false,
 	delay: 1300
 };
+
+export const menuOpen = {
+	slider: [
+		{
+			width: "100%",
+			delay: 600,
+			duration: 200,
+			easing: "easeInCirc"
+		},
+		{
+			height: [0, "calc(100% - 42px)"],
+			delay: 200,
+			duration: 300,
+			easing: "easeInCirc"
+		}
+	],
+
+	topLine: {
+		translateY: ["0", "10px"],
+		rotate: "-45deg",
+		delay: 400,
+		duration: 1000
+	},
+
+	middleLine: {
+		rotate: "45deg",
+		delay: 400,
+		duration: 1000
+	},
+
+	bottomLine: [
+		{
+			translateY: "6px",
+			delay: 300,
+			duration: 300,
+			easing: "easeInCirc"
+		},
+		{
+			opacity: 0,
+			delay: 601,
+			duration: 200,
+			easing: "easeInCirc"
+		}
+	]
+};
+
+export const menuClose = {
+	slider: [
+		{
+			height: ["calc(100% - 42px)", "70%", 0],
+			delay: 200,
+			duration: 500,
+			easing: "easeOutSine"
+		},
+		{
+			width: ["100%", 0],
+			delay: 400,
+			duration: 200,
+			easing: "easeInCirc"
+		}
+	],
+	
+	topLine: {
+		translateY: ["10px", "0px"],
+		rotate: 0,
+		delay: 700
+	},
+	middleLine: {
+		rotate: 0,
+		delay: 700
+	},
+
+	bottomLine: [
+		{
+			opacity: 1,
+			delay: 700,
+			duration: 100,
+			easing: "easeInCirc"
+		},
+		{
+			translateY: "0px",
+			delay: 700,
+			duration: 100,
+			easing: "easeInCirc"
+		}
+	]
+};
+
+const openMenu = {
+	topLine: {
+		translateY: ["0", "10px"],
+		rotate: "-45deg",
+		delay: 400,
+		duration: 1000
+	},
+	middleLine: {
+		rotate: "45deg",
+		delay: 400,
+		duration: 1000
+	},
+	bottomLine: [
+		{
+			translateY: "6px",
+			delay: 300,
+			duration: 300,
+			easing: "easeInCirc"
+		},
+		{
+			opacity: 0,
+			delay: 601,
+			duration: 200,
+			easing: "easeInCirc"
+		}
+	]
+};
+const closeMenu = {
+	topLine: {
+		translateY: ["10px", "0px"],
+		rotate: 0,
+		delay: 700
+	},
+	middleLine: {
+		rotate: 0,
+		delay: 700
+	},
+	bottomLine: [
+		{
+			opacity: 1,
+			delay: 700,
+			duration: 100,
+			easing: "easeInCirc"
+		},
+		{
+			translateY: "0px",
+			delay: 700,
+			duration: 100,
+			easing: "easeInCirc"
+		}
+	]
+};

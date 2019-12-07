@@ -1,26 +1,31 @@
-import React, { useReducer } from "react";
+import React from "react";
 
-import { StyledButton } from "./style";
-import MenuPage from "../../pages/menu";
+import { IconWrapper, Line } from "./style";
+import Animate from "../animate-wrapper";
+import {menuOpen,menuClose} from '../../config/animation'
 
-function reducer(state, action) {}
-
-function init(initialState) {
-	return Object.assign({}, initialState, { isActive: false });
-}
-
-function MenuButton({ initialState }) {
-	const [state, dispatch] = useReducer(reducer, initialState, init);
+function MenuButton({ isActive, onClick }) {
+	let topLineAnimation = isActive ? menuOpen.topLine : menuClose.topLine;
+	let middleLineAnimation = isActive
+		? menuOpen.middleLine
+		: menuClose.middleLine;
+	let bottomLineAnimation = isActive
+		? menuOpen.bottomLine
+		: menuClose.bottomLine;
 
 	return (
-		<React.Fragment>
-			{state.isActive ? <StyledButton /> : <MenuPage />}
-		</React.Fragment>
+		<IconWrapper onClick={onClick}>
+			<Animate animeProps={topLineAnimation}>
+				<Line />
+			</Animate>
+			<Animate animeProps={middleLineAnimation}>
+				<Line />
+			</Animate>
+			<Animate animeProps={bottomLineAnimation}>
+				<Line />
+			</Animate>
+		</IconWrapper>
 	);
 }
 
 export default MenuButton;
-
-function StyledButton() {
-	return <div></div>;
-}

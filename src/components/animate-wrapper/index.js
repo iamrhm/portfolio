@@ -1,6 +1,6 @@
 import React from "react";
 import anime from "animejs";
-
+import _ from "lodash";
 class Animate extends React.Component {
 	constructor(props) {
 		super(props);
@@ -9,7 +9,17 @@ class Animate extends React.Component {
 			isReplay: false
 		};
 	}
-
+	componentDidUpdate(prevProps, prevState) {
+		if (!isEqual(prevProps.animeProps, this.props.animeProps)) {
+			let animeProps = Array.isArray(this.props.animeProps)
+				? this.props.animeProps
+				: [this.props.animeProps];
+			this.anime = anime.timeline({ loop: false });
+			animeProps.forEach(animeProp => {
+				this.anime.add(Object.assign({ targets: this.targets }, animeProp));
+			});
+		}
+	}
 	componentDidMount() {
 		if (this.props.animeProps) {
 			let animeProps = Array.isArray(this.props.animeProps)
@@ -44,3 +54,15 @@ class Animate extends React.Component {
 }
 
 export default Animate;
+
+function isEqual(obj1, obj2) {
+	let arrayOfObj1 = Array.isArray(obj1) ? obj1 : [obj1];
+	let arrayOfObj2 = Array.isArray(obj2) ? obj2 : [obj2];
+	if (arrayOfObj1.length !== arrayOfObj2.length) return false;
+	else {
+		for (let i = 0; i < arrayOfObj1.length; i++) {
+			if (!_.isEqual(arrayOfObj1[i], arrayOfObj2[i])) return false;
+		}
+		return true;
+	}
+}

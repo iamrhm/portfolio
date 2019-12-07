@@ -1,16 +1,15 @@
 import React from "react";
-import { Container, LogoContainer, ButtonContainer, MenuIcon } from "./style";
+import { Container, LogoContainer } from "./style";
+import MenuButton from "../menu-button";
 
 import { BrandLogo } from "../utils/logo";
-const Header = () => {
+const Header = props => {
 	return (
 		<Container>
 			<LogoContainer>
 				<BrandLogo />
 			</LogoContainer>
-			<ButtonContainer>
-				<MenuIcon />
-			</ButtonContainer>
+			<MenuButton {...props} />
 		</Container>
 	);
 };

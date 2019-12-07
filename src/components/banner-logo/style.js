@@ -15,10 +15,6 @@ export const BannerContainer = styled.div`
 		justify-content: flex-end;
 		height: 100%;
 	}
-	/* iPad Screen */
-	@media only screen and (max-width: 833px) and (min-width: 414px) {
-		height: 64px;
-	}
 `;
 
 export const StyledSvg = styled.svg`

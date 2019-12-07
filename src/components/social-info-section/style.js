@@ -22,6 +22,11 @@ export const StyledIconButton = styled.span`
 		text-decoration: none;
 		cursor: pointer;
 	}
+
+	/* Laptop  screen  */
+	@media screen and (min-width: 834px) and (max-width: 1600px) {
+		margin-right: 18px;
+	}
 `;
 
 export const GithubIcon = styled(Github)`
