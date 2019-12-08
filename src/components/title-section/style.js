@@ -15,6 +15,9 @@ export const Title = styled.div`
 	align-items: center;
 	justify-content: flex-start;
 	position: relative;
+	@media screen and (min-width: 834px) and (max-width: 1600px) {
+		justify-content: center;
+	}
 `;
 
 export const StyledPara = styled.span`

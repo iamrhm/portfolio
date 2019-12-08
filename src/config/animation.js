@@ -34,9 +34,9 @@ export const textAnimation = {
 export const menuOpen = {
 	slider: [
 		{
-			width: "100.1%",
+			width: [0, "24px", "100%"],
 			delay: 600,
-			duration: 200,
+			duration: 300,
 			easing: "easeOutExpo"
 		},
 		{
@@ -68,7 +68,7 @@ export const menuOpen = {
 		},
 		{
 			opacity: 0,
-			delay: 400,
+			delay: 500,
 			duration: 100,
 			easing: "easeOutExpo"
 		}

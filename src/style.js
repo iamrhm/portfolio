@@ -27,6 +27,7 @@ export const GlobalStyle = createGlobalStyle`
 export const WrapperContainer = styled.div`
 	width: 100vw;
 	height: 100vh;
+	min-height: 620px;
 	background-color: #fefefe;
 	padding: 0 6%;
 	position: relative;

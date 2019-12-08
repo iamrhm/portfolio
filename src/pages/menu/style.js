@@ -12,7 +12,7 @@ export const HeaderContainer = styled.div`
 	width: 100%;
 	height: 42px;
 	top: 0;
-	left: 0;
+	right: 0;
 
 	overflow: scroll;
 	/* background: red; */

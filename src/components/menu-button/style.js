@@ -11,7 +11,7 @@ export const IconWrapper = styled.span`
 `;
 
 export const Line = styled.span`
-	width: 23px;
+	width: 24px;
 	height: 2px;
 	background: #020202;
 	margin: 4px 0;

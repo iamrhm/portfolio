@@ -13,7 +13,8 @@ export const BannerContainer = styled.div`
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
 		display: flex;
 		justify-content: flex-end;
-		height: 100%;
+		height: 30%;
+		align-items: center;
 	}
 `;
 

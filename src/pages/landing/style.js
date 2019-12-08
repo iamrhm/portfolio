@@ -40,7 +40,8 @@ export const BannerContainer = styled.div`
 
 	/* Laptop  screen  */
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
-		height: 30%;
+		width: 50%;
+		height: 100%;
 		justify-content: flex-end;
 	}
 `;
@@ -51,9 +52,10 @@ export const TitleContainer = styled.div`
 
 	/* Laptop  screen  */
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
-		height: 30%;
+		width: 50%;
+		height: 100%;
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 	}
 `;
 
