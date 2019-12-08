@@ -15,6 +15,8 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing:border-box;
+    
+    overflow: hidden;
   }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -27,6 +29,5 @@ export const WrapperContainer = styled.div`
 	height: 100vh;
 	background-color: #fefefe;
 	padding: 0 6%;
-
-	position: absolute;
+	position: relative;
 `;

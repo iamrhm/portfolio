@@ -6,12 +6,12 @@ export const IconWrapper = styled.span`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	justify-content: flex-end;
+	justify-content: center;
 	cursor: pointer;
 `;
 
 export const Line = styled.span`
-	width: 24px;
+	width: 23px;
 	height: 2px;
 	background: #020202;
 	margin: 4px 0;

@@ -34,16 +34,15 @@ export const textAnimation = {
 export const menuOpen = {
 	slider: [
 		{
-			width: "100%",
+			width: "100.1%",
 			delay: 600,
 			duration: 200,
-			easing: "easeInCirc"
+			easing: "easeOutExpo"
 		},
 		{
-			height: [0, "calc(100% - 42px)"],
-			delay: 200,
-			duration: 300,
-			easing: "easeInCirc"
+			delay: 100,
+			height: ["2px", "2px", "100%"],
+			easing: "easeOutExpo"
 		}
 	],
 
@@ -62,16 +61,16 @@ export const menuOpen = {
 
 	bottomLine: [
 		{
-			translateY: "6px",
-			delay: 300,
-			duration: 300,
-			easing: "easeInCirc"
+			translateY: [0, "8px"],
+			delay: 200,
+			duration: 200,
+			easing: "easeOutExpo"
 		},
 		{
 			opacity: 0,
-			delay: 601,
-			duration: 200,
-			easing: "easeInCirc"
+			delay: 400,
+			duration: 100,
+			easing: "easeOutExpo"
 		}
 	]
 };
@@ -79,19 +78,19 @@ export const menuOpen = {
 export const menuClose = {
 	slider: [
 		{
-			height: ["calc(100% - 42px)", "70%", 0],
+			height: ["100%", "70%", "2px"],
 			delay: 200,
-			duration: 500,
+			duration: 300,
 			easing: "easeOutSine"
 		},
 		{
-			width: ["100%", 0],
-			delay: 400,
+			width: ["100%", "60%", 0],
+			delay: 100,
 			duration: 200,
 			easing: "easeInCirc"
 		}
 	],
-	
+
 	topLine: {
 		translateY: ["10px", "0px"],
 		rotate: 0,
@@ -105,66 +104,13 @@ export const menuClose = {
 	bottomLine: [
 		{
 			opacity: 1,
-			delay: 700,
+			delay: 600,
 			duration: 100,
 			easing: "easeInCirc"
 		},
 		{
 			translateY: "0px",
-			delay: 700,
-			duration: 100,
-			easing: "easeInCirc"
-		}
-	]
-};
-
-const openMenu = {
-	topLine: {
-		translateY: ["0", "10px"],
-		rotate: "-45deg",
-		delay: 400,
-		duration: 1000
-	},
-	middleLine: {
-		rotate: "45deg",
-		delay: 400,
-		duration: 1000
-	},
-	bottomLine: [
-		{
-			translateY: "6px",
-			delay: 300,
-			duration: 300,
-			easing: "easeInCirc"
-		},
-		{
-			opacity: 0,
-			delay: 601,
-			duration: 200,
-			easing: "easeInCirc"
-		}
-	]
-};
-const closeMenu = {
-	topLine: {
-		translateY: ["10px", "0px"],
-		rotate: 0,
-		delay: 700
-	},
-	middleLine: {
-		rotate: 0,
-		delay: 700
-	},
-	bottomLine: [
-		{
-			opacity: 1,
-			delay: 700,
-			duration: 100,
-			easing: "easeInCirc"
-		},
-		{
-			translateY: "0px",
-			delay: 700,
+			delay: 200,
 			duration: 100,
 			easing: "easeInCirc"
 		}

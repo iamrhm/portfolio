@@ -13,7 +13,9 @@ export const HeaderContainer = styled.div`
 	height: 42px;
 	top: 0;
 	left: 0;
-	background: #ffffff4a;
+
+	overflow: scroll;
+	/* background: red; */
 `;
 
 export const MessageBox = styled.div`
@@ -37,10 +39,10 @@ export const StyledLink = styled.span``;
 export const Slider = styled.div`
 	position: absolute;
 	width: 0%;
-	height: 0%;
-	background: #fff;
+	height: 2px;
+	background: transparent;
 	z-index: 999;
-	top: 42px;
+	top: 38px;
 	right: 0;
 	padding: 0 6%;
 `;

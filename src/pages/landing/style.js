@@ -8,7 +8,8 @@ export const Container = styled.div`
 	flex-direction: column;
 	justify-content: left;
 	align-items: flex-start;
-	margin-top: 42px;
+
+	top: 50px;
 
 	/* Laptop  screen  */
 	@media screen and (min-width: 834px) and (max-width: 1600px) {

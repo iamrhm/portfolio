@@ -11,40 +11,7 @@ import {
 import Animate from "../../components/animate-wrapper";
 
 import Header from "../../components/header";
-
-const menuOpen = {
-	slider: [
-		{
-			width: "100%",
-			delay: 600,
-			duration: 200,
-			easing: "easeInCirc"
-		},
-		{
-			height: [0, "calc(100% - 42px)"],
-			delay: 200,
-			duration: 300,
-			easing: "easeInCirc"
-		}
-	]
-};
-
-const menuClose = {
-	slider: [
-		{
-			height: ["calc(100% - 42px)", "70%", 0],
-			delay: 200,
-			duration: 500,
-			easing: "easeOutSine"
-		},
-		{
-			width: ["100%", 0],
-			delay: 400,
-			duration: 200,
-			easing: "easeInCirc"
-		}
-	]
-};
+import {menuOpen,menuClose} from '../../config/animation'
 
 function reducer(state, action) {
 	switch (action.type) {
@@ -79,9 +46,7 @@ function MenuPage({}) {
 			</HeaderContainer>
 			<Animate animeProps={state.activeAnimation.slider}>
 				<Slider>
-					{/* <Animate animeProps={state.activeAnimation.slider}> */}
-					<MenuContainer></MenuContainer>
-					{/* </Animate> */}
+					<MenuContainer/>
 				</Slider>
 			</Animate>
 		</React.Fragment>
