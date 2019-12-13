@@ -53,3 +53,11 @@ export const InstagramIcon = styled(Instagram)`
 	width: 24px;
 	height: 24px;
 `;
+
+export const LogoContainer = styled.span`
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: flex-start;
+	float: right;
+`;

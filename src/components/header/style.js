@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { primaryBackgroundColor } from "../../config/color-platte";
 
 export const Container = styled.div`
 	width: 100%;
@@ -10,7 +11,7 @@ export const Container = styled.div`
 	align-items: center;
 	z-index: 999;
 	padding: 0 6%;
-	background: #ffffff4a;
+	background: ${primaryBackgroundColor};
 `;
 
 export const LogoContainer = styled.span`

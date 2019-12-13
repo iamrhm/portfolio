@@ -28,7 +28,6 @@ const TitleSection = ({}) => {
 	);
 
 	return (
-		// <Animate animeProps={letterAnimation}>
 		<Title>
 			<StyledPara>
 				<Animate animeProps={letterAnimation}>{textHi}</Animate>
@@ -40,7 +39,6 @@ const TitleSection = ({}) => {
 				<Animate animeProps={letterAnimation}>{textAWebDeveloper}</Animate>
 			</StyledPara>
 		</Title>
-		// </Animate>
 	);
 };
 

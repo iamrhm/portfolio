@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { firstTextColor } from "../../config/color-platte";
 
 export const BannerContainer = styled.div`
 	position: relative;
@@ -29,7 +30,7 @@ export const StyledSvg = styled.svg`
 
 export const StyledPath = styled.path`
 	fill: none;
-	stroke: #2e2e2e;
+	stroke: ${firstTextColor};
 	stroke-width: 1.5;
 	stroke-linecap: round;
 	stroke-miterlimit: 10;

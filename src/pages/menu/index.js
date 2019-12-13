@@ -11,7 +11,7 @@ import {
 import Animate from "../../components/animate-wrapper";
 
 import Header from "../../components/header";
-import {menuOpen,menuClose} from '../../config/animation'
+import { menuOpen, menuClose } from "../../config/animation";
 
 function reducer(state, action) {
 	switch (action.type) {
@@ -32,7 +32,6 @@ const InitialState = {
 
 function MenuPage({}) {
 	const [state, dispatch] = useReducer(reducer, InitialState);
-	console.log(state.activeAnimation.slider);
 	return (
 		<React.Fragment>
 			<HeaderContainer>
@@ -46,7 +45,7 @@ function MenuPage({}) {
 			</HeaderContainer>
 			<Animate animeProps={state.activeAnimation.slider}>
 				<Slider>
-					<MenuContainer/>
+					<MenuContainer />
 				</Slider>
 			</Animate>
 		</React.Fragment>

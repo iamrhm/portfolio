@@ -1,9 +1,14 @@
 import styled, { css } from "styled-components";
+import {
+	contactMeButton,
+	secondTextColor,
+	thirdTextColor
+} from "../../config/color-platte";
 
 const BodyTextStyle = css`
 	font-size: 14px;
 	line-height: 22px;
-	color: #2e2e2ec4;
+	color: ${secondTextColor};
 `;
 
 export const StyledBody = styled.span`
@@ -33,8 +38,8 @@ export const ContactMeButton = styled.span`
 	align-items: center;
 	align-self: flex-start;
 	${BodyTextStyle};
-	background-color: #020202;
-	color: #fefefe;
+	background-color: ${contactMeButton};
+	color: ${thirdTextColor};
 	text-transform: uppercase;
 	:focus :active {
 		outline: none;

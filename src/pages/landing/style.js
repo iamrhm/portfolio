@@ -8,7 +8,7 @@ export const Container = styled.div`
 	flex-direction: column;
 	justify-content: left;
 	align-items: flex-start;
-
+	z-index: 1;
 	top: 50px;
 
 	/* Laptop  screen  */
@@ -94,7 +94,8 @@ export const SocialInfoContainer = styled.div`
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
-
+	position: relative;
+	
 	/* Laptop  screen  */
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
 		align-items: flex-end;

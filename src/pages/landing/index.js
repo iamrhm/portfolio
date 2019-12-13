@@ -7,7 +7,7 @@ import {
 	InfoContainer,
 	SocialInfoContainer,
 	AuthorInfoContainer,
-	IntroSection
+	IntroSection,
 } from "./style";
 
 import BannerLogo from "../../components/banner-logo";

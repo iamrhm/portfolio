@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { primaryBackgroundColor } from "./config/color-platte";
 
 export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Ibarra+Real+Nova|Lora|Muli|Nanum+Gothic|Noto+Sans|Open+Sans|Roboto+Slab|Source+Sans+Pro&display=swap');
@@ -28,7 +29,8 @@ export const WrapperContainer = styled.div`
 	width: 100vw;
 	height: 100vh;
 	min-height: 620px;
-	background-color: #fefefe;
+	background-color: ${primaryBackgroundColor};
 	padding: 0 6%;
 	position: relative;
+  overflow-y:auto;
 `;

@@ -1,9 +1,10 @@
 import styled, { css } from "styled-components";
+import { firstTextColor } from "../../config/color-platte";
 
 const IntroTextStyle = css`
 	font-size: 24px;
 	line-height: 24px;
-	color: #2e2e2e;
+	color: ${firstTextColor};
 `;
 
 export const Title = styled.div`
