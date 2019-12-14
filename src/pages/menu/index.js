@@ -1,16 +1,8 @@
 import React, { useReducer } from "react";
-import {
-	HeaderContainer,
-	MessageBox,
-	Message,
-	StyledLink,
-	Slider,
-	MenuContainer
-} from "./style";
-
-import Animate from "../../components/animate-wrapper";
 
 import Header from "../../components/header";
+import Slider from "../../components/slider";
+
 import { menuOpen, menuClose } from "../../config/animation";
 
 function reducer(state, action) {
@@ -34,20 +26,22 @@ function MenuPage({}) {
 	const [state, dispatch] = useReducer(reducer, InitialState);
 	return (
 		<React.Fragment>
-			<HeaderContainer>
-				<Header
-					isActive={state.isActive}
-					onClick={e => {
-						e.preventDefault();
-						dispatch({ type: "toggle-menu" });
-					}}
-				/>
-			</HeaderContainer>
-			<Animate animeProps={state.activeAnimation.slider}>
-				<Slider>
-					<MenuContainer />
-				</Slider>
-			</Animate>
+			<Header
+				isActive={state.isActive}
+				activeAnimation={state.activeAnimation}
+				onClick={e => {
+					e.preventDefault();
+					dispatch({ type: "toggle-menu" });
+				}}
+			/>
+			<Slider
+				isActive={state.isActive}
+				activeAnimation={state.activeAnimation}
+				onClick={e => {
+					e.preventDefault();
+					dispatch({ type: "toggle-menu" });
+				}}
+			/>
 		</React.Fragment>
 	);
 }

@@ -2,26 +2,14 @@ import React from "react";
 
 import { IconWrapper, Line } from "./style";
 import Animate from "../animate-wrapper";
-import {menuOpen,menuClose} from '../../config/animation'
 
-function MenuButton({ isActive, onClick }) {
-	let topLineAnimation = isActive ? menuOpen.topLine : menuClose.topLine;
-	let middleLineAnimation = isActive
-		? menuOpen.middleLine
-		: menuClose.middleLine;
-	let bottomLineAnimation = isActive
-		? menuOpen.bottomLine
-		: menuClose.bottomLine;
-
+function MenuButton({ isActive, activeAnimation, onClick }) {
 	return (
 		<IconWrapper onClick={onClick}>
-			<Animate animeProps={topLineAnimation}>
+			<Animate animeProps={activeAnimation.topLine}>
 				<Line />
 			</Animate>
-			<Animate animeProps={middleLineAnimation}>
-				<Line />
-			</Animate>
-			<Animate animeProps={bottomLineAnimation}>
+			<Animate animeProps={activeAnimation.middleLine}>
 				<Line />
 			</Animate>
 		</IconWrapper>

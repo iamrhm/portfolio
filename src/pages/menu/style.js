@@ -4,27 +4,15 @@ import {
 	primaryBackgroundColor
 } from "../../config/color-platte";
 
-export const HeaderContainer = styled.div`
-	position: absolute;
-	z-index: 999;
-	width: 100%;
-	height: 42px;
-	top: 0;
-	right: 0;
-
-	overflow: scroll;
-	/* background: red; */
-`;
-
 export const Slider = styled.div`
 	position: absolute;
-	width: 0%;
-	height: 2px;
+	width: 100%;
+	height: 100%;
 	background: transparent;
 	z-index: 999;
 	top: 38px;
 	right: 0;
-	padding: 0 6%;
+	padding: inherit;
 `;
 
 export const MenuContainer = styled.div`

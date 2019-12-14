@@ -32,87 +32,53 @@ export const textAnimation = {
 };
 
 export const menuOpen = {
-	slider: [
-		{
-			width: [0, "24px", "30px", "100%"],
-			delay: 600,
-			duration: 400,
-			easing: "easeOutExpo"
-		},
-		{
-			delay: 100,
-			height: ["2px", "2px", "100%"],
-			easing: "easeOutExpo"
-		}
-	],
-
-	topLine: {
-		translateY: ["0", "10px"],
-		rotate: "-45deg",
-		delay: 400,
-		duration: 1000
+	slider: {
+		height: ["2px", "2px", "100%"],
+		delay: 605,
+		duration: 600,
+		easing: "easeInOutQuad"
 	},
-
-	middleLine: {
+	topLine: {
 		rotate: "45deg",
 		delay: 400,
 		duration: 1000
 	},
-
-	bottomLine: [
-		{
-			translateY: [0, "8px"],
-			delay: 200,
-			duration: 200,
-			easing: "easeOutExpo"
-		},
-		{
-			opacity: 0,
-			delay: 500,
-			duration: 200,
-			easing: "easeOutExpo"
-		}
-	]
+	middleLine: {
+		translateY: "-10px",
+		rotate: "-45deg",
+		delay: 400,
+		duration: 1000
+	},
+	bottomLine: {
+		width: ["16px", "16px", "100%"],
+		delay: 0,
+		duration: 600,
+		easing: "easeInOutQuad"
+	}
 };
 
 export const menuClose = {
-	slider: [
-		{
-			height: ["100%", "70%", "2px"],
-			delay: 200,
-			duration: 300,
-			easing: "easeOutSine"
-		},
-		{
-			width: ["100%", "60%", 0],
-			delay: 100,
-			duration: 200,
-			easing: "easeInCirc"
-		}
-	],
-
+	slider: {
+		height: ["100%", "2px", "2px"],
+		delay: 0,
+		duration: 600,
+		easing: "easeInOutQuad"
+	},
 	topLine: {
-		translateY: ["10px", "0px"],
-		rotate: 0,
-		delay: 700
+		rotate: "0",
+		delay: 400,
+		duration: 1000
 	},
 	middleLine: {
-		rotate: 0,
-		delay: 700
+		translateY: "0px",
+		rotate: "0deg",
+		delay: 400,
+		duration: 1000
 	},
-
-	bottomLine: [
-		{
-			opacity: 1,
-			delay: 600,
-			duration: 100,
-			easing: "easeInCirc"
-		},
-		{
-			translateY: "0px",
-			delay: 200,
-			duration: 100,
-			easing: "easeInCirc"
-		}
-	]
+	bottomLine: {
+		width: ["100%", "16px", "16px"],
+		delay: 605,
+		duration: 300,
+		easing: "easeInOutQuad"
+	}
 };

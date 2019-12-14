@@ -7,13 +7,17 @@ export const IconWrapper = styled.span`
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
-	justify-content: center;
+	justify-content: flex-end;
 	cursor: pointer;
+
+	padding: inherit;
+	position: absolute;
+	right: 0;
 `;
 
 export const Line = styled.span`
 	width: 24px;
 	height: 2px;
 	background: ${firstTextColor};
-	margin: 4px 0;
+	margin: 4px 0px;
 `;
