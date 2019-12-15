@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {
 	primaryBackgroundColor,
 	backgroundScreenPrimary
-} from "../../config/color-platte";
+} from "../../../config/color-platte";
 
 export const BackgroundScreen = styled.span`
 	width: 100%;

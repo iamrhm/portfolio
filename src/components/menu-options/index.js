@@ -6,14 +6,14 @@ import Animate from "../animate-wrapper";
 import { getHarmonicDelay, getProgressiveDelay } from "../../config/animation";
 
 const MenuOptions = ({ isActive, activeAnimation, onClick }) => {
-	const options = ["About", "Projects", "Blogs"];
+	const options = ["<About>", "<Projects>", "<Blogs>"];
 
 	const list = options.map((title, index) => {
 		let delay =
 			activeAnimation === {}
 				? () => {}
 				: isActive
-				? getHarmonicDelay(index, options.length, 300, 700)
+				? getHarmonicDelay(index, options.length, 300, 900)
 				: getProgressiveDelay(index, 200);
 		return (
 			<Item key={index}>

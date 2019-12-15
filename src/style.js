@@ -3,6 +3,7 @@ import { primaryBackgroundColor } from "./config/color-platte";
 
 export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Ibarra+Real+Nova|Lora|Muli|Nanum+Gothic|Noto+Sans|Open+Sans|Roboto+Slab|Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Heebo:900&display=swap');
 *{
     margin: 0;
     border:0;
@@ -28,9 +29,9 @@ export const GlobalStyle = createGlobalStyle`
 export const WrapperContainer = styled.div`
 	width: 100vw;
 	height: 100vh;
-	min-height: 620px;
+	min-height: 500px;
 	background-color: ${primaryBackgroundColor};
 	padding: 0 6%;
 	position: relative;
-  overflow-y:auto;
+	overflow-y: auto;
 `;

@@ -10,19 +10,20 @@ export const Container = styled.div`
 	align-items: center;
 	justify-content: space-around;
 
-	top: -50%;
-	transform: translateY(50%);
+	top: 50%;
+	transform: translateY(-70%);
+	position: relative;
 `;
 
 export const Item = styled.span`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 24px;
 `;
 
 export const Title = styled.span`
 	color: ${firstTextColor};
-	font-size: 20px;
+	font-size: 24px;
 	opacity: 0;
+	font-weight: bold;
 `;

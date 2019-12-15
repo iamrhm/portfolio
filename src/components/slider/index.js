@@ -2,8 +2,8 @@ import React, { useReducer } from "react";
 
 import { Container, SlideLineContainer, Line } from "./style";
 import MenuOptions from "../menu-options";
-
 import Animate from "../animate-wrapper";
+import ScreenTwo from "../background-screen/menu-page";
 
 function Slider({ isActive, activeAnimation, onClick }) {
 	return (
@@ -19,6 +19,8 @@ function Slider({ isActive, activeAnimation, onClick }) {
 					activeAnimation={activeAnimation}
 					onClick={onClick}
 				/>
+
+				<ScreenTwo isActive={isActive} activeAnimation={activeAnimation} />
 			</Container>
 		</Animate>
 	);

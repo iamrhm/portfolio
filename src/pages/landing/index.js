@@ -7,14 +7,14 @@ import {
 	InfoContainer,
 	SocialInfoContainer,
 	AuthorInfoContainer,
-	IntroSection,
+	IntroSection
 } from "./style";
 
 import BannerLogo from "../../components/banner-logo";
 import TitleSection from "../../components/title-section";
 import InfoSection from "../../components/info-section";
 import SocialInfoSection from "../../components/social-info-section";
-import ScreenOne from "../../components/background-screen";
+import ScreenOne from "../../components/background-screen/landing-page";
 
 const LandingPage = ({}) => {
 	return (
