@@ -21,6 +21,9 @@ class Animate extends React.Component {
 		}
 	}
 	componentDidMount() {
+		if(this.props.options){
+			console.log(this.props.animeProps.delay)
+		}
 		if (this.props.animeProps) {
 			let animeProps = Array.isArray(this.props.animeProps)
 				? this.props.animeProps

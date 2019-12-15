@@ -31,54 +31,87 @@ export const textAnimation = {
 	delay: 1300
 };
 
+export function getHarmonicDelay(
+	currentIndex,
+	totalGaps,
+	deltaTime,
+	initialDelay
+) {
+	if (currentIndex === totalGaps - 1) {
+		return deltaTime + initialDelay;
+	} else {
+		return (totalGaps - currentIndex) * deltaTime + initialDelay;
+	}
+}
+
+export function getProgressiveDelay(currentIndex, deltaTime, initialDelay = 0) {
+	return initialDelay + deltaTime * (currentIndex + 1);
+}
+
 export const menuOpen = {
-	slider: {
-		height: ["2px", "2px", "100%"],
-		delay: 605,
-		duration: 600,
-		easing: "easeInOutQuad"
-	},
 	topLine: {
 		rotate: "45deg",
 		delay: 400,
-		duration: 1000
+		duration: 200,
+		easing: "easeInOutQuad"
 	},
 	middleLine: {
 		translateY: "-10px",
 		rotate: "-45deg",
 		delay: 400,
-		duration: 1000
+		duration: 200,
+		easing: "easeInOutQuad"
 	},
 	bottomLine: {
 		width: ["16px", "16px", "100%"],
 		delay: 0,
+		duration: 400,
+		easing: "easeInOutQuad"
+	},
+	slider: {
+		height: ["2px", "2px", "100%"],
+		delay: 400,
 		duration: 600,
+		easing: "easeInOutQuad"
+	},
+	riseAnimation: {
+		translateY: ["100%", "0%"],
+		opacity: [0, 1],
+		duration: 300,
 		easing: "easeInOutQuad"
 	}
 };
 
 export const menuClose = {
-	slider: {
-		height: ["100%", "2px", "2px"],
-		delay: 0,
-		duration: 600,
-		easing: "easeInOutQuad"
-	},
 	topLine: {
 		rotate: "0",
-		delay: 400,
-		duration: 1000
+		delay: 1000,
+		duration: 400,
+		easing: "easeInOutQuad"
 	},
 	middleLine: {
 		translateY: "0px",
 		rotate: "0deg",
-		delay: 400,
-		duration: 1000
+		delay: 1000,
+		duration: 400,
+		easing: "easeInOutQuad"
 	},
 	bottomLine: {
 		width: ["100%", "16px", "16px"],
-		delay: 605,
-		duration: 300,
+		delay: 1200,
+		duration: 400,
+		easing: "easeInOutQuad"
+	},
+	slider: {
+		height: ["100%", "2%", "2px"],
+		delay: 700,
+		duration: 500,
+		easing: "linear"
+	},
+	riseAnimation: {
+		translateY: ["0%", "100%"],
+		opacity: [1, 0],
+		duration: 100,
 		easing: "easeInOutQuad"
 	}
 };

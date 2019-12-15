@@ -1,6 +1,8 @@
 import React, { useReducer } from "react";
 
-import { Container, SlideLineContainer, Line, MenuContainer } from "./style";
+import { Container, SlideLineContainer, Line } from "./style";
+import MenuOptions from "../menu-options";
+
 import Animate from "../animate-wrapper";
 
 function Slider({ isActive, activeAnimation, onClick }) {
@@ -12,7 +14,11 @@ function Slider({ isActive, activeAnimation, onClick }) {
 						<Line onClick={onClick} />
 					</Animate>
 				</SlideLineContainer>
-				{/* <MenuContainer /> */}
+				<MenuOptions
+					isActive={isActive}
+					activeAnimation={activeAnimation}
+					onClick={onClick}
+				/>
 			</Container>
 		</Animate>
 	);
