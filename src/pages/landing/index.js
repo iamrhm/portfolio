@@ -6,37 +6,35 @@ import {
 	TitleContainer,
 	InfoContainer,
 	SocialInfoContainer,
-	AuthorInfoContainer,
-	IntroSection
+	IntroContainer,
+	FooterContainer
 } from "./style";
 
 import BannerLogo from "../../components/banner-logo";
 import TitleSection from "../../components/title-section";
 import InfoSection from "../../components/info-section";
 import SocialInfoSection from "../../components/social-info-section";
-import ScreenOne from "../../components/background-screen/landing-page";
 
 const LandingPage = ({}) => {
 	return (
 		<React.Fragment>
-			<ScreenOne />
 			<Container>
-				<IntroSection>
+				<IntroContainer>
 					<BannerContainer>
 						<BannerLogo />
 					</BannerContainer>
 					<TitleContainer>
 						<TitleSection />
 					</TitleContainer>
-				</IntroSection>
+				</IntroContainer>
 				<InfoContainer>
 					<InfoSection />
 				</InfoContainer>
 				<SocialInfoContainer>
 					<SocialInfoSection />
 				</SocialInfoContainer>
-				<AuthorInfoContainer></AuthorInfoContainer>
 			</Container>
+			<FooterContainer />
 		</React.Fragment>
 	);
 };

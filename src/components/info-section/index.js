@@ -12,11 +12,10 @@ const InfoSection = () => {
 				Front End Developer, specialized in MERN stack. If your are looking for
 				a front end developer or web designer, get in touch
 			</StyledBody>
+			<ContactMeButton> Contact Me </ContactMeButton>
 			<StyledBody>
-				<ContactMeButton> Contact Me </ContactMeButton>
-			</StyledBody>
-			<StyledBody>
-				iamRhM is my social alias. you can also find me on,
+				iamRhM is my social alias. A web developer based in India. You can also
+				find me on,
 			</StyledBody>
 		</Animate>
 	);

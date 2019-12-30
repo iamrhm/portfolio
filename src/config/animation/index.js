@@ -26,6 +26,7 @@ export const iconAnimation = {
 export const textAnimation = {
 	easing: "easeInOutQuad",
 	opacity: [0, 1],
+	translateY: ["8px", 0],
 	duration: 800,
 	loop: false,
 	delay: 1300
@@ -56,7 +57,7 @@ export const menuOpen = {
 		easing: "easeOutExpo"
 	},
 	middleLine: {
-		translateY: "-10px",
+		translateY: "-7px",
 		rotate: "-45deg",
 		delay: 400,
 		duration: 200,
@@ -69,20 +70,22 @@ export const menuOpen = {
 		easing: "easeOutExpo"
 	},
 	slider: {
-		height: ["2px", "2px", "100%"],
+		height: [
+			"1px",
+			window.innerHeight - 62 < 500 ? 500 : window.innerHeight + 58
+		],
 		delay: 400,
 		duration: 600,
 		easing: "easeOutExpo"
 	},
 	riseAnimation: {
-		translateY: ["100%", "0%"],
 		opacity: [0, 1],
-		duration: 300,
+		translateY: [-100, 0],
 		easing: "easeOutExpo"
 	},
 	menuBackground: [
 		{
-			opacity: [0, 0.15],
+			opacity: [0, 1],
 			translateX: [40, 0],
 			translateZ: 0,
 			easing: "easeOutExpo",
@@ -95,40 +98,32 @@ export const menuOpen = {
 export const menuClose = {
 	topLine: {
 		rotate: "0",
-		delay: 1600,
+		delay: 600,
 		duration: 400,
 		easing: "easeInOutQuad"
 	},
 	middleLine: {
 		translateY: "0px",
 		rotate: "0deg",
-		delay: 1600,
+		delay: 600,
 		duration: 400,
 		easing: "easeInOutQuad"
 	},
 	bottomLine: {
 		width: ["100%", "16px", "16px"],
-		delay: 1600,
+		delay: 800,
 		duration: 400,
 		easing: "easeInOutQuad"
 	},
 	slider: {
-		height: ["100%", "2%", "2px"],
-		delay: 1100,
+		height: [
+			window.innerHeight - 62 < 500 ? 500 : window.innerHeight + 58,
+			"1px"
+		],
+		delay: 100,
 		duration: 500,
 		easing: "linear"
 	},
-	riseAnimation: {
-		translateY: ["0%", "100%"],
-		opacity: [1, 0],
-		duration: 100,
-		easing: "easeInOutQuad"
-	},
-	menuBackground: {
-		translateX: [0, -30],
-		opacity: [0.15, 0],
-		easing: "easeInExpo",
-		duration: 1100,
-		delay: (el, i) => 30 * i
-	}
+	riseAnimation: {},
+	menuBackground: {}
 };

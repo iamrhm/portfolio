@@ -4,13 +4,11 @@ import { Linkedin } from "styled-icons/feather/Linkedin";
 import { Instagram } from "styled-icons/boxicons-logos/Instagram";
 import { Github } from "styled-icons/feather/Github";
 
-import { CodeS as CodeStart } from "styled-icons/remix-fill/CodeS";
-import { CodeSSlash as CodeEnd } from "styled-icons/remix-fill/CodeSSlash";
-
+import { firstTextColor } from "../../config/color-platte";
 export const StyledIconButton = styled.span`
 	width: 24px;
 	height: 24px;
-	margin-right: 5%;
+	margin-right: 18px;
 	display: flex;
 	align-items: center;
 	a {
@@ -23,35 +21,24 @@ export const StyledIconButton = styled.span`
 		cursor: pointer;
 	}
 
-	/* Laptop  screen  */
-	@media screen and (min-width: 834px) and (max-width: 1600px) {
-		margin-right: 18px;
-	}
 `;
 
 export const GithubIcon = styled(Github)`
 	width: 24px;
 	height: 24px;
-`;
-
-export const CodeStartIcon = styled(CodeStart)`
-	width: 14px;
-	height: 14px;
-`;
-
-export const CodeEndIcon = styled(CodeEnd)`
-	width: 14px;
-	height: 14px;
+	color: ${firstTextColor};
 `;
 
 export const LinkedinIcon = styled(Linkedin)`
 	width: 24px;
 	height: 24px;
+	color: ${firstTextColor};
 `;
 
 export const InstagramIcon = styled(Instagram)`
 	width: 24px;
 	height: 24px;
+	color: ${firstTextColor};
 `;
 
 export const LogoContainer = styled.span`

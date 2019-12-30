@@ -1,14 +1,17 @@
-import React, { useReducer } from "react";
+import React from "react";
 
 import { Container, SlideLineContainer, Line } from "./style";
 import MenuOptions from "../menu-options";
 import Animate from "../animate-wrapper";
-import ScreenTwo from "../background-screen/menu-page";
+
+import ScreenOne from "../background-screens/screen-one";
+
 
 function Slider({ isActive, activeAnimation, onClick }) {
 	return (
 		<Animate animeProps={activeAnimation.slider}>
 			<Container>
+				<ScreenOne />
 				<SlideLineContainer>
 					<Animate animeProps={activeAnimation.bottomLine}>
 						<Line onClick={onClick} />
@@ -19,8 +22,6 @@ function Slider({ isActive, activeAnimation, onClick }) {
 					activeAnimation={activeAnimation}
 					onClick={onClick}
 				/>
-
-				<ScreenTwo isActive={isActive} activeAnimation={activeAnimation} />
 			</Container>
 		</Animate>
 	);

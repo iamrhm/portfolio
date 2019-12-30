@@ -1,15 +1,13 @@
-export const firstTextColor = "#050505";
-export const secondTextColor = "#838081";
-export const thirdTextColor = "#AAAAAA";
+export const firstTextColor = "#D3D3D3";
+export const secondTextColor = "#A7A7A7";
+export const thirdTextColor = "#FFF";
 
-export const contactMeButton = "#050505";
+export const contactMeButton = "#131313";
 
-export const primaryBackgroundColor = "rgb(250, 250, 250)";
-export const secondaryBackgroundColor = "#ffff";
-export const backgroundScreenPrimary = {
-	form: "rgb(250, 250, 250,1)",
-	to: "rgb(250, 250, 250,0)"
-};
+export const primaryBackgroundColor = "#131313";
+export const secondaryBackgroundColor = "#2E2E2E";
+
+export const MenuTextColor = "rgb(0, 0, 0);";
 
 const darkTheme = {};
 const lightTheme = {};

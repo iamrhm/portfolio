@@ -1,12 +1,21 @@
 import React from "react";
 
-import { Container, Item, Title } from "./style";
+import {
+	Container,
+	Item,
+	OptionItem,
+	ListContainer,
+	OptionIndex,
+	OptionTitle,
+	RubberLine
+} from "./style";
 import Animate from "../animate-wrapper";
 
 import { getHarmonicDelay, getProgressiveDelay } from "../../config/animation";
+import MenuTextScreen from "../background-screens/menu-text";
 
 const MenuOptions = ({ isActive, activeAnimation, onClick }) => {
-	const options = ["<About>", "<Projects>", "<Blogs>"];
+	const options = ["Home", "About", "My Work", "Skills", "Contact"];
 
 	const list = options.map((title, index) => {
 		let delay =
@@ -21,13 +30,22 @@ const MenuOptions = ({ isActive, activeAnimation, onClick }) => {
 					options={true}
 					animeProps={{ ...activeAnimation.riseAnimation, delay: delay }}
 				>
-					<Title>{title}</Title>
+					<OptionItem>
+						<OptionIndex>0{index}</OptionIndex>
+						<RubberLine />
+						<OptionTitle>{title}</OptionTitle>
+					</OptionItem>
 				</Animate>
 			</Item>
 		);
 	});
 
-	return <Container>{list}</Container>;
+	return (
+		<Container>
+			<MenuTextScreen isActive={isActive} activeAnimation={activeAnimation} />
+			<ListContainer>{list}</ListContainer>
+		</Container>
+	);
 };
 
 export default MenuOptions;

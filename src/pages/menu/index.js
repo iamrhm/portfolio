@@ -2,7 +2,6 @@ import React, { useReducer } from "react";
 
 import Header from "../../components/header";
 import Slider from "../../components/slider";
-
 import { menuOpen, menuClose } from "../../config/animation";
 
 function reducer(state, action) {

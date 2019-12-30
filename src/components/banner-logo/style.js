@@ -4,7 +4,7 @@ import { firstTextColor } from "../../config/color-platte";
 export const BannerContainer = styled.div`
 	position: relative;
 	width: 234px;
-	height: 64px;
+	height: 48px;
 
 	display: flex;
 	justify-content: flex-start;
@@ -14,7 +14,6 @@ export const BannerContainer = styled.div`
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
 		display: flex;
 		justify-content: flex-end;
-		height: 30%;
 		align-items: center;
 	}
 `;

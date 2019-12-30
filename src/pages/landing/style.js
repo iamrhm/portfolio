@@ -2,29 +2,36 @@ import styled from "styled-components";
 
 export const Container = styled.div`
 	width: 100%;
-	height: 90%;
+	height: 80%;
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	justify-content: left;
+	justify-content: space-evenly;
 	align-items: flex-start;
-	z-index: 1;
-	top: 50px;
+	top: 64px;
+	overflow: hidden;
 
+	min-height: 480px;
+	max-height: 600px;
+	* {
+		overflow: hidden;
+	}
 	/* Laptop  screen  */
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
 		justify-content: space-around;
 	}
 `;
-export const IntroSection = styled.div`
+export const IntroContainer = styled.div`
 	width: 100%;
 	height: 40%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 
+	min-height: 220px;
+
 	/* Laptop  screen  */
-	@media screen and (min-width: 834px) and (max-width: 1600px) {
+	@media screen and (min-width: 834px) {
 		flex-direction: row-reverse;
 		justify-content: space-between;
 		align-items: center;
@@ -33,25 +40,28 @@ export const IntroSection = styled.div`
 
 export const BannerContainer = styled.div`
 	width: 100%;
-	height: 50%;
+	height: 30%;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 
 	/* Laptop  screen  */
-	@media screen and (min-width: 834px) and (max-width: 1600px) {
+	@media screen and (min-width: 834px) {
 		width: 50%;
 		height: 100%;
 		justify-content: flex-end;
+		align-items: center;
 	}
 `;
 
 export const TitleContainer = styled.div`
 	width: 100%;
 	height: 50%;
+	display: flex;
+	justify-content: center;
 
 	/* Laptop  screen  */
-	@media screen and (min-width: 834px) and (max-width: 1600px) {
+	@media screen and (min-width: 834px) {
 		width: 50%;
 		height: 100%;
 		display: flex;
@@ -65,51 +75,38 @@ export const InfoContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
+	align-items: flex-start;
 
-	/* Laptop  screen  */
-	@media screen and (min-width: 834px) and (max-width: 1000px) {
-		width: 45%;
-		height: 50%;
-	}
-	/* Special Case One */
-	@media screen and (min-width: 500px) and (max-width: 833px) {
-		height: 40%;
-		width: 75%;
-		display: flex;
-		justify-content: center;
-	}
-	/*Special Case Two */
-	@media screen and (min-width: 1001px) and (max-width: 1290px) {
-		width: 35%;
-	}
-	/*Special Case Three */
-	@media screen and (min-width: 1291px) and (max-width: 1600px) {
-		width: 30%;
-	}
+	min-height: 230px;
+	max-width: 320px;
 `;
 
 export const SocialInfoContainer = styled.div`
 	width: 100%;
 	height: 10%;
+	position: relative;
+	min-height: 42px;
+
 	display: flex;
 	align-items: flex-start;
 	justify-content: flex-start;
-	position: relative;
-	
+
 	/* Laptop  screen  */
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
-		align-items: flex-end;
+		align-items: flex-start;
+	}
+	/* Special case */
+	@media screen and (min-width: 500px) and (max-width: 833px) {
+		align-items: center;
+	}
+
+	/* For small mobile case */
+	@media screen and (max-height: 600px) {
+		align-items: center;
 	}
 `;
 
-export const AuthorInfoContainer = styled.div`
+export const FooterContainer = styled.div`
 	width: 100%;
 	height: 10%;
-	display: flex;
-	align-items: left;
-	justify-content: flex-start;
-
-	/* Laptop  screen  */
-	@media screen and (min-width: 834px) and (max-width: 1600px) {
-	}
 `;

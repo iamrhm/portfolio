@@ -3,7 +3,7 @@ import { firstTextColor } from "../../config/color-platte";
 
 const IntroTextStyle = css`
 	font-size: 24px;
-	line-height: 24px;
+	line-height: 28px;
 	color: ${firstTextColor};
 `;
 
@@ -14,11 +14,13 @@ export const Title = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: flex-start;
+	justify-content: flex-end;
 	position: relative;
+
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
 		justify-content: center;
 	}
+
 `;
 
 export const StyledPara = styled.span`
