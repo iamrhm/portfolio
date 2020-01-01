@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { MenuTextColor } from "../../../config/color-platte";
+import { DarkTextColor } from "../../../config/color-platte";
 
 export const BackgroundScreen = styled.span`
 	width: 100%;
@@ -39,7 +39,7 @@ export const BackgroundWrapper = styled.div`
 `;
 
 export const StyledTextSpan = styled.span`
-	color: ${MenuTextColor};
+	color: ${DarkTextColor};
 	opacity: 0;
 	margin: 0 1%;
 	font-weight: bold;

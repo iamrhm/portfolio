@@ -20,9 +20,9 @@ export const Container = styled.div`
 `;
 
 export const ListContainer = styled.ul`
-	top: 50%;
+	top: 74px;
 	left: 50%;
-	transform: translate(-45%, -45%);
+	transform: translateX(-50%);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -33,9 +33,9 @@ export const ListContainer = styled.ul`
 
 	/* Laptop  screen  */
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
-		top: 50%;
+		top: 74px;
 		left: 50%;
-		transform: translate(-40%, -45%);
+		transform: translateX(-40%);
 	}
 `;
 
@@ -51,6 +51,9 @@ export const Item = styled.li`
 	:active {
 		transform: translateX(-8px);
 		transition: transform 0.35s;
+	}
+	* {
+		color: inherit;
 	}
 `;
 
@@ -116,7 +119,7 @@ export const RubberLine = styled.span`
 	top: 50%;
 	width: 76px;
 	height: 1px;
-	transform-origin: 100% ;
+	transform-origin: 100%;
 
 	transform: translateX(-100%) translateY(-2px) scaleX(0);
 	position: absolute;

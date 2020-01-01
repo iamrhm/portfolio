@@ -2,7 +2,8 @@ import styled, { css } from "styled-components";
 import {
 	contactMeButton,
 	secondTextColor,
-	firstTextColor
+	firstTextColor,
+	thirdTextColor
 } from "../../config/color-platte";
 
 const BodyTextStyle = css`
@@ -14,10 +15,6 @@ const BodyTextStyle = css`
 export const StyledBody = styled.span`
 	width: 100%;
 	${BodyTextStyle};
-	display: flex;
-	flex-direction: column;
-	justify-content: left;
-	align-items: flex-start;
 
 	/* Special case */
 	@media screen and (min-width: 510px) and (max-width: 833px) {
@@ -45,4 +42,9 @@ export const ContactMeButton = styled.span`
 	:focus :active {
 		outline: none;
 	}
+`;
+
+export const StrongText = styled.span`
+	font-weight: bold;
+	color:${thirdTextColor}
 `;

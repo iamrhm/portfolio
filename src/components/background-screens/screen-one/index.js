@@ -7,6 +7,7 @@ function ScreenOne() {
 			<Line />
 			<Line />
 			<Line />
+			<Line />
 		</BackgroundScreen>
 	);
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { StyledBody, ContactMeButton } from "./style";
+import { StyledBody, ContactMeButton,StrongText } from "./style";
 
 import Animate from "../animate-wrapper";
 import { textAnimation } from "../../config/animation";
@@ -14,8 +14,8 @@ const InfoSection = () => {
 			</StyledBody>
 			<ContactMeButton> Contact Me </ContactMeButton>
 			<StyledBody>
-				iamRhM is my social alias. A web developer based in India. You can also
-				find me on,
+				<StrongText>iamRhM</StrongText> is my social alias. A web developer based in
+				India. You can also find me on,
 			</StyledBody>
 		</Animate>
 	);

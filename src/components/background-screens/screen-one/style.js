@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import {
 	primaryBackgroundColor,
-	MenuTextColor
+	DarkTextColor
 } from "../../../config/color-platte";
 
 export const BackgroundScreen = styled.span`
@@ -15,11 +15,11 @@ export const BackgroundScreen = styled.span`
 
 	min-height: inherit;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-between;
 `;
 
 export const Line = styled.span`
 	width: 1px;
 	height: 100%;
-	background: ${MenuTextColor};
+	background: ${DarkTextColor};
 `;

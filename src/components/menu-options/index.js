@@ -11,13 +11,21 @@ import {
 } from "./style";
 import Animate from "../animate-wrapper";
 
+import { Link } from "react-router-dom";
+
 import { getHarmonicDelay, getProgressiveDelay } from "../../config/animation";
 import MenuTextScreen from "../background-screens/menu-text";
 
 const MenuOptions = ({ isActive, activeAnimation, onClick }) => {
-	const options = ["Home", "About", "My Work", "Skills", "Contact"];
+	const options = [
+		{ name: "Home", path: "/" },
+		{ name: "About", path: "/about" },
+		{ name: "My Work", path: "/work-on-progress" },
+		{ name: "Skills", path: "/skill" },
+		{ name: "Contact", path: "/work-on-progress" }
+	];
 
-	const list = options.map((title, index) => {
+	const list = options.map((option, index) => {
 		let delay =
 			activeAnimation === {}
 				? () => {}
@@ -26,16 +34,18 @@ const MenuOptions = ({ isActive, activeAnimation, onClick }) => {
 				: getProgressiveDelay(index, 200);
 		return (
 			<Item key={index}>
-				<Animate
-					options={true}
-					animeProps={{ ...activeAnimation.riseAnimation, delay: delay }}
-				>
-					<OptionItem>
-						<OptionIndex>0{index}</OptionIndex>
-						<RubberLine />
-						<OptionTitle>{title}</OptionTitle>
-					</OptionItem>
-				</Animate>
+				<Link to={{ pathname: `${option.path}` }}>
+					<Animate
+						options={true}
+						animeProps={{ ...activeAnimation.riseAnimation, delay: delay }}
+					>
+						<OptionItem>
+							<OptionIndex>0{index}</OptionIndex>
+							<RubberLine />
+							<OptionTitle>{option.name}</OptionTitle>
+						</OptionItem>
+					</Animate>
+				</Link>
 			</Item>
 		);
 	});

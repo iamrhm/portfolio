@@ -72,7 +72,13 @@ export const menuOpen = {
 	slider: {
 		height: [
 			"1px",
-			window.innerHeight - 62 < 500 ? 500 : window.innerHeight + 58
+			window.location.hash.substr(1) === "/skill" &&
+			window.innerHeight - 62 < 1082 + 58
+				? 1200
+				: window.location.hash.substr(1) !== "/skill" &&
+				  window.innerHeight - 62 < 500 + 58
+				? 500
+				: window.innerHeight + 58
 		],
 		delay: 400,
 		duration: 600,
@@ -117,13 +123,93 @@ export const menuClose = {
 	},
 	slider: {
 		height: [
-			window.innerHeight - 62 < 500 ? 500 : window.innerHeight + 58,
+			window.location.hash.substr(1) === "/skill" &&
+			window.innerHeight - 62 < 1082 + 58
+				? 1200
+				: window.location.hash.substr(1) !== "/skill" &&
+				  window.innerHeight - 62 < 500 + 58
+				? 500
+				: window.innerHeight + 58,
 			"1px"
 		],
 		delay: 100,
 		duration: 500,
 		easing: "linear"
 	},
+	riseAnimation: {},
+	menuBackground: {}
+};
+
+const DefaultMenuInitial = {
+	firstStep: {
+		opacity: 0,
+		delay: 0,
+		duration: 1,
+		easing: "easeOutExpo"
+	},
+	secondStep: {
+		opacity: 1,
+		delay: 0,
+		duration: 1,
+		easing: "easeOutExpo"
+	}
+};
+export const menuInitial = {
+	topLine: [
+		DefaultMenuInitial.firstStep,
+		{
+			rotate: "0",
+			width: 0,
+			delay: 100,
+			duration: 100,
+			easing: "easeInOutQuad"
+		},
+		DefaultMenuInitial.secondStep,
+		{
+			width: [0, 22],
+			delay: 300,
+			duration: 800
+		}
+	],
+	middleLine: [
+		DefaultMenuInitial.firstStep,
+		{
+			translateY: "0px",
+			rotate: "0deg",
+			width: 0,
+			delay: 100,
+			duration: 100,
+			easing: "easeInOutQuad"
+		},
+		DefaultMenuInitial.secondStep,
+		{
+			width: [0, 22],
+			delay: 500,
+			duration: 800,
+			easing: "easeOutExpo"
+		}
+	],
+	bottomLine: [
+		DefaultMenuInitial.firstStep,
+		{
+			width: 0,
+			delay: 100,
+			duration: 100,
+			easing: "easeInOutQuad"
+		},
+		DefaultMenuInitial.secondStep,
+		{
+			width: ["0%", "0px", "16px"],
+			delay: 200,
+			duration: 1000,
+			easing: "easeOutExpo"
+		}
+	],
+	slider: [
+		DefaultMenuInitial.firstStep,
+		{ ...menuClose.slider, delay: 0 },
+		DefaultMenuInitial.secondStep
+	],
 	riseAnimation: {},
 	menuBackground: {}
 };

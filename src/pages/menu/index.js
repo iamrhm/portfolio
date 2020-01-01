@@ -1,8 +1,9 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useEffect } from "react";
+import { withRouter } from "react-router-dom";
 
 import Header from "../../components/header";
 import Slider from "../../components/slider";
-import { menuOpen, menuClose } from "../../config/animation";
+import { menuOpen, menuClose, menuInitial } from "../../config/animation";
 
 function reducer(state, action) {
 	switch (action.type) {
@@ -10,6 +11,11 @@ function reducer(state, action) {
 			return {
 				isActive: !state.isActive,
 				activeAnimation: !state.isActive ? menuOpen : menuClose
+			};
+		case "load-menu":
+			return {
+				isActive: false,
+				activeAnimation: menuInitial
 			};
 		default:
 			return { isActive: false, activeAnimation: {} };
@@ -21,8 +27,13 @@ const InitialState = {
 	activeAnimation: {}
 };
 
-function MenuPage({}) {
+function MenuPage({ history }) {
 	const [state, dispatch] = useReducer(reducer, InitialState);
+
+	history.listen((location, action) => {
+		dispatch({ type: "load-menu" });
+	});
+
 	return (
 		<React.Fragment>
 			<Header
@@ -45,4 +56,4 @@ function MenuPage({}) {
 	);
 }
 
-export default MenuPage;
+export default withRouter(MenuPage);

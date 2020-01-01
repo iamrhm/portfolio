@@ -37,8 +37,15 @@ export const WrapperContainer = styled.div`
 	position: relative;
 	z-index: 1; /* First Elevation From Background */
 `;
+
 export const Background = styled.div`
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
+`;
+
+export const RoutesContainer = styled.div`
+	position: relative;
+	width: 100%;
+	top: 64px;
 `;
