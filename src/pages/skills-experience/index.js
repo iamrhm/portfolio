@@ -24,7 +24,7 @@ function SkillsAndExperience() {
 				</StyledPara>
 				<StyledPara>
 					HTML, CSS, JS (TypeScript), building small and medium web apps with
-					Angular 2+, custom plugins, features, animations, and coding
+					React, redux, animations, and coding
 					interactive layouts.
 				</StyledPara>
 			</SubSection>

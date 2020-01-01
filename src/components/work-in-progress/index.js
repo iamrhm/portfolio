@@ -19,7 +19,7 @@ function DefaultPage() {
 					<HeaderText>Work in Progress</HeaderText>
 				</Heading>
 				<InfoSection>
-					<StyledPara>Thanks for your interest</StyledPara>
+					<StyledPara>Thanks for your interest,</StyledPara>
 					<StyledPara>
 						Come back once the page is ready. Mean while you can also get
 						connected with me,
@@ -28,8 +28,19 @@ function DefaultPage() {
 				<Row>
 					<SocialInfoSection />
 				</Row>
-				<StyledPara>If you have ideas and looking for developer designer, send a note,</StyledPara>
+				<StyledPara>
+					If you have ideas and looking for developer designer, send a note,
+				</StyledPara>
 				<StyledTag>rahulmitra980@gmail.com</StyledTag>
+				<StyledPara>
+					This site is designed from different design ideas from dribble and a
+					great thanks to{"        "}
+					<StyledTag>
+						<a href="https://jacekjeznach.com/">Jack</a>
+					</StyledTag>
+					{"       "}
+					for inspiration and major design idea help.
+				</StyledPara>
 			</Container>
 		</React.Fragment>
 	);

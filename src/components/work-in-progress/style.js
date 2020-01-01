@@ -62,7 +62,7 @@ export const StyledPara = styled.p`
 `;
 
 export const Row = styled.div`
-	height: 64px;
+	height: 32px;
 	width: 100%;
 	display: flex;
 `;
@@ -73,5 +73,9 @@ export const StyledTag = styled.span`
 	color: ${secondTextColor};
 	font-weight: bold;
 	color: #08fdd8;
-	margin-bottom: 4%;
+	/* padding: 0 8px; */
+	* {
+		color: inherit;
+		text-decoration:none;
+	}
 `;
