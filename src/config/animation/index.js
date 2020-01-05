@@ -7,12 +7,18 @@ export const svgAnimation = {
 	strokeDashoffset: [anime.setDashoffset, 0]
 };
 
-export const letterAnimation = {
-	opacity: [0, 1],
-	translateY: ["-4px", "0px"],
+export const R_TEXT_Animation = {
 	easing: "easeInOutExpo",
-	duration: 1000,
-	delay: (el, i) => 1000 + 40 * (i + 1)
+	opacity: [0, 1],
+	duration: 3000,
+	delay: 3600
+};
+
+export const letterAnimation = {
+	scale: [0, 1],
+	duration: 1500,
+	elasticity: 600,
+	delay: (el, i) => 1200 + 45 * (i + 1)
 };
 
 export const iconAnimation = {
@@ -70,16 +76,7 @@ export const menuOpen = {
 		easing: "easeOutExpo"
 	},
 	slider: {
-		height: [
-			"1px",
-			window.location.hash.substr(1) === "/skill" &&
-			window.innerHeight - 62 < 1082 + 58
-				? 1200
-				: window.location.hash.substr(1) !== "/skill" &&
-				  window.innerHeight - 62 < 500 + 58
-				? 500
-				: window.innerHeight + 58
-		],
+		height: ["1px", window.innerHeight < 640 ? "712px" : window.innerHeight],
 		delay: 400,
 		duration: 600,
 		easing: "easeOutExpo"
@@ -122,16 +119,7 @@ export const menuClose = {
 		easing: "easeInOutQuad"
 	},
 	slider: {
-		height: [
-			window.location.hash.substr(1) === "/skill" &&
-			window.innerHeight - 62 < 1082 + 58
-				? 1200
-				: window.location.hash.substr(1) !== "/skill" &&
-				  window.innerHeight - 62 < 500 + 58
-				? 500
-				: window.innerHeight + 58,
-			"1px"
-		],
+		height: [window.innerHeight < 480 ? "520px" : window.innerHeight, "1px"],
 		delay: 100,
 		duration: 500,
 		easing: "linear"
@@ -154,6 +142,7 @@ const DefaultMenuInitial = {
 		easing: "easeOutExpo"
 	}
 };
+
 export const menuInitial = {
 	topLine: [
 		DefaultMenuInitial.firstStep,

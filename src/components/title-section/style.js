@@ -2,8 +2,8 @@ import styled, { css } from "styled-components";
 import { firstTextColor } from "../../config/color-platte";
 
 const IntroTextStyle = css`
-	font-size: 24px;
-	line-height: 28px;
+	font-size: 38px;
+	font-weight: bold;
 	color: ${firstTextColor};
 `;
 
@@ -14,18 +14,16 @@ export const Title = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: space-around;
 	position: relative;
 
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
 		justify-content: center;
 	}
-
 `;
 
-export const StyledPara = styled.span`
+export const StyledPara = styled.h1`
 	width: 100%;
-	padding: 0.2em 0;
 	${IntroTextStyle};
 `;
 

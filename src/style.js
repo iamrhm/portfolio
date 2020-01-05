@@ -47,5 +47,8 @@ export const Background = styled.div`
 export const RoutesContainer = styled.div`
 	position: relative;
 	width: 100%;
+	height: 80%;
+	min-height: 480px;
+	min-width: 340px;
 	top: 64px;
 `;

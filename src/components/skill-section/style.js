@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import {
 	TileColor,
-	secondTextColor,
+	thirdTextColor,
 	firstTextColor
 } from "../../config/color-platte";
 
@@ -41,7 +41,7 @@ export const Title = styled.span`
 	height: 18px;
 	text-align: center;
 	font-size: 12px;
-	color: ${firstTextColor};
+	color: ${thirdTextColor};
 	padding: 4%;
 `;
 

@@ -12,14 +12,15 @@ const BodyTextStyle = css`
 	color: ${secondTextColor};
 `;
 
+export const Container = styled.div`
+	width: 95%;
+	max-width: 400px;
+	padding: 2% 0;
+`;
+
 export const StyledBody = styled.span`
 	width: 100%;
 	${BodyTextStyle};
-
-	/* Special case */
-	@media screen and (min-width: 510px) and (max-width: 833px) {
-		padding: 2% 0;
-	}
 `;
 
 export const ContactMeButton = styled.span`
@@ -46,5 +47,5 @@ export const ContactMeButton = styled.span`
 
 export const StrongText = styled.span`
 	font-weight: bold;
-	color:${thirdTextColor}
+	color: ${thirdTextColor};
 `;

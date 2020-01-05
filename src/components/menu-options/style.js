@@ -30,7 +30,9 @@ export const ListContainer = styled.ul`
 	position: absolute;
 	width: 300px;
 	z-index: 3; /* One level above of the menu dropdown page */
-
+	* {
+		list-style-type: none;
+	}
 	/* Laptop  screen  */
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
 		top: 74px;
@@ -54,6 +56,7 @@ export const Item = styled.li`
 	}
 	* {
 		color: inherit;
+		text-decoration: none;
 	}
 `;
 
