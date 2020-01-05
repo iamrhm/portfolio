@@ -7,7 +7,7 @@ import {
 
 const BodyTextStyle = css`
 	font-size: 14px;
-	line-height: 26px;
+	line-height: 22px;
 	color: ${secondTextColor};
 	font-weight: 300;
 `;
@@ -59,6 +59,7 @@ export const StyledPara = styled.p`
 	width: 100%;
 	${BodyTextStyle};
 	margin: 4% 0;
+	max-width: 420px;
 `;
 
 export const Row = styled.div`
@@ -69,13 +70,12 @@ export const Row = styled.div`
 
 export const StyledTag = styled.span`
 	width: 100%;
-	font-size: 18px;
+	font-size: 14px;
 	color: ${secondTextColor};
 	font-weight: bold;
 	color: #08fdd8;
-	/* padding: 0 8px; */
 	* {
 		color: inherit;
-		text-decoration:none;
+		text-decoration: none;
 	}
 `;

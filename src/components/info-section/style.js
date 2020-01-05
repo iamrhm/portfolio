@@ -43,6 +43,10 @@ export const ContactMeButton = styled.span`
 	:focus :active {
 		outline: none;
 	}
+	* {
+		text-decoration: none;
+		color: inherit;
+	};
 `;
 
 export const StrongText = styled.span`

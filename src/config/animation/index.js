@@ -21,6 +21,17 @@ export const letterAnimation = {
 	delay: (el, i) => 1200 + 45 * (i + 1)
 };
 
+export const HEADERAnimation = [
+	{
+		translateX: [20, 0],
+		translateZ: 0,
+		opacity: [0, 1],
+		easing: "easeOutExpo",
+		duration: 1200,
+		delay: (el, i) => 500 + 30 * i
+	}
+];
+
 export const iconAnimation = {
 	scale: [0.3, 1],
 	opacity: [0, 1],
@@ -32,7 +43,14 @@ export const iconAnimation = {
 export const textAnimation = {
 	easing: "easeInOutQuad",
 	opacity: [0, 1],
-	translateY: ["8px", 0],
+	duration: 800,
+	loop: false,
+	delay: 1300
+};
+
+export const bulbAnimation = {
+	easing: "easeInOutQuad",
+	opacity: [0, 1],
 	duration: 800,
 	loop: false,
 	delay: 1300

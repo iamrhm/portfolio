@@ -10,14 +10,19 @@ import {
 } from "./style";
 
 import SocialInfoSection from "../social-info-section";
+import Animate from '../animate-wrapper'
+import { HEADERAnimation, bulbAnimation } from "../../config/animation";
 
 function DefaultPage() {
 	return (
 		<React.Fragment>
 			<Container>
 				<Heading>
+				<Animate animeProps={HEADERAnimation}>
 					<HeaderText>Work in Progress</HeaderText>
+				</Animate>
 				</Heading>
+				<Animate animeProps={bulbAnimation}>
 				<InfoSection>
 					<StyledPara>Thanks for your interest,</StyledPara>
 					<StyledPara>
@@ -41,6 +46,7 @@ function DefaultPage() {
 					{"       "}
 					for inspiration and major design idea help.
 				</StyledPara>
+				</Animate>
 			</Container>
 		</React.Fragment>
 	);
