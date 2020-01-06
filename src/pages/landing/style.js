@@ -24,7 +24,7 @@ export const Container = styled.div`
 	justify-content: left;
 	align-items: flex-start;
 	overflow: hidden;
-	top: 160px;
+	top: 164px;
 	* {
 		overflow: hidden;
 	}
@@ -37,5 +37,5 @@ export const TitleContainer = styled.div`
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	padding: 2% 0;
+	padding: 10px 0;
 `;

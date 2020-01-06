@@ -2,7 +2,7 @@ export const firstTextColor = "#D3D3D3";
 export const secondTextColor = "#A7A7A7";
 export const thirdTextColor = "#FFF";
 
-export const TileColor = "#5A5A5A";
+export const TileColor = "#00000052";
 
 export const contactMeButton = "#1d1d1d";
 

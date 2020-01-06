@@ -15,7 +15,6 @@ const BodyTextStyle = css`
 export const Container = styled.div`
 	width: 95%;
 	max-width: 400px;
-	padding: 2% 0;
 `;
 
 export const StyledBody = styled.span`
@@ -46,7 +45,7 @@ export const ContactMeButton = styled.span`
 	* {
 		text-decoration: none;
 		color: inherit;
-	};
+	}
 `;
 
 export const StrongText = styled.span`

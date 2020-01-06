@@ -10,7 +10,7 @@ import {
 } from "./style";
 
 import SocialInfoSection from "../social-info-section";
-import Animate from '../animate-wrapper'
+import Animate from "../animate-wrapper";
 import { HEADERAnimation, bulbAnimation } from "../../config/animation";
 
 function DefaultPage() {
@@ -18,34 +18,33 @@ function DefaultPage() {
 		<React.Fragment>
 			<Container>
 				<Heading>
-				<Animate animeProps={HEADERAnimation}>
-					<HeaderText>Work in Progress</HeaderText>
-				</Animate>
+					<Animate animeProps={HEADERAnimation}>
+						<HeaderText>Work in Progress</HeaderText>
+					</Animate>
 				</Heading>
 				<Animate animeProps={bulbAnimation}>
-				<InfoSection>
-					<StyledPara>Thanks for your interest,</StyledPara>
+					<InfoSection>
+						<StyledPara>
+							Thanks for your interest, come back once the page is ready.
+							Meanwhile you can also get connected with me,
+						</StyledPara>
+					</InfoSection>
+					<Row>
+						<SocialInfoSection />
+					</Row>
 					<StyledPara>
-						Come back once the page is ready. Mean while you can also get
-						connected with me,
+						If you have ideas and looking for developer designer, send a note,{"        "}
+						<StyledTag>rahulmitra980@gmail.com</StyledTag>
 					</StyledPara>
-				</InfoSection>
-				<Row>
-					<SocialInfoSection />
-				</Row>
-				<StyledPara>
-					If you have ideas and looking for developer designer, send a note,
-				</StyledPara>
-				<StyledTag>rahulmitra980@gmail.com</StyledTag>
-				<StyledPara>
-					This site is designed from different design ideas from dribble and a
-					great thanks to{"        "}
-					<StyledTag>
-						<a href="https://jacekjeznach.com/">Jack</a>
-					</StyledTag>
-					{"       "}
-					for inspiration and major design idea help.
-				</StyledPara>
+					<StyledPara>
+						This site is designed from different design ideas from dribble and a
+						great thanks to{"        "}
+						<StyledTag>
+							<a href="https://jacekjeznach.com/">Jack</a>
+						</StyledTag>
+						{"       "}
+						for inspiration and major design idea help.
+					</StyledPara>
 				</Animate>
 			</Container>
 		</React.Fragment>

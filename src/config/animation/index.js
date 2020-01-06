@@ -10,8 +10,8 @@ export const svgAnimation = {
 export const R_TEXT_Animation = {
 	easing: "easeInOutExpo",
 	opacity: [0, 1],
-	duration: 3000,
-	delay: 3600
+	duration: 1000,
+	delay: 3200
 };
 
 export const letterAnimation = {
@@ -28,7 +28,7 @@ export const HEADERAnimation = [
 		opacity: [0, 1],
 		easing: "easeOutExpo",
 		duration: 1200,
-		delay: (el, i) => 500 + 30 * i
+		delay: 1200
 	}
 ];
 

@@ -58,7 +58,7 @@ export const InfoSection = styled.div`
 export const StyledPara = styled.p`
 	width: 100%;
 	${BodyTextStyle};
-	margin: 4% 0;
+	margin: 12px 0;
 	max-width: 420px;
 `;
 

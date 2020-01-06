@@ -23,6 +23,22 @@ export const GlobalStyle = createGlobalStyle`
       outline: 0;
       outline: none;
       }
+
+    ::-webkit-scrollbar
+    {
+      width: 2px;  /* for vertical scrollbars */
+      height: 2px; /* for horizontal scrollbars */
+    }
+
+    ::-webkit-scrollbar-track
+    {
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    ::-webkit-scrollbar-thumb
+    {
+      background: rgba(0, 0, 0, 0.5);
+    }
   }
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -50,5 +66,5 @@ export const RoutesContainer = styled.div`
 	height: 80%;
 	min-height: 480px;
 	min-width: 340px;
-	top: 64px;
+	top: 72px;
 `;

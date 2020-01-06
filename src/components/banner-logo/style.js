@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { thirdTextColor,firstTextColor } from "../../config/color-platte";
+import { thirdTextColor, firstTextColor } from "../../config/color-platte";
 
 export const BannerContainer = styled.div`
 	position: relative;
@@ -9,9 +9,13 @@ export const BannerContainer = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	@media screen and (min-width: 990px) {
+		width: 486px;
+    height: 110px;
+	}
 `;
 
-export const StyledSvg = styled.svg`
+export const StyledSvgSmall = styled.svg`
 	width: 100%;
 	height: 100%;
 	text-align: left;
@@ -24,6 +28,28 @@ export const StyledSvg = styled.svg`
 	& :nth-child(7) {
 		fill: ${thirdTextColor};
 		stroke: none;
+	}
+	@media screen and (min-width: 990px) {
+		display: none;
+	}
+`;
+
+export const StyledSvgLarge = styled.svg`
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	display: none;
+	* {
+		fill: none;
+	}
+	& :nth-child(7) {
+		fill: ${thirdTextColor};
+		stroke: none;
+	}
+
+	@media screen and (min-width: 990px) {
+		display: flex;
+		justify-content: center;
 	}
 `;
 
