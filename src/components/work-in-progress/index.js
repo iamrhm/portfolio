@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
 	Container,
 	Heading,
@@ -8,12 +8,13 @@ import {
 	Row,
 	StyledTag
 } from "./style";
-
+import { PortfolioContext } from "../../context";
 import SocialInfoSection from "../social-info-section";
 import Animate from "../animate-wrapper";
 import { HEADERAnimation, bulbAnimation } from "../../config/animation";
 
 function DefaultPage() {
+	const { defaultPageData } = useContext(PortfolioContext);
 	return (
 		<React.Fragment>
 			<Container>
@@ -24,26 +25,26 @@ function DefaultPage() {
 				</Heading>
 				<Animate animeProps={bulbAnimation}>
 					<InfoSection>
-						<StyledPara>
-							Thanks for your interest, come back once the page is ready.
-							Meanwhile you can also get connected with me,
-						</StyledPara>
+						<StyledPara>{defaultPageData.firstText}</StyledPara>
 					</InfoSection>
 					<Row>
 						<SocialInfoSection />
 					</Row>
 					<StyledPara>
-						If you have ideas and looking for developer designer, send a note,{"        "}
-						<StyledTag>rahulmitra980@gmail.com</StyledTag>
+						{defaultPageData.secondText}
+						{"        "}
+						<StyledTag>{defaultPageData.myEmail}</StyledTag>
 					</StyledPara>
 					<StyledPara>
-						This site is designed from different design ideas from dribble and a
-						great thanks to{"        "}
+						{defaultPageData.thirdText}
+						{"        "}
 						<StyledTag>
-							<a href="https://jacekjeznach.com/">Jack</a>
+							<a href="https://jacekjeznach.com/">
+								{defaultPageData.inspiration}
+							</a>
 						</StyledTag>
 						{"       "}
-						for inspiration and major design idea help.
+						{defaultPageData.fourthText}
 					</StyledPara>
 				</Animate>
 			</Container>

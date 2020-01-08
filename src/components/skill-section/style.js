@@ -1,12 +1,8 @@
 import styled from "styled-components";
-import {
-	TileColor,
-	thirdTextColor,
-	firstTextColor
-} from "../../config/color-platte";
+import { thirdTextColor } from "../../config/color-platte";
 
 export const Container = styled.div`
-	width: 75%;
+	width: 85%;
 	min-width: 300px;
 	position: relative;
 	display: flex;
@@ -27,8 +23,6 @@ export const Item = styled.div`
 	flex-direction: column;
 	margin: 2% 0;
 	margin-right: 10px;
-
-	background: ${TileColor};
 	padding: 0 2%;
 	z-index: 1;
 	* {

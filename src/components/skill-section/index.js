@@ -1,18 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, Item, Title, LogoContainer } from "./style";
 import { getLogo } from "../../assets/logos";
+import { PortfolioContext } from "../../context";
 
 function SkillSection() {
-	const Skills = [
-		"JavaScript",
-		"React",
-		"Redux",
-		"NodeJS",
-		"MongoDB",
-		"TypeScript",
-		"HTML",
-		"CSS"
-	];
+	const { skill } = useContext(PortfolioContext);
+	const Skills = skill.knownTechnologies;
 	return (
 		<Container>
 			{Skills.map((skill, index) => (

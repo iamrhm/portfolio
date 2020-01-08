@@ -17,7 +17,6 @@ const iconPack = {
 	typescriptIcon: typescriptIcon,
 	javascriptIcon: javascriptIcon,
 	htmlIcon: htmlIcon,
-	htmlIcon: htmlIcon,
 	cssIcon: cssIcon
 };
 export function getLogo(iconName) {

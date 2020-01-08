@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { PortfolioContext } from "../../context";
 import {
 	Container,
 	Heading,
@@ -9,16 +11,15 @@ import {
 	TimelineHeader,
 	TimelineImageFrame
 } from "./style";
-import AvatorScreen from "../../components/background-screens/avator-background";
 
 import TimelineImage from "../../assets/images/timeline.png";
 import Animate from "../../components/animate-wrapper";
 import { HEADERAnimation, bulbAnimation } from "../../config/animation";
 
 function AboutPage() {
+	const { about } = useContext(PortfolioContext);
 	return (
 		<React.Fragment>
-			<AvatorScreen />
 			<Container>
 				<Heading>
 					<Animate animeProps={HEADERAnimation}>
@@ -27,19 +28,9 @@ function AboutPage() {
 				</Heading>
 				<Animate animeProps={bulbAnimation}>
 					<InfoSection>
-						<StyledPara>
-							Currently working as a full time front end developer in Cognizant
-							Technology Solution.
-						</StyledPara>
-						<StyledPara>
-							A design-based web developer who like to make Web a beautiful
-							place. An ambitious guy, highly interested in Physics and also fan
-							of TV series and ancient histories.
-						</StyledPara>
-						<StyledPara>
-							Interested in the entire frontend spectrum and working on
-							different projects.
-						</StyledPara>
+						<StyledPara>{about.firstText}</StyledPara>
+						<StyledPara>{about.secondText}</StyledPara>
+						<StyledPara>{about.thirdText} </StyledPara>
 					</InfoSection>
 					<TimelineSection>
 						<TimelineHeader>Timeline</TimelineHeader>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
 	Container,
 	Card,
@@ -10,19 +10,11 @@ import {
 	Details
 } from "./style";
 
+import { PortfolioContext } from "../../context";
+
 function ExperienceSection() {
-	const Experiences = [
-		{
-			clientDetails: "Norway based Insurance Project",
-			company_timeline: "Cognizant 2018 March - 2019 Nov",
-			project_details: "Worked on React, Redux, TypeScript"
-		},
-		{
-			clientDetails: "USA based Retail Project",
-			company_timeline: "Cognizant 2019 Dec - Working",
-			project_details: "Worked on JS, GraphQl, JQuery"
-		}
-	];
+	const { skill } = useContext(PortfolioContext);
+	const Experiences = skill.experience;
 	return (
 		<React.Fragment>
 			<Container>

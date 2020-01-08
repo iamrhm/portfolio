@@ -1,25 +1,34 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { Title, StyledPara, StyledTextSpan, BlankSpan } from "./style";
 
 import Animate from "../animate-wrapper";
 import { letterAnimation } from "../../config/animation";
+import { PortfolioContext } from "../../context";
 
-const TitleSection = ({}) => {
-	const textHi = Array.prototype.map.call(`Hi,`, (char, index) => (
-		<StyledTextSpan key={index}>
-			{char !== " " ? char : <BlankSpan />}
-		</StyledTextSpan>
-	));
+const TitleSection = () => {
+	const { home } = useContext(PortfolioContext);
 
-	const textImRahul = Array.prototype.map.call(`I'm Rahul,`, (char, index) => (
-		<StyledTextSpan key={index}>
-			{char !== " " ? char : <BlankSpan />}
-		</StyledTextSpan>
-	));
+	const textHi = Array.prototype.map.call(
+		home.introText.firstText,
+		(char, index) => (
+			<StyledTextSpan key={index}>
+				{char !== " " ? char : <BlankSpan />}
+			</StyledTextSpan>
+		)
+	);
+
+	const textImRahul = Array.prototype.map.call(
+		home.introText.secondText,
+		(char, index) => (
+			<StyledTextSpan key={index}>
+				{char !== " " ? char : <BlankSpan />}
+			</StyledTextSpan>
+		)
+	);
 
 	const textAWebDeveloper = Array.prototype.map.call(
-		`a Web Developer.`,
+		home.introText.thirdText,
 		(char, index) => (
 			<StyledTextSpan key={index}>
 				{char !== " " ? char : <BlankSpan />}

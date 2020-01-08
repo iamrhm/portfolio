@@ -14,7 +14,6 @@ import Animate from "../animate-wrapper";
 import { Link } from "react-router-dom";
 
 import { getHarmonicDelay, getProgressiveDelay } from "../../config/animation";
-import MenuTextScreen from "../background-screens/menu-text";
 
 const MenuOptions = ({ isActive, activeAnimation, onClick }) => {
 	const options = [
@@ -22,7 +21,7 @@ const MenuOptions = ({ isActive, activeAnimation, onClick }) => {
 		{ name: "About", path: "/about" },
 		{ name: "My Work", path: "/work-on-progress" },
 		{ name: "Skills", path: "/skill" },
-		{ name: "Contact", path: "/work-on-progress" }
+		{ name: "Contact", path: "/contact-me" }
 	];
 
 	const list = options.map((option, index) => {
@@ -52,7 +51,6 @@ const MenuOptions = ({ isActive, activeAnimation, onClick }) => {
 
 	return (
 		<Container>
-			<MenuTextScreen isActive={isActive} activeAnimation={activeAnimation} />
 			<ListContainer>{list}</ListContainer>
 		</Container>
 	);

@@ -11,7 +11,7 @@ export const R_TEXT_Animation = {
 	easing: "easeInOutExpo",
 	opacity: [0, 1],
 	duration: 1000,
-	delay: 3200
+	delay: 3400
 };
 
 export const letterAnimation = {

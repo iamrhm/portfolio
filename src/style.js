@@ -1,9 +1,8 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { primaryBackgroundColor } from "./config/color-platte";
 
 export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Ibarra+Real+Nova|Lora|Muli|Nanum+Gothic|Noto+Sans|Open+Sans|Roboto+Slab|Source+Sans+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Heebo:900&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Asap:700|Bungee+Shade|Days+One|Dosis:800|Fredoka+One|Raleway:800&display=swap');
 *{
     margin: 0;
     border:0;
@@ -52,15 +51,10 @@ export const WrapperContainer = styled.div`
 	padding: 0 6%;
 	position: relative;
 	z-index: 1; /* First Elevation From Background */
+	background: ${primaryBackgroundColor};
 `;
 
-export const Background = styled.div`
-	position: absolute;
-	width: 100vw;
-	height: 100vh;
-`;
-
-export const RoutesContainer = styled.div`
+export const PageContainer = styled.div`
 	position: relative;
 	width: 100%;
 	height: 80%;

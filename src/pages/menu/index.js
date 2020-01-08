@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from "react";
+import React, { useReducer } from "react";
 import { withRouter } from "react-router-dom";
 
 import Header from "../../components/header";
@@ -24,10 +24,11 @@ function reducer(state, action) {
 
 const InitialState = {
 	isActive: false,
-	activeAnimation: {}
+	activeAnimation: {},
+	routeLocation: ""
 };
 
-function MenuPage({ history }) {
+function Menu({ history }) {
 	const [state, dispatch] = useReducer(reducer, InitialState);
 
 	history.listen((location, action) => {
@@ -56,4 +57,4 @@ function MenuPage({ history }) {
 	);
 }
 
-export default withRouter(MenuPage);
+export default withRouter(Menu);

@@ -35,7 +35,7 @@ export const ListContainer = styled.ul`
 	}
 	/* Laptop  screen  */
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
-		top: 74px;
+		top: 84px;
 		left: 50%;
 		transform: translateX(-40%);
 	}

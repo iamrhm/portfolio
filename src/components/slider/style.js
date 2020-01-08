@@ -1,12 +1,14 @@
 import styled from "styled-components";
 import {
 	thirdTextColor,
+	primaryBackgroundColor
 } from "../../config/color-platte";
 
 export const Container = styled.div`
 	position: absolute;
 	width: 100%;
 	height: 1px;
+	background: ${primaryBackgroundColor};
 	z-index: 2; /* One level above of the main page */
 	top: 62px;
 	right: 0;

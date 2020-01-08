@@ -1,9 +1,8 @@
 import styled, { css } from "styled-components";
 import {
-	contactMeButton,
+	ButtonColor,
 	secondTextColor,
-	firstTextColor,
-	thirdTextColor
+	firstTextColor
 } from "../../config/color-platte";
 
 const BodyTextStyle = css`
@@ -35,7 +34,7 @@ export const ContactMeButton = styled.span`
 	align-items: center;
 	align-self: flex-start;
 	${BodyTextStyle};
-	background-color: ${contactMeButton};
+	background-color: ${ButtonColor};
 	color: ${firstTextColor};
 	text-transform: uppercase;
 	border: 1px solid ${firstTextColor};
@@ -46,9 +45,4 @@ export const ContactMeButton = styled.span`
 		text-decoration: none;
 		color: inherit;
 	}
-`;
-
-export const StrongText = styled.span`
-	font-weight: bold;
-	color: ${thirdTextColor};
 `;
