@@ -2,7 +2,7 @@ import React from "react";
 
 import { Container, BannerContainer, TitleContainer } from "./style";
 
-import BannerLogo from "../../components/banner-logo";
+import BannerLogo from "../../components/banner";
 import TitleSection from "../../components/title-section";
 import InfoSection from "../../components/info-section";
 
