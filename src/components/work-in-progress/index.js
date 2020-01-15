@@ -11,19 +11,20 @@ import {
 import { PortfolioContext } from "../../context";
 import SocialInfoSection from "../social-info-section";
 import Animate from "../animate-wrapper";
-import { HEADERAnimation, bulbAnimation } from "../../config/animation";
+import { HEADERAnimation, blinkAnimation } from "../../config/animation";
+import WrapperLoader from "../loader";
 
 function DefaultPage() {
 	const { defaultPageData } = useContext(PortfolioContext);
 	return (
-		<React.Fragment>
+		<WrapperLoader>
 			<Container>
 				<Heading>
 					<Animate animeProps={HEADERAnimation}>
 						<HeaderText>Work in Progress</HeaderText>
 					</Animate>
 				</Heading>
-				<Animate animeProps={bulbAnimation}>
+				<Animate animeProps={blinkAnimation}>
 					<InfoSection>
 						<StyledPara>{defaultPageData.firstText}</StyledPara>
 					</InfoSection>
@@ -48,7 +49,7 @@ function DefaultPage() {
 					</StyledPara>
 				</Animate>
 			</Container>
-		</React.Fragment>
+		</WrapperLoader>
 	);
 }
 

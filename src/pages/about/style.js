@@ -79,3 +79,23 @@ export const TimelineImageFrame = styled.img`
 	max-width: 95%;
 	margin: 12px 0;
 `;
+
+export const BackgroundScreen = styled.div`
+	width: 324px;
+	height: 78px;
+
+	position: absolute;
+	right: 24px;
+	top: 124px;
+	display: none;
+
+	@media screen and (min-width: 980px) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	* {
+		overflow: hidden;
+	}
+`;

@@ -48,11 +48,10 @@ export const textAnimation = {
 	delay: 1300
 };
 
-export const bulbAnimation = {
+export const blinkAnimation = {
 	easing: "easeInOutQuad",
 	opacity: [0, 1],
 	duration: 800,
-	loop: false,
 	delay: 1300
 };
 
@@ -219,4 +218,33 @@ export const menuInitial = {
 	],
 	riseAnimation: {},
 	menuBackground: {}
+};
+
+export const loaderAnimation = {
+	line: {
+		easing: "easeInOutSine",
+		delay: 500,
+		duration: 1000,
+		strokeDashoffset: [anime.setDashoffset, 0]
+	},
+	letter: {
+		easing: "easeInOutExpo",
+		opacity: [0, 1],
+		duration: 1000,
+		delay: 1500
+	}
+};
+
+export const TexTAnimation = {
+	in: {
+		duration: 800,
+		easing: "easeOutElastic",
+		opacity: 1
+	},
+	out: {
+		duration: 800,
+		delay: 500,
+		easing: "easeOutExpo",
+		opacity: 0
+	}
 };

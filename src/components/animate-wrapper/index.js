@@ -5,12 +5,13 @@ class Animate extends React.Component {
 	constructor(props) {
 		super(props);
 		this.targets = [];
-		this.state = {
-			isReplay: false
-		};
+		this.state = {};
 	}
 	componentDidUpdate(prevProps, prevState) {
-		if (!isEqual(prevProps.animeProps, this.props.animeProps)) {
+		if (
+			!isEqual(prevProps.animeProps, this.props.animeProps) ||
+			prevProps.children !== this.props.children
+		) {
 			let animeProps = Array.isArray(this.props.animeProps)
 				? this.props.animeProps
 				: [this.props.animeProps];

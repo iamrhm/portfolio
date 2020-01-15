@@ -50,6 +50,7 @@ export const WrapperContainer = styled.div`
 	height: 100vh;
 	padding: 0 6%;
 	position: relative;
+	overflow: hidden;
 	z-index: 1; /* First Elevation From Background */
 	background: ${primaryBackgroundColor};
 `;

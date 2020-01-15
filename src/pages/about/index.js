@@ -9,24 +9,31 @@ import {
 	HeaderText,
 	TimelineSection,
 	TimelineHeader,
-	TimelineImageFrame
+	TimelineImageFrame,
+	BackgroundScreen
 } from "./style";
 
 import TimelineImage from "../../assets/images/timeline.png";
 import Animate from "../../components/animate-wrapper";
-import { HEADERAnimation, bulbAnimation } from "../../config/animation";
+import { HEADERAnimation, blinkAnimation } from "../../config/animation";
+
+import WrapperLoader from "../../components/loader";
+import TexTAnimationScreen from "../../components/background-screen/text-animation";
 
 function AboutPage() {
 	const { about } = useContext(PortfolioContext);
 	return (
-		<React.Fragment>
+		<WrapperLoader>
+			<BackgroundScreen>
+				<TexTAnimationScreen TexTArray={about.aboutMeArray}/>
+			</BackgroundScreen>
 			<Container>
 				<Heading>
 					<Animate animeProps={HEADERAnimation}>
 						<HeaderText>About me</HeaderText>
 					</Animate>
 				</Heading>
-				<Animate animeProps={bulbAnimation}>
+				<Animate animeProps={blinkAnimation}>
 					<InfoSection>
 						<StyledPara>{about.firstText}</StyledPara>
 						<StyledPara>{about.secondText}</StyledPara>
@@ -38,7 +45,7 @@ function AboutPage() {
 					</TimelineSection>
 				</Animate>
 			</Container>
-		</React.Fragment>
+		</WrapperLoader>
 	);
 }
 

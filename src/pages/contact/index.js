@@ -5,25 +5,27 @@ import { PortfolioContext } from "../../context";
 import { Container, Heading, HeaderText, StyledPara } from "./style";
 
 import Animate from "../../components/animate-wrapper";
-import { HEADERAnimation, bulbAnimation } from "../../config/animation";
+import { HEADERAnimation, blinkAnimation } from "../../config/animation";
 import ContactForm from "../../components/forms/contact-form";
+
+import WrapperLoader from "../../components/loader";
 
 function ContactPage() {
 	const { contact } = useContext(PortfolioContext);
 	return (
-		<React.Fragment>
+		<WrapperLoader>
 			<Container>
 				<Heading>
 					<Animate animeProps={HEADERAnimation}>
 						<HeaderText>Contact me</HeaderText>
 					</Animate>
 				</Heading>
-				<Animate animeProps={bulbAnimation}>
+				<Animate animeProps={blinkAnimation}>
 					<StyledPara>{contact.firstText}</StyledPara>
 				</Animate>
 				<ContactForm />
 			</Container>
-		</React.Fragment>
+		</WrapperLoader>
 	);
 }
 

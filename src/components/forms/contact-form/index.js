@@ -8,6 +8,9 @@ import {
 	RowContainer
 } from "./style";
 
+import Animate from "../../animate-wrapper";
+import {blinkAnimation} from '../../../config/animation'
+
 function reducer(state, { type, payload }) {
 	switch (type) {
 		case "submit-data":
@@ -32,48 +35,50 @@ const ContactForm = () => {
 	const [state, dispatch] = useReducer(reducer, InitialState);
 	return (
 		<form>
-			<InputSection>
-				<RowContainer>
+			<Animate animeProps={blinkAnimation}>
+				<InputSection>
+					<RowContainer>
+						<StyledInput
+							name="name"
+							type="text"
+							value={state.name}
+							onChange={e => dispatch({ type: "edit-form", payload: e.target })}
+							placeholder="Name"
+							size="small"
+						/>
+						<StyledInput
+							name="email"
+							type="email"
+							value={state.email}
+							onChange={e => dispatch({ type: "edit-form", payload: e.target })}
+							size="small"
+							placeholder="Email"
+						/>
+					</RowContainer>
 					<StyledInput
-						name="name"
+						name="subject"
 						type="text"
-						value={state.name}
+						value={state.subject}
 						onChange={e => dispatch({ type: "edit-form", payload: e.target })}
-						placeholder="Name"
-						size="small"
+						placeholder="Subject"
 					/>
-					<StyledInput
-						name="email"
-						type="email"
-						value={state.email}
+					<StyledTextArea
+						name="message"
+						type="text"
+						value={state.message}
 						onChange={e => dispatch({ type: "edit-form", payload: e.target })}
-						size="small"
-						placeholder="Email"
+						placeholder="Message"
 					/>
-				</RowContainer>
-				<StyledInput
-					name="subject"
-					type="text"
-					value={state.subject}
-					onChange={e => dispatch({ type: "edit-form", payload: e.target })}
-					placeholder="Subject"
-				/>
-				<StyledTextArea
-					name="message"
-					type="text"
-					value={state.message}
-					onChange={e => dispatch({ type: "edit-form", payload: e.target })}
-					placeholder="Message"
-				/>
-				<StyledButton
-					onClick={e => {
-						e.preventDefault();
-						dispatch({ type: "submit-data", payload: null });
-					}}
-				>
-					SEND
-				</StyledButton>
-			</InputSection>
+					<StyledButton
+						onClick={e => {
+							e.preventDefault();
+							dispatch({ type: "submit-data", payload: null });
+						}}
+					>
+						SEND
+					</StyledButton>
+				</InputSection>
+			</Animate>
 		</form>
 	);
 };

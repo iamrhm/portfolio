@@ -13,7 +13,8 @@ export const PortfolioData = {
 	about: {
 		firstText: `Currently working as a full time front end developer in Cognizant Technology Solution.`,
 		secondText: `A design-based web developer who like to make Web a beautiful place. An ambitious guy, highly interested in Physics and also fan of TV series and ancient histories.`,
-		thirdText: `Interested in the entire frontend spectrum and working on different projects.`
+		thirdText: `Interested in the entire frontend spectrum and working on different projects.`,
+		aboutMeArray: ["developer", "designer", "coder", "programmer"]
 	},
 	skill: {
 		firstText: `The main area of my expertise is front end development (client side of the web). HTML, CSS, JS (TypeScript), building small and medium web apps with React, redux, animations, and coding interactive layouts.`,
@@ -40,8 +41,8 @@ export const PortfolioData = {
 			}
 		]
 	},
-	contact:{
-		firstText:`I am interested in freelance opportunities – especially ambitious or large projects. However, if you have other request or question, don’t hesitate to contact me using below form either.`
+	contact: {
+		firstText: `I am interested in freelance opportunities – especially ambitious or large projects. However, if you have other request or question, don’t hesitate to contact me using below form either.`
 	},
 	defaultPageData: {
 		firstText: `Thanks for your interest, come back once the page is ready. Meanwhile you can also get connected with me,`,
