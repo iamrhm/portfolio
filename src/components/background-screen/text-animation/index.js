@@ -34,10 +34,8 @@ function reducer(state, action) {
 			} else {
 				return state;
 			}
-			break;
 		default:
 			return state;
-			break;
 	}
 }
 
@@ -102,6 +100,7 @@ function getAnimatedText(displayText) {
 							delay: 500 + index * 50
 						}
 					]}
+					renderOnStateUpdate={true}
 				>
 					<StyledText>{letter}</StyledText>
 				</Animate>

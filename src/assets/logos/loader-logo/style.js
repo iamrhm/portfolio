@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { thirdTextColor, firstTextColor } from "../../../config/color-platte";
+import { firstTextColor } from "../../../config/color-platte";
 
 export const BannerContainer = styled.div`
 	position: relative;

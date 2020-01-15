@@ -1,24 +1,6 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 import { firstTextColor } from "../../../config/color-platte";
-
-const slideUp = keyframes`
-from{
-  transform:translateY(-100%)
-}
-to{
-	transform:translateY(0%)
-}
-`;
-
-const slideDown = keyframes`
-from{
-  transform:translateY(0%)
-}
-to{
-	transform:translateY(100%)
-}
-`;
 
 export const Container = styled.div`
 	width: 324px;

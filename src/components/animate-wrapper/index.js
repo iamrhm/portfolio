@@ -10,7 +10,8 @@ class Animate extends React.Component {
 	componentDidUpdate(prevProps, prevState) {
 		if (
 			!isEqual(prevProps.animeProps, this.props.animeProps) ||
-			prevProps.children !== this.props.children
+			(this.props.renderOnStateUpdate !== undefined &&
+				this.props.renderOnStateUpdate)
 		) {
 			let animeProps = Array.isArray(this.props.animeProps)
 				? this.props.animeProps
