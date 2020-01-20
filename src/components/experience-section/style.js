@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { firstTextColor, secondTextColor } from "../../config/color-platte";
+import { firstTextColor, secondTextColor } from "../../config/style"
 
 export const Container = styled.div`
 	width: 100%;

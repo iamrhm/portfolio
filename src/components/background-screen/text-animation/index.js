@@ -1,13 +1,13 @@
 import React, { useReducer, useEffect } from "react";
 import {
-	Container,
 	StyledText,
 	DisplayTextContainer,
-	StyledAnimatePara
+	StyledAnimatePara,
+	StyledLine
 } from "./style";
 
 import Animate from "../../animate-wrapper";
-import { TexTAnimation } from "../../../config/animation";
+import { TexTAnimation, MoveLine } from "../../../config/animation";
 
 function getRandomTexT(displayTexTArray, currentTexT) {
 	let randomIndex = Math.ceil(Math.random() * displayTexTArray.length - 1);
@@ -39,7 +39,7 @@ function reducer(state, action) {
 	}
 }
 
-const DefaultText = "About Me";
+const DefaultText = "";
 
 const InitialState = {
 	prevTexT: DefaultText,
@@ -62,25 +62,29 @@ const TexTAnimationScreen = ({ TexTArray = [] }) => {
 	});
 
 	return (
-		<Container>
-			<DisplayText {...state} />
-		</Container>
+		<DisplayTextContainer>
+			<Animate
+				animeProps={[
+					{ ...MoveLine.first },
+					{ ...MoveLine.second, translateY: "-1.825em" }
+				]}
+			>
+				<StyledLine />
+			</Animate>
+			{getAnimatedText(state.currentTexT)}
+			<Animate
+				animeProps={[
+					{ ...MoveLine.first },
+					{ ...MoveLine.second, translateY: "1.825em" }
+				]}
+			>
+				<StyledLine />
+			</Animate>
+		</DisplayTextContainer>
 	);
 };
 
 export default TexTAnimationScreen;
-
-const DisplayText = ({ currentTexT }) => {
-	return (
-		<React.Fragment>
-			<DisplayTextContainer>
-				<StyledText>{`<`}</StyledText>
-				{getAnimatedText(currentTexT)}
-				<StyledText>{`>`}</StyledText>
-			</DisplayTextContainer>
-		</React.Fragment>
-	);
-};
 
 function getAnimatedText(displayText) {
 	return (

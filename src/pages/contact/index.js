@@ -8,12 +8,9 @@ import Animate from "../../components/animate-wrapper";
 import { HEADERAnimation, blinkAnimation } from "../../config/animation";
 import ContactForm from "../../components/forms/contact-form";
 
-import WrapperLoader from "../../components/loader";
-
 function ContactPage() {
 	const { contact } = useContext(PortfolioContext);
 	return (
-		<WrapperLoader>
 			<Container>
 				<Heading>
 					<Animate animeProps={HEADERAnimation}>
@@ -25,7 +22,6 @@ function ContactPage() {
 				</Animate>
 				<ContactForm />
 			</Container>
-		</WrapperLoader>
 	);
 }
 

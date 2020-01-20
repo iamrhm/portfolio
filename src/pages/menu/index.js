@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 
 import Header from "../../components/header";
@@ -10,22 +10,28 @@ function reducer(state, action) {
 		case "toggle-menu":
 			return {
 				isActive: !state.isActive,
-				activeAnimation: !state.isActive ? menuOpen : menuClose
+				currentAnimation: !state.isActive ? menuOpen : menuClose,
+				applyMask: state.isActive
 			};
 		case "load-menu":
 			return {
 				isActive: false,
-				activeAnimation: menuInitial
+				currentAnimation: menuInitial
 			};
+		case "toggle-mask":
+			return { ...state, applyMask: !state.applyMask && !state.isActive };
+		case "display-none":
+			return { ...state, isActive: false };
 		default:
-			return { isActive: false, activeAnimation: {} };
+			return { isActive: false, currentAnimation: {} };
 	}
 }
 
 const InitialState = {
 	isActive: false,
-	activeAnimation: {},
-	routeLocation: ""
+	currentAnimation: {},
+	routeLocation: "",
+	applyMask: false
 };
 
 function Menu({ history }) {
@@ -34,24 +40,28 @@ function Menu({ history }) {
 	history.listen((location, action) => {
 		dispatch({ type: "load-menu" });
 	});
-
+	
 	return (
 		<React.Fragment>
 			<Header
 				isActive={state.isActive}
-				activeAnimation={state.activeAnimation}
+				currentAnimation={state.currentAnimation}
 				onClick={e => {
 					e.preventDefault();
 					dispatch({ type: "toggle-menu" });
 				}}
+				toggleMask={() => dispatch({ type: "toggle-mask" })}
+				applyMask={state.applyMask}
 			/>
 			<Slider
 				isActive={state.isActive}
-				activeAnimation={state.activeAnimation}
+				currentAnimation={state.currentAnimation}
 				onClick={e => {
 					e.preventDefault();
 					dispatch({ type: "toggle-menu" });
 				}}
+				toggleMask={() => dispatch({ type: "toggle-mask" })}
+				applyMask={state.applyMask}
 			/>
 		</React.Fragment>
 	);

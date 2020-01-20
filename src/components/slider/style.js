@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import {
 	thirdTextColor,
-	primaryBackgroundColor
-} from "../../config/color-platte";
+	primaryBackgroundColor,
+	HoverMaskEffect
+} from "../../config/style";
 
 export const Container = styled.div`
 	position: absolute;
@@ -39,6 +40,7 @@ export const Line = styled.span`
 	background: ${thirdTextColor};
 	cursor: pointer;
 	z-index: 2; /* One level above of the main page */
+	${props => (props.applyMask ? HoverMaskEffect : "")}
 `;
 
 export const MenuContainer = styled.div`

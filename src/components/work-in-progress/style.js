@@ -3,7 +3,7 @@ import {
 	thirdTextColor,
 	firstTextColor,
 	secondTextColor
-} from "../../config/color-platte";
+} from "../../config/style";
 
 const BodyTextStyle = css`
 	font-size: 14px;
@@ -45,6 +45,12 @@ export const HeaderText = styled.span`
 	${HeadingTextStyle};
 	width: 100%;
 	word-wrap: break-word;
+
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-o-user-select: none;
 `;
 
 export const InfoSection = styled.div`
@@ -60,6 +66,12 @@ export const StyledPara = styled.p`
 	${BodyTextStyle};
 	margin: 12px 0;
 	max-width: 420px;
+
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-o-user-select: none;
 `;
 
 export const Row = styled.div`
@@ -78,4 +90,10 @@ export const StyledTag = styled.span`
 		color: inherit;
 		text-decoration: none;
 	}
+
+	-moz-user-select: text;
+	-webkit-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+	-o-user-select: text;
 `;

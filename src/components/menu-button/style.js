@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { thirdTextColor } from "../../config/color-platte";
+import { thirdTextColor, HoverMaskEffect } from "../../config/style";
 
 export const IconWrapper = styled.div`
 	width: 24px;
@@ -18,13 +18,15 @@ export const IconWrapper = styled.div`
 	:focus {
 		outline: none;
 		outline: 0;
-		border:  0;
+		border: 0;
 	}
-	:active{
+	:active {
 		outline: none;
 		outline: 0;
-		border:  0;
+		border: 0;
 	}
+
+	${props => (props.applyMask ? HoverMaskEffect : "")}
 `;
 
 export const Line = styled.span`

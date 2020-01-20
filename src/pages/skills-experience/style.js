@@ -3,7 +3,7 @@ import {
 	thirdTextColor,
 	firstTextColor,
 	secondTextColor
-} from "../../config/color-platte";
+} from "../../config/style"
 
 const BodyTextStyle = css`
 	font-size: 14px;

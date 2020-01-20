@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
-import { primaryBackgroundColor } from "./config/color-platte";
+import { primaryBackgroundColor } from "./config/style"
 
 export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Ibarra+Real+Nova|Lora|Muli|Nanum+Gothic|Noto+Sans|Open+Sans|Roboto+Slab|Source+Sans+Pro&display=swap');
@@ -25,8 +25,8 @@ export const GlobalStyle = createGlobalStyle`
 
     ::-webkit-scrollbar
     {
-      width: 2px;  /* for vertical scrollbars */
-      height: 2px; /* for horizontal scrollbars */
+      width: 0.1px;  /* for vertical scrollbars */
+      height: 0.1px; /* for horizontal scrollbars */
     }
 
     ::-webkit-scrollbar-track
@@ -50,7 +50,7 @@ export const WrapperContainer = styled.div`
 	height: 100vh;
 	padding: 0 6%;
 	position: relative;
-	overflow: hidden;
+	/* overflow: hidden; */ /* Major fix */
 	z-index: 1; /* First Elevation From Background */
 	background: ${primaryBackgroundColor};
 `;

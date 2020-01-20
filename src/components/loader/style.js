@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { firstTextColor } from "../../config/color-platte";
+import { firstTextColor } from "../../config/style"
 
 export const LoaderContainer = styled.div`
 	width: 100%;

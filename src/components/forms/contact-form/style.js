@@ -4,7 +4,9 @@ import {
 	firstTextColor,
 	ButtonColor,
 	InputBoxColor
-} from "../../../config/color-platte";
+} from "../../../config/style";
+
+import { PressEffect } from "../../../config/style";
 
 export const InputSection = styled.div`
 	width: 95%;
@@ -63,4 +65,8 @@ export const StyledButton = styled.button`
 	cursor: pointer;
 
 	margin-top: 6px;
+
+	:active {
+		${PressEffect}
+	}
 `;

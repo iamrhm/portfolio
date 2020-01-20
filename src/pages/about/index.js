@@ -17,13 +17,12 @@ import TimelineImage from "../../assets/images/timeline.png";
 import Animate from "../../components/animate-wrapper";
 import { HEADERAnimation, blinkAnimation } from "../../config/animation";
 
-import WrapperLoader from "../../components/loader";
 import TexTAnimationScreen from "../../components/background-screen/text-animation";
 
 function AboutPage() {
 	const { about } = useContext(PortfolioContext);
 	return (
-		<WrapperLoader>
+		<React.Fragment>
 			<BackgroundScreen>
 				<TexTAnimationScreen TexTArray={about.aboutMeArray}/>
 			</BackgroundScreen>
@@ -37,7 +36,6 @@ function AboutPage() {
 					<InfoSection>
 						<StyledPara>{about.firstText}</StyledPara>
 						<StyledPara>{about.secondText}</StyledPara>
-						<StyledPara>{about.thirdText} </StyledPara>
 					</InfoSection>
 					<TimelineSection>
 						<TimelineHeader>Timeline</TimelineHeader>
@@ -45,7 +43,7 @@ function AboutPage() {
 					</TimelineSection>
 				</Animate>
 			</Container>
-		</WrapperLoader>
+		</React.Fragment>
 	);
 }
 

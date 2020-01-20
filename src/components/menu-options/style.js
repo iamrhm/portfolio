@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { thirdTextColor } from "../../config/color-platte";
+import { thirdTextColor } from "../../config/style";
 
 export const Container = styled.div`
 	width: 100%;
@@ -16,6 +16,13 @@ export const Container = styled.div`
 	}
 	* {
 		overflow: hidden;
+	}
+	* {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-o-user-select: none;
 	}
 `;
 

@@ -3,7 +3,9 @@ import {
 	ButtonColor,
 	secondTextColor,
 	firstTextColor
-} from "../../config/color-platte";
+} from "../../config/style";
+
+import { PressEffect } from "../../config/style";
 
 const BodyTextStyle = css`
 	font-size: 14px;
@@ -14,6 +16,14 @@ const BodyTextStyle = css`
 export const Container = styled.div`
 	width: 95%;
 	max-width: 400px;
+
+	* {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-o-user-select: none;
+	}
 `;
 
 export const StyledBody = styled.span`
@@ -21,7 +31,7 @@ export const StyledBody = styled.span`
 	${BodyTextStyle};
 `;
 
-export const ContactMeButton = styled.span`
+export const ContactMeButton = styled.button`
 	width: 164px;
 	height: 54px;
 	padding: 4% 0;
@@ -38,11 +48,16 @@ export const ContactMeButton = styled.span`
 	color: ${firstTextColor};
 	text-transform: uppercase;
 	border: 1px solid ${firstTextColor};
+	cursor: pointer;
 	:focus :active {
 		outline: none;
+		cursor: pointer;
 	}
 	* {
 		text-decoration: none;
 		color: inherit;
+	}
+	:active {
+		${PressEffect}
 	}
 `;

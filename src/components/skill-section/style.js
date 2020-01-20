@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import { thirdTextColor } from "../../config/color-platte";
+import {
+	thirdTextColor,
+	firstTextColor,
+	secondTextColor
+} from "../../config/style";
 
 export const Container = styled.div`
 	width: 85%;
@@ -11,20 +15,27 @@ export const Container = styled.div`
 	flex-wrap: wrap;
 	padding: 4% 0%;
 	padding-right: 4%;
+
+	* {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-o-user-select: none;
+	}
 `;
 
 export const Item = styled.div`
 	width: 72px;
 	height: 72px;
-	justify-content: center;
-	align-items: center;
-	border-radius: 8px;
 	display: flex;
 	flex-direction: column;
-	margin: 2% 0;
+	justify-content: center;
+	align-items: center;
+
+	margin: 5px 0;
 	margin-right: 10px;
 	padding: 0 2%;
-	z-index: 1;
 	* {
 		overflow: hidden;
 	}
@@ -35,15 +46,14 @@ export const Title = styled.span`
 	height: 18px;
 	text-align: center;
 	font-size: 12px;
-	color: ${thirdTextColor};
-	padding: 4%;
+	color: ${secondTextColor};
+	padding: 3px 1px;
 `;
 
 export const LogoContainer = styled.span`
 	width: 24px;
 	height: 24px;
-	margin: 3px;
-	font-size: 18px;
+	margin: 5px;
 	display: flex;
 	justify-content: center;
 	align-items: center;

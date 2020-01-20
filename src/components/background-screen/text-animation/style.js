@@ -1,26 +1,12 @@
 import styled from "styled-components";
 
-import { firstTextColor } from "../../../config/color-platte";
-
-export const Container = styled.div`
-	width: 324px;
-	height: 78px;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	position: relative;
-
-	* {
-		overflow: hidden;
-	}
-`;
+import { secondTextColor } from "../../../config/style"
 
 export const DisplayTextContainer = styled.span`
 	width: 100%;
-	height: 32px;
-	position: absolute;
+	height: 100%;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 `;
@@ -33,8 +19,20 @@ export const StyledAnimatePara = styled.span`
 `;
 
 export const StyledText = styled.span`
-	font-size: 24px;
+	font-size: 28px;
 	padding: 0 1%;
-	text-transform: lowercase;
-	color: ${firstTextColor};
+	text-transform: uppercase;
+	color: ${secondTextColor};
+`;
+
+export const StyledLine = styled.span`
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	height: 1px;
+	width: 100%;
+	background-color: ${secondTextColor};
+	transform-origin: 0.5 0;
 `;

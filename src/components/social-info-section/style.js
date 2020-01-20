@@ -4,7 +4,7 @@ import { Linkedin } from "styled-icons/feather/Linkedin";
 import { Instagram } from "styled-icons/boxicons-logos/Instagram";
 import { Github } from "styled-icons/feather/Github";
 
-import { firstTextColor } from "../../config/color-platte";
+import { firstTextColor } from "../../config/style"
 export const StyledIconButton = styled.span`
 	width: 24px;
 	height: 24px;

@@ -3,7 +3,7 @@ import {
 	thirdTextColor,
 	firstTextColor,
 	secondTextColor
-} from "../../config/color-platte";
+} from "../../config/style";
 
 const BodyTextStyle = css`
 	font-size: 14px;
@@ -37,6 +37,13 @@ export const Heading = styled.div`
 	justify-content: flex-start;
 	align-items: center;
 	margin: 12px 0;
+	* {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-o-user-select: none;
+	}
 `;
 
 export const HeaderText = styled.span`
@@ -59,4 +66,10 @@ export const StyledPara = styled.p`
 	max-width: 420px;
 	min-height: 78px;
 	text-align: left;
+
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-o-user-select: none;
 `;

@@ -1,19 +1,23 @@
-//External Logos
 import React from "react";
-import { Icon } from "@iconify/react";
-import reduxIcon from "@iconify/icons-logos/redux";
-import reactIcon from "@iconify/icons-logos/react";
-import nodejsIcon from "@iconify/icons-logos/nodejs-icon";
-import mongodbIcon from "@iconify/icons-whh/mongodb";
-import typescriptIcon from "@iconify/icons-logos/typescript-icon";
-import javascriptIcon from "@iconify/icons-logos/javascript";
-import htmlIcon from "@iconify/icons-logos/html-5";
-import cssIcon from "@iconify/icons-logos/css-3";
+import styled from "styled-components";
 
-//Internal Logos
+import reduxIcon from "./skills-logo/redux.svg";
+import reactIcon from "./skills-logo/react.svg";
+import nodejsIcon from "./skills-logo/nodejs.svg";
+import mongodbIcon from "./skills-logo/mongodb.svg";
+import typescriptIcon from "./skills-logo/typescript.svg";
+import javascriptIcon from "./skills-logo/javascript.svg";
+import htmlIcon from "./skills-logo/html.svg";
+import cssIcon from "./skills-logo/css.svg";
+import graphqlIcon from "./skills-logo/graphql.svg";
 import LoaderLogo from "./loader-logo";
 
-const externalIconPack = {
+const StyledIconImage = styled.img`
+	width: 24px;
+	height: 24px;
+	display: block;
+`;
+const skillsIcon = {
 	reduxIcon: reduxIcon,
 	reactIcon: reactIcon,
 	nodejsIcon: nodejsIcon,
@@ -21,15 +25,16 @@ const externalIconPack = {
 	typescriptIcon: typescriptIcon,
 	javascriptIcon: javascriptIcon,
 	htmlIcon: htmlIcon,
-	cssIcon: cssIcon
+	cssIcon: cssIcon,
+	graphqlIcon: graphqlIcon
 };
-
-
 
 export function getSkillLogo(iconName) {
 	let icon =
-		typeof iconName === "string" ? `${iconName.toLowerCase()}Icon` : null;
-	return <Icon icon={externalIconPack[`${icon}`]} />;
+		typeof iconName === "string"
+			? skillsIcon[`${iconName.toLowerCase()}Icon`]
+			: null;
+	return <StyledIconImage src={icon} alt={iconName} />;
 }
 
 export function getCustomLogo(logoName) {

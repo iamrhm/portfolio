@@ -4,18 +4,18 @@ import { Container, SlideLineContainer, Line } from "./style";
 import MenuOptions from "../menu-options";
 import Animate from "../animate-wrapper";
 
-function Slider({ isActive, activeAnimation, onClick }) {
+function Slider({ isActive, currentAnimation, onClick, applyMask }) {
 	return (
-		<Animate animeProps={activeAnimation.slider}>
+		<Animate animeProps={currentAnimation.slider}>
 			<Container>
 				<SlideLineContainer>
-					<Animate animeProps={activeAnimation.bottomLine}>
-						<Line onClick={onClick} />
+					<Animate animeProps={currentAnimation.bottomLine}>
+						<Line onClick={onClick} applyMask={applyMask} />
 					</Animate>
 				</SlideLineContainer>
 				<MenuOptions
 					isActive={isActive}
-					activeAnimation={activeAnimation}
+					currentAnimation={currentAnimation}
 					onClick={onClick}
 				/>
 			</Container>

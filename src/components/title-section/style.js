@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { firstTextColor } from "../../config/color-platte";
+import { firstTextColor } from "../../config/style";
 
 const IntroTextStyle = css`
 	font-size: 38px;
@@ -19,6 +19,14 @@ export const Title = styled.div`
 
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
 		justify-content: center;
+	}
+
+	* {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-o-user-select: none;
 	}
 `;
 

@@ -26,7 +26,8 @@ export const PortfolioData = {
 			"MongoDB",
 			"TypeScript",
 			"HTML",
-			"CSS"
+			"CSS",
+			"GraphQl"
 		],
 		experience: [
 			{

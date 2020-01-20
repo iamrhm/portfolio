@@ -8,7 +8,7 @@ export const svgAnimation = {
 };
 
 export const R_TEXT_Animation = {
-	easing: "easeInOutExpo",
+	easing: "easeInBounce",
 	opacity: [0, 1],
 	duration: 1000,
 	delay: 3400
@@ -23,12 +23,11 @@ export const letterAnimation = {
 
 export const HEADERAnimation = [
 	{
-		translateX: [20, 0],
-		translateZ: 0,
+		scale: [0.92, 1],
 		opacity: [0, 1],
-		easing: "easeOutExpo",
-		duration: 1200,
-		delay: 1200
+		easing: "easeOutCubic",
+		duration: 800,
+		delay: 500
 	}
 ];
 
@@ -52,7 +51,7 @@ export const blinkAnimation = {
 	easing: "easeInOutQuad",
 	opacity: [0, 1],
 	duration: 800,
-	delay: 1300
+	delay: 500
 };
 
 export function getHarmonicDelay(
@@ -248,3 +247,23 @@ export const TexTAnimation = {
 		opacity: 0
 	}
 };
+
+export const MoveLine = {
+	first: {
+		opacity: [0.5, 1],
+		scaleX: [0, 1],
+		easing: "easeInOutExpo",
+		delay: 2000,
+		duration: 700
+	},
+	second: {
+		duration: 600,
+		easing: "easeOutExpo"
+	}
+};
+
+export function delayRoute(route, history, delay) {
+	setTimeout(() => {
+		history.push(route);
+	}, delay);
+}

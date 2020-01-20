@@ -3,7 +3,7 @@ import {
 	thirdTextColor,
 	firstTextColor,
 	secondTextColor
-} from "../../config/color-platte";
+} from "../../config/style";
 
 const BodyTextStyle = css`
 	font-size: 14px;
@@ -29,6 +29,14 @@ export const Container = styled.div`
 
 	overflow-x: hidden;
 	overflow-y: auto;
+
+	* {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-o-user-select: none;
+	}
 `;
 
 export const Heading = styled.div`
@@ -81,12 +89,11 @@ export const TimelineImageFrame = styled.img`
 `;
 
 export const BackgroundScreen = styled.div`
-	width: 324px;
-	height: 78px;
-
+	width: 300px;
+	height: 64px;
 	position: absolute;
-	right: 24px;
-	top: 124px;
+	right: 54px;
+	top: 108px;
 	display: none;
 
 	@media screen and (min-width: 980px) {
