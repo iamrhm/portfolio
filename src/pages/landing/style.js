@@ -45,7 +45,7 @@ export const TitleContainer = styled.div`
 	position: relative;
 
 	--maskX: 0;
-	--maskY: 50;
+	--maskY: 0;
 `;
 
 export const WrapperClone = styled.div`

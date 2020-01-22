@@ -18,8 +18,8 @@ function App() {
 			<WrapperContainer>
 				<GlobalStyle />
 				<Router>
-					<MenuPage /> {/* Header all page visible*/}
 					<WrapperLoader>
+						<MenuPage /> {/* Header all page visible*/}
 						<PageContainer>
 							<Route exact path="/" component={LandingPage} />
 							<Route exact path="/about" component={AboutPage} />

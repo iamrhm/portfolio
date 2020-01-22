@@ -29,18 +29,18 @@ function reducer(state, action) {
 
 const InitialState = {
 	isActive: false,
-	currentAnimation: {},
+	currentAnimation: menuInitial,
 	routeLocation: "",
 	applyMask: false
 };
 
-function Menu({ history }) {
+function Menu() {
 	const [state, dispatch] = useReducer(reducer, InitialState);
 
-	history.listen((location, action) => {
+	useEffect(() => {
 		dispatch({ type: "load-menu" });
-	});
-	
+	}, []);
+
 	return (
 		<React.Fragment>
 			<Header
@@ -67,4 +67,4 @@ function Menu({ history }) {
 	);
 }
 
-export default withRouter(Menu);
+export default Menu;

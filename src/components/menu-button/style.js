@@ -35,4 +35,7 @@ export const Line = styled.span`
 	background: ${thirdTextColor};
 	margin: 3px 0px;
 	cursor: pointer;
+
+	/* to stop initial menu show  */
+	opacity: 0;
 `;

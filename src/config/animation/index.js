@@ -205,8 +205,8 @@ export const menuInitial = {
 		DefaultMenuInitial.secondStep,
 		{
 			width: ["0%", "0px", "16px"],
-			delay: 200,
-			duration: 1000,
+			delay: 300,
+			duration: 800,
 			easing: "easeOutExpo"
 		}
 	],

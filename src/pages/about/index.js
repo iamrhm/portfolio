@@ -36,6 +36,7 @@ function AboutPage() {
 					<InfoSection>
 						<StyledPara>{about.firstText}</StyledPara>
 						<StyledPara>{about.secondText}</StyledPara>
+						<StyledPara>{about.thirdText}</StyledPara>
 					</InfoSection>
 					<TimelineSection>
 						<TimelineHeader>Timeline</TimelineHeader>

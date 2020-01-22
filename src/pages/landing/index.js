@@ -47,7 +47,6 @@ const LandingPage = () => {
 	}
 
 	function _onTouchMove(e) {
-		//e.preventDefault();
 		const width = inputEl.current.clientWidth;
 		const height = inputEl.current.clientHeight;
 
@@ -55,9 +54,6 @@ const LandingPage = () => {
 		let oY = Math.floor((e.touches[0].clientY / height) * 100);
 
 		oY = oY > 100 ? oY % 70 : oY;
-
-		console.log("X", oX);
-		console.log("Y", oY);
 
 		dispatch({
 			type: "update-coordinate",
