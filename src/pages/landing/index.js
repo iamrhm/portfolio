@@ -15,17 +15,22 @@ import InfoSection from "../../components/info-section";
 
 const LandingPage = () => {
 	return (
-		<Container>
-			<WrapperIntro>
-				<TitleContainer>
-					<TitleSection />
-				</TitleContainer>
-				<InfoSection />
-			</WrapperIntro>
-			<ScrollDown>
-				<Line />
-			</ScrollDown>
-		</Container>
+		<React.Fragment>
+			{/* <BannerContainer>
+				<BannerLogo />
+			</BannerContainer> */}
+			<Container>
+				<WrapperIntro>
+					<TitleContainer>
+						<TitleSection />
+					</TitleContainer>
+					<InfoSection />
+				</WrapperIntro>
+				<ScrollDown>
+					<Line />
+				</ScrollDown>
+			</Container>
+		</React.Fragment>
 	);
 };
 

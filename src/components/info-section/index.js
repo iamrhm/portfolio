@@ -18,7 +18,6 @@ const InfoSection = ({ history }) => {
 	const { home } = useContext(PortfolioContext);
 	return (
 		<Container>
-			{/* <RubberLine /> */}
 			<RubberLine>
 				<Line />
 			</RubberLine>
