@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {
-	thirdTextColor,
 	firstTextColor,
 	HoverMaskEffect
 } from "../../config/style";
@@ -52,7 +51,7 @@ export const MobileBanner = styled(MobileSvg)`
 export const MobileRLogo = styled(MobileSvg)`
 	position: absolute;
 	* {
-		fill: ${thirdTextColor} !important;
+		fill: ${firstTextColor} !important;
 		stroke: none !important;
 	}
 `;
@@ -64,7 +63,7 @@ export const DesktopBanner = styled(DesktopSvg)`
 export const DesktopRLogo = styled(DesktopSvg)`
 	position: absolute;
 	* {
-		fill: ${thirdTextColor} !important;
+		fill: ${firstTextColor} !important;
 		stroke: none !important;
 	}
 `;

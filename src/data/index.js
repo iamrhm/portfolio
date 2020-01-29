@@ -3,10 +3,11 @@ export const PortfolioData = {
 		introText: {
 			firstText: "Hi,",
 			secondText: `I'm Rahul,`,
-			thirdText: `a Web Developer`
+			thirdText: `Web Developer`
 		},
 		briefText: {
-			firstText: `Front End Developer, specialized in MERN stack. If your are looking for a front end developer or web designer, get in touch`
+			firstText: `India based`,
+			secondText: ` front-end developer`
 		},
 		buttonText: `CONTACT ME`
 	},

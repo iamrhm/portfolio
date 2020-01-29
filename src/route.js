@@ -18,16 +18,16 @@ function App() {
 			<WrapperContainer>
 				<GlobalStyle />
 				<Router>
-					<WrapperLoader>
-						<MenuPage /> {/* Header all page visible*/}
-						<PageContainer>
-							<Route exact path="/" component={LandingPage} />
-							<Route exact path="/about" component={AboutPage} />
-							<Route exact path="/skill" component={SkillsAndExperience} />
-							<Route exact path="/contact-me" component={ContactPage} />
-							<Route exact path="/work-on-progress" component={DefaultPage} />
-						</PageContainer>
-					</WrapperLoader>
+					{/* <WrapperLoader> */}
+					<MenuPage /> {/*Header all page visible*/}
+					<PageContainer>
+						<Route exact path="/" component={LandingPage} />
+						<Route exact path="/about" component={AboutPage} />
+						<Route exact path="/skill" component={SkillsAndExperience} />
+						<Route exact path="/contact-me" component={ContactPage} />
+						<Route exact path="/work-on-progress" component={DefaultPage} />
+					</PageContainer>
+					{/* </WrapperLoader> */}
 				</Router>
 			</WrapperContainer>
 		</React.Fragment>

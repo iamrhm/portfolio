@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { thirdTextColor } from "../../config/style";
+import { firstTextColor } from "../../config/style";
 
 export const Container = styled.div`
 	width: 100%;
@@ -82,7 +82,7 @@ export const OptionItem = styled.div`
 				display: block;
 				width: 5px;
 				height: 5px;
-				background: ${thirdTextColor};
+				background: ${firstTextColor};
 				top: 0;
 				left: 0;
 				transform: translate(-10px, 12px) rotate(45deg) scale(1);
@@ -96,7 +96,7 @@ export const OptionItem = styled.div`
 `;
 
 export const OptionIndex = styled.div`
-	color: ${thirdTextColor};
+	color: ${firstTextColor};
 	font-size: 14px;
 	font-weight: bold;
 	transform: rotate(-90deg);
@@ -113,7 +113,7 @@ export const OptionIndex = styled.div`
 		display: block;
 		width: 5px;
 		height: 5px;
-		background: ${thirdTextColor};
+		background: ${firstTextColor};
 		top: 0;
 		left: 0;
 
@@ -123,7 +123,7 @@ export const OptionIndex = styled.div`
 `;
 
 export const RubberLine = styled.span`
-	background: ${thirdTextColor};
+	background: ${firstTextColor};
 
 	left: 104px;
 	top: 50%;
@@ -138,7 +138,7 @@ export const RubberLine = styled.span`
 `;
 
 export const OptionTitle = styled.div`
-	color: ${thirdTextColor};
+	color: ${firstTextColor};
 	font-size: 28px;
 	font-weight: bold;
 

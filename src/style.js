@@ -1,8 +1,12 @@
 import styled, { createGlobalStyle } from "styled-components";
-import { primaryBackgroundColor } from "./config/style"
+import { primaryBackgroundColor } from "./config/style";
 
 export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans|Ibarra+Real+Nova|Lora|Muli|Nanum+Gothic|Noto+Sans|Open+Sans|Roboto+Slab|Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap&subset=cyrillic-ext');
+html, body, #root{
+  height:100%;
+}
 *{
     margin: 0;
     border:0;
@@ -13,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     padding:0;
     outline:hidden;
     outline: 0;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing:border-box;
@@ -47,7 +51,7 @@ export const GlobalStyle = createGlobalStyle`
 
 export const WrapperContainer = styled.div`
 	width: 100vw;
-	height: 100vh;
+	height: 100%;
 	padding: 0 6%;
 	position: relative;
 	/* overflow: hidden; */ /* Major fix */
@@ -58,8 +62,8 @@ export const WrapperContainer = styled.div`
 export const PageContainer = styled.div`
 	position: relative;
 	width: 100%;
-	height: 80%;
-	min-height: 480px;
-	min-width: 340px;
-	top: 72px;
+	height: 100%;
+	/* min-height: 480px;
+	min-width: 340px; */
+	/* top: 72px; */
 `;

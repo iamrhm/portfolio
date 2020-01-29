@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {
-	thirdTextColor,
 	firstTextColor,
 	secondTextColor
 } from "../../config/style";

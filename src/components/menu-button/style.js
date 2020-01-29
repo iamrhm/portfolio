@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { thirdTextColor, HoverMaskEffect } from "../../config/style";
+import { firstTextColor, HoverMaskEffect } from "../../config/style";
 
 export const IconWrapper = styled.div`
 	width: 24px;
@@ -32,7 +32,7 @@ export const IconWrapper = styled.div`
 export const Line = styled.span`
 	width: 22px;
 	height: 1px;
-	background: ${thirdTextColor};
+	background: ${firstTextColor};
 	margin: 3px 0px;
 	cursor: pointer;
 
