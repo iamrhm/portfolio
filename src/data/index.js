@@ -6,7 +6,8 @@ export const PortfolioData = {
 			thirdText: `Web Developer`
 		},
 		briefText: {
-			firstText: `Specialized in MERN stack`,
+			firstText: `India based`,
+			secondText: ` front-end developer`
 		},
 		buttonText: `CONTACT ME`
 	},

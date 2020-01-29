@@ -14,10 +14,11 @@ const BodyTextStyle = css`
 `;
 
 export const Container = styled.div`
-	width: 100%;
+	width: 274px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
+	align-self: flex-end;
 	justify-content: flex-start;
 	margin-top: 10px;
 	* {
@@ -29,20 +30,36 @@ export const Container = styled.div`
 	}
 	@media only screen and (min-device-width: 767px) {
 		margin-top: 0px;
+		width: 100%;
 	}
 `;
 
-export const StyledBody = styled.span`
+export const InfoContainer = styled.div`
+	width: 65%;
 	${BodyTextStyle};
 	text-align: right;
 `;
 
+export const StyledPara = styled.p`
+	white-space: normal;
+	text-align: right;
+`;
+export const StyledSpan = styled.span`
+	${BodyTextStyle};
+	text-align: right;
+	white-space: nowrap;
+`;
+
 export const RubberLine = styled.div`
 	position: relative;
-	width: 124px;
+	width: 76px;
 	height: 10px;
 	background-color: transparent;
 	pointer-events: visiblePainted;
+
+	@media only screen and (min-device-width: 767px) {
+		width: 110px;
+	}
 `;
 
 export const Line = styled.div`

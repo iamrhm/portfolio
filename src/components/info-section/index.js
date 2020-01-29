@@ -1,6 +1,13 @@
 import React, { useContext } from "react";
 
-import { StyledBody, Container, RubberLine, Line } from "./style";
+import {
+	StyledSpan,
+	Container,
+	RubberLine,
+	Line,
+	InfoContainer,
+	StyledPara
+} from "./style";
 import { withRouter } from "react-router-dom";
 
 import Animate from "../animate-wrapper";
@@ -16,7 +23,12 @@ const InfoSection = ({ history }) => {
 				<Line />
 			</RubberLine>
 			<Animate animeProps={textAnimation}>
-				<StyledBody>{home.briefText.firstText}</StyledBody>
+				<InfoContainer>
+					<StyledPara>
+						{home.briefText.firstText}
+						<StyledSpan>{home.briefText.secondText}</StyledSpan>
+					</StyledPara>
+				</InfoContainer>
 			</Animate>
 		</Container>
 	);
