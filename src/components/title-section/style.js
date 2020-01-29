@@ -2,9 +2,13 @@ import styled, { css } from "styled-components";
 import { firstTextColor } from "../../config/style";
 
 const IntroTextStyle = css`
-	font-size: 38px;
+	font-size: 42px;
 	font-weight: bold;
 	color: ${firstTextColor};
+	text-transform: uppercase;
+	@media screen and (min-width: 834px) {
+		font-size: 64px;
+	}
 `;
 
 export const Title = styled.div`
@@ -38,6 +42,7 @@ export const StyledPara = styled.h1`
 export const StyledTextSpan = styled.span`
 	display: inline-block;
 	${IntroTextStyle};
+	padding-right: 1px;
 `;
 
 export const BlankSpan = styled.span`

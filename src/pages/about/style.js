@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import {
-	thirdTextColor,
 	firstTextColor,
 	secondTextColor
 } from "../../config/style";
@@ -49,7 +48,7 @@ export const Heading = styled.div`
 `;
 
 export const HeaderText = styled.span`
-	color: ${thirdTextColor};
+	color: ${firstTextColor};
 	${HeadingTextStyle};
 `;
 
@@ -79,7 +78,7 @@ export const TimelineSection = styled.div`
 export const TimelineHeader = styled.span`
 	${BodyTextStyle};
 	font-size: 18px;
-	color: ${thirdTextColor};
+	color: ${firstTextColor};
 	text-transform: uppercase;
 `;
 

@@ -52,3 +52,51 @@ const TitleSection = () => {
 };
 
 export default TitleSection;
+
+// const TextAnimation = ({ message }) => {
+//   const textArray = Array.prototype.map.call(message, function(char) {
+//     if (char === "") return " ";
+//     return char;
+//   });
+
+//   const randomIndex = Math.floor(Math.random() * (textArray.length - 2) + 1);
+
+//   for (let i = 0; i < textArray.length; i++) {
+//     if (randomIndex + i === randomIndex || randomIndex - i === randomIndex) {
+//       textArray[randomIndex + i] = (
+//         <AnimeWrapper animeProps={AnimationStyle.active} key={randomIndex}>
+//           <StyledChar> {textArray[randomIndex + i]} </StyledChar>
+//         </AnimeWrapper>
+//       );
+//     } else {
+//       if (randomIndex + i < textArray.length) {
+//         textArray[randomIndex + i] = (
+//           <AnimeWrapper
+//             animeProps={{
+//               ...AnimationStyle.right,
+//               delay: 800 + Math.abs(i) * 100
+//             }}
+//             key={randomIndex + i}
+//           >
+//             <StyledChar>{textArray[randomIndex + i]}</StyledChar>
+//           </AnimeWrapper>
+//         );
+//       }
+//       if (randomIndex - i > -1) {
+//         textArray[randomIndex - i] = (
+//           <AnimeWrapper
+//             animeProps={{
+//               ...AnimationStyle.left,
+//               delay: 800 + Math.abs(i) * 100
+//             }}
+//             key={randomIndex - i}
+//           >
+//             <StyledChar>{textArray[randomIndex - i]}</StyledChar>
+//           </AnimeWrapper>
+//         );
+//       }
+//     }
+//   }
+
+//   return <CharContainer>{textArray}</CharContainer>;
+// };

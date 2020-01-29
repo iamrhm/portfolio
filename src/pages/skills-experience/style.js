@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 import {
-	thirdTextColor,
 	firstTextColor,
 	secondTextColor
 } from "../../config/style"
@@ -40,7 +39,7 @@ export const Heading = styled.div`
 `;
 
 export const HeadingText = styled.span`
-	color: ${thirdTextColor};
+	color: ${firstTextColor};
 	${HeadingTextStyle};
 	word-wrap: break-word;
 	width: 100%;
@@ -63,6 +62,6 @@ export const StyledPara = styled.p`
 export const Header = styled.span`
 	${BodyTextStyle};
 	font-size: 18px;
-	color: ${thirdTextColor};
+	color: ${firstTextColor};
 	text-transform: uppercase;
 `;

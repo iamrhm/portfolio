@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import {
-	thirdTextColor,
 	firstTextColor,
 	ButtonColor,
 	InputBoxColor
@@ -28,7 +27,7 @@ export const StyledInput = styled.input`
 	border: 0;
 	height: 50px;
 	font-size: 16px;
-	color: ${thirdTextColor};
+	color: ${firstTextColor};
 	padding: 0 20px;
 	box-sizing: border-box;
 	background-color: ${InputBoxColor};
@@ -39,7 +38,7 @@ export const StyledTextArea = styled.textarea`
 	border: 0;
 	height: 50px;
 	font-size: 16px;
-	color: ${thirdTextColor};
+	color: ${firstTextColor};
 	padding: 20px;
 	box-sizing: border-box;
 	min-height: 150px;

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {
-	thirdTextColor,
+	firstTextColor,
 	primaryBackgroundColor,
 	HoverMaskEffect
 } from "../../config/style";
@@ -37,7 +37,7 @@ export const SlideLineContainer = styled.div`
 export const Line = styled.span`
 	width: 16px;
 	height: 1px;
-	background: ${thirdTextColor};
+	background: ${firstTextColor};
 	cursor: pointer;
 	z-index: 2; /* One level above of the main page */
 	${props => (props.applyMask ? HoverMaskEffect : "")}
@@ -47,5 +47,5 @@ export const MenuContainer = styled.div`
 	position: relative;
 	width: 100%;
 	height: 100%;
-	border-bottom: 1px solid ${thirdTextColor};
+	border-bottom: 1px solid ${firstTextColor};
 `;
