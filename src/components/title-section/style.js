@@ -1,15 +1,4 @@
-import styled, { css } from "styled-components";
-import { firstTextColor } from "../../config/style";
-
-const IntroTextStyle = css`
-	font-size: 42px;
-	font-weight: bold;
-	color: ${firstTextColor};
-	text-transform: uppercase;
-	@media screen and (min-width: 834px) {
-		font-size: 64px;
-	}
-`;
+import styled from "styled-components";
 
 export const Title = styled.div`
 	width: 100%;
@@ -17,36 +6,7 @@ export const Title = styled.div`
 	font-weight: 800;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: space-around;
+	align-items: flex-start;
+	justify-content: flex-start;
 	position: relative;
-
-	@media screen and (min-width: 834px) and (max-width: 1600px) {
-		justify-content: center;
-	}
-
-	* {
-		-moz-user-select: none;
-		-webkit-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-		-o-user-select: none;
-	}
-`;
-
-export const StyledPara = styled.h1`
-	width: 100%;
-	${IntroTextStyle};
-`;
-
-export const StyledTextSpan = styled.span`
-	display: inline-block;
-	${IntroTextStyle};
-	padding-right: 1px;
-`;
-
-export const BlankSpan = styled.span`
-	display: inline-block;
-	${IntroTextStyle};
-	width: 5px;
 `;

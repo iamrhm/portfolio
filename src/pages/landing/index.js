@@ -1,43 +1,46 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import {
 	Container,
-	BannerContainer,
 	TitleContainer,
 	WrapperIntro,
 	ScrollDown,
-	Line
+	Line,
+	InfoSection,
+	InfoContainer,
+	StyledPara,
+	StyledSpan
 } from "./style";
 
-import BannerLogo from "../../components/banner";
 import TitleSection from "../../components/title-section";
-import InfoSection from "../../components/info-section";
+import Animate from "../../components/animate-wrapper";
+import { PortfolioContext } from "../../context";
+import { riseUp } from "../../config/animation";
 
 const LandingPage = () => {
+	const { home } = useContext(PortfolioContext);
 	return (
-		<React.Fragment>
-			{/* <BannerContainer>
-				<BannerLogo />
-			</BannerContainer> */}
-			<Container>
-				<WrapperIntro>
-					<TitleContainer>
-						<TitleSection />
-					</TitleContainer>
-					<InfoSection />
-				</WrapperIntro>
-				<ScrollDown>
-					<Line />
-				</ScrollDown>
-			</Container>
-		</React.Fragment>
+		<Container>
+			<WrapperIntro>
+				<TitleContainer>
+					<TitleSection />
+				</TitleContainer>
+				<InfoSection>
+					<Animate animeProps={riseUp}>
+						<InfoContainer>
+							<StyledPara>
+								{home.briefText.firstText}
+								<StyledSpan>{home.briefText.secondText}</StyledSpan>
+							</StyledPara>
+						</InfoContainer>
+					</Animate>
+				</InfoSection>
+			</WrapperIntro>
+			<ScrollDown>
+				<Line />
+			</ScrollDown>
+		</Container>
 	);
 };
 
 export default LandingPage;
-
-{
-	/* <BannerContainer>
-				<BannerLogo />
-			</BannerContainer> */
-}

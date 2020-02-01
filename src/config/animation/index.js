@@ -267,3 +267,58 @@ export function delayRoute(route, history, delay) {
 		history.push(route);
 	}, delay);
 }
+
+export const TextAnimationStyle = {
+	active: {
+		opacity: [0, 1],
+		translateY: ['100px', 0],
+		delay: 1000,
+		duration: 1000,
+		easing: "easeInOutExpo"
+	},
+	left: {
+		opacity: [0, 1],
+		translateX: ["10px", 0],
+		duration: 500
+	},
+	right: {
+		opacity: [0, 1],
+		translateX: ["-10px", 0],
+		duration: 500
+	},
+	slideUp: [
+		{
+			opacity: [0, 1],
+			translateY: [100, 0],
+			delay: 2000,
+			duration: 1000,
+			easing: "easeInOutExpo"
+		},
+		{
+			translateX: [0, -4],
+			duration: 200,
+			easing: "easeInOutExpo"
+		}
+	],
+	slideDown: [
+		{
+			opacity: [0, 1],
+			translateY: [-100, 0],
+			delay: 2000,
+			duration: 1000,
+			easing: "easeInOutExpo"
+		},
+		{
+			translateX: [0, -4],
+			duration: 200,
+			easing: "easeInOutExpo"
+		}
+	]
+};
+
+export const riseUp = {
+	translateY: [100, 0],
+	delay: 2800,
+	duration: 1000,
+	easing: "easeOutExpo"
+};

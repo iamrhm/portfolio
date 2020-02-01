@@ -1,10 +1,5 @@
 export const PortfolioData = {
 	home: {
-		introText: {
-			firstText: "Hi,",
-			secondText: `I'm Rahul,`,
-			thirdText: `Web Developer`
-		},
 		briefText: {
 			firstText: `India based`,
 			secondText: ` front-end developer`

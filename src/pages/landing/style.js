@@ -1,22 +1,13 @@
-import styled from "styled-components";
-import { MaskTitleColor, firstTextColor } from "../../config/style";
+import styled, { css } from "styled-components";
+import { firstTextColor, RiseUpEffect } from "../../config/style";
 
-export const BannerContainer = styled.div`
-	width: 100%;
-	position: absolute;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	top: 64px;
-
-	/* Laptop  screen  */
-	@media screen and (min-width: 834px) {
-		width: 55%;
-		justify-content: flex-end;
-		align-items: flex-start;
-		top: 142px;
-		right: 0;
-	}
+const BodyTextStyle = css`
+	font-size: 12px;
+	color: ${firstTextColor};
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	white-space: normal;
+	font-weight: bold;
 `;
 
 export const Container = styled.div`
@@ -44,7 +35,7 @@ export const WrapperIntro = styled.div`
 	transform: translateY(-30%);
 
 	@media only screen and (min-device-width: 767px) {
-		width: 512px;
+		width: 600px;
 		transform: translateY(-50%);
 	}
 `;
@@ -52,8 +43,47 @@ export const WrapperIntro = styled.div`
 export const TitleContainer = styled.div`
 	display: flex;
 	justify-content: flex-start;
-	padding: 10px 0;
 	position: relative;
+`;
+
+export const InfoSection = styled.div`
+	width: 184px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	align-self: flex-end;
+	justify-content: flex-start;
+
+	margin-top: 8px;
+
+	* {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-o-user-select: none;
+	}
+	@media only screen and (min-device-width: 767px) {
+		width: 100%;
+		margin-right: 17px;
+	}
+`;
+
+export const InfoContainer = styled.div`
+	width: 65%;
+	${BodyTextStyle};
+	text-align: right;
+`;
+
+export const StyledPara = styled.p`
+	white-space: normal;
+	text-align: right;
+`;
+
+export const StyledSpan = styled.span`
+	${BodyTextStyle};
+	text-align: right;
+	white-space: nowrap;
 `;
 
 export const ScrollDown = styled.div`
@@ -65,8 +95,6 @@ export const ScrollDown = styled.div`
 	cursor: pointer;
 	background-color: transparent;
 	pointer-events: visiblePainted;
-	transform-origin: 0 0;
-	transform: translate3d(-50%, 0, 0) scaleY(1);
 `;
 
 export const Line = styled.div`
@@ -86,5 +114,7 @@ export const Line = styled.div`
 		width: 100%;
 		height: 100%;
 		background-color: ${firstTextColor};
+		transform: scaleY(0);
+		${RiseUpEffect}
 	}
 `;
