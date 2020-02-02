@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	top: 0;
 	right: 0;

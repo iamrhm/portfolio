@@ -6,7 +6,7 @@ import {
 } from "../../config/style";
 
 export const Container = styled.div`
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	height: 1px;
 	background: ${primaryBackgroundColor};
