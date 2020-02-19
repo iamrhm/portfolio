@@ -52,18 +52,15 @@ html, body, #root{
 export const WrapperContainer = styled.div`
 	width: 100vw;
 	height: 100%;
-	padding: 0 6%;
 	position: relative;
-	/* overflow: hidden; */ /* Major fix */
-	z-index: 1; /* First Elevation From Background */
-	background: ${primaryBackgroundColor};
+	/* background: ${primaryBackgroundColor}; */
 `;
 
 export const PageContainer = styled.div`
 	position: relative;
 	width: 100%;
 	height: 100%;
+	padding: 0 6%;
 	/* min-height: 480px;
 	min-width: 340px; */
-	/* top: 72px; */
 `;

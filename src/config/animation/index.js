@@ -41,10 +41,10 @@ export const iconAnimation = {
 
 export const textAnimation = {
 	easing: "easeInOutQuad",
-	opacity: [0, 1],
+	translateY: [40, 0],
 	duration: 800,
 	loop: false,
-	delay: 1300
+	delay: 1000
 };
 
 export const blinkAnimation = {
@@ -91,9 +91,15 @@ export const menuOpen = {
 		duration: 400,
 		easing: "easeOutExpo"
 	},
+	backgroundScreen: {
+		height: ["0%", "100%"],
+		delay: 300,
+		duration: 200,
+		easing: "easeOutExpo"
+	},
 	slider: {
-		height: ["1px", window.innerHeight < 640 ? "712px" : window.innerHeight],
-		delay: 400,
+		height: ["62px", window.innerHeight < 640 ? "712px" : window.innerHeight],
+		delay: 600,
 		duration: 600,
 		easing: "easeOutExpo"
 	},
@@ -134,8 +140,14 @@ export const menuClose = {
 		duration: 400,
 		easing: "easeInOutQuad"
 	},
+	backgroundScreen: {
+		height: ["100%", "0%"],
+		delay: 800,
+		duration: 200,
+		easing: "easeOutExpo"
+	},
 	slider: {
-		height: [window.innerHeight < 480 ? "520px" : window.innerHeight, "1px"],
+		height: [window.innerHeight < 480 ? "520px" : window.innerHeight, "62px"],
 		delay: 100,
 		duration: 500,
 		easing: "linear"
@@ -267,3 +279,58 @@ export function delayRoute(route, history, delay) {
 		history.push(route);
 	}, delay);
 }
+
+export const TextAnimationStyle = {
+	active: {
+		opacity: [0, 1],
+		translateY: ["100px", 0],
+		delay: 1000,
+		duration: 1000,
+		easing: "easeInOutExpo"
+	},
+	left: {
+		opacity: [0, 1],
+		translateX: ["10px", 0],
+		duration: 500
+	},
+	right: {
+		opacity: [0, 1],
+		translateX: ["-10px", 0],
+		duration: 500
+	},
+	slideUp: [
+		{
+			opacity: [0, 1],
+			translateY: [100, 0],
+			delay: 2000,
+			duration: 1000,
+			easing: "easeInOutExpo"
+		},
+		{
+			translateX: [0, -4],
+			duration: 200,
+			easing: "easeInOutExpo"
+		}
+	],
+	slideDown: [
+		{
+			opacity: [0, 1],
+			translateY: [-100, 0],
+			delay: 2000,
+			duration: 1000,
+			easing: "easeInOutExpo"
+		},
+		{
+			translateX: [0, -4],
+			duration: 200,
+			easing: "easeInOutExpo"
+		}
+	]
+};
+
+export const riseUp = {
+	translateY: [100, 0],
+	delay: 2800,
+	duration: 1000,
+	easing: "easeOutExpo"
+};

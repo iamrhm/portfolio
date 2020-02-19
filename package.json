@@ -15,6 +15,7 @@
 		"react-router-dom": "^5.1.2",
 		"react-scripts": "3.2.0",
 		"react-transition-group": "^4.3.0",
+		"snapsvg-cjs": "^0.0.6",
 		"styled-components": "^4.4.1",
 		"styled-icons": "^9.0.1"
 	},

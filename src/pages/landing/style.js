@@ -1,59 +1,52 @@
 import styled from "styled-components";
-import { MaskTitleColor, firstTextColor } from "../../config/style";
+import {
+	primaryBackgroundColor,
+	firstTextColor,
+	RiseUpEffect
+} from "../../config/style";
 
-export const BannerContainer = styled.div`
+export const BackgroundScreenWrapper = styled.div`
 	width: 100%;
+	height: 100%;
 	position: absolute;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	top: 64px;
-
-	/* Laptop  screen  */
-	@media screen and (min-width: 834px) {
-		width: 55%;
-		justify-content: flex-end;
-		align-items: flex-start;
-		top: 142px;
-		right: 0;
-	}
+	left: 0;
+	background: ${primaryBackgroundColor};
 `;
 
 export const Container = styled.div`
 	width: 100%;
 	height: 100%;
-	position: absolute;
 	display: flex;
+	position: relative;
 	flex-direction: column;
 	justify-content: left;
 	align-items: flex-start;
-
+	z-index: 1; /*above background overlay*/
 	* {
 		overflow: hidden;
 	}
 `;
 
-export const WrapperIntro = styled.div`
+export const TitleSection = styled.div`
 	width: 100%;
-	height: 300px;
-	display: flex;
-	justify-content: flex-start;
-	flex-direction: column;
+	height: 25%;
 	position: relative;
-	top: 50%;
-	transform: translateY(-30%);
+	display: flex;
+	flex-direction: column;
+	top: 25%;
+	transform: translateY(50%);
 
 	@media only screen and (min-device-width: 767px) {
-		width: 512px;
-		transform: translateY(-50%);
+		width: 60%;
+		height: 50%;
+		top: 0%;
+		transform: translateY(60%);
 	}
 `;
 
-export const TitleContainer = styled.div`
-	display: flex;
-	justify-content: flex-start;
-	padding: 10px 0;
-	position: relative;
+export const StyledSVG = styled.div`
+	width: 100%;
+	height: 80%;
 `;
 
 export const ScrollDown = styled.div`
@@ -86,5 +79,7 @@ export const Line = styled.div`
 		width: 100%;
 		height: 100%;
 		background-color: ${firstTextColor};
+		transform: scaleY(0);
+		${RiseUpEffect}
 	}
 `;

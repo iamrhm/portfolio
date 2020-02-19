@@ -1,6 +1,11 @@
 import React from "react";
 
-import { Container, SlideLineContainer, Line } from "./style";
+import {
+	Container,
+	SlideLineContainer,
+	Line,
+	BackgroundScreenWrapper
+} from "./style";
 import MenuOptions from "../menu-options";
 import Animate from "../animate-wrapper";
 
@@ -13,6 +18,9 @@ function Slider({ isActive, currentAnimation, onClick, applyMask }) {
 						<Line onClick={onClick} applyMask={applyMask} />
 					</Animate>
 				</SlideLineContainer>
+				<Animate animeProps={currentAnimation.backgroundScreen}>
+					<BackgroundScreenWrapper />
+				</Animate>
 				<MenuOptions
 					isActive={isActive}
 					currentAnimation={currentAnimation}

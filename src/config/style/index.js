@@ -62,3 +62,50 @@ const press = keyframes`
 export const PressEffect = css`
 	animation: ${press} 1s forwards;
 `;
+
+const riseUp = keyframes`
+	10%{
+		transform-origin: 0 0;
+		transform: scaleY(0);
+	}
+	50%{
+		transform-origin: 0 0;
+		transform: scaleY(1);
+	}
+	60%{
+		transform-origin: 0 100%;
+		transform: scaleY(1);
+	}
+	100%{
+		transform-origin: 0 100%;
+		transform: scaleY(0);
+	}
+`;
+
+export const RiseUpEffect = css`
+	animation: ${riseUp} 4s 2s forwards;
+	animation-iteration-count: infinite;
+`;
+
+const popUp = keyframes`
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+`;
+
+export const PopUpEffect = css`
+	animation: ${popUp} 1.2s ease-in-out .2s forwards;
+`;
+
+export const NOTForCopy = css`
+	* {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-o-user-select: none;
+	}
+`;

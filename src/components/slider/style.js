@@ -6,12 +6,12 @@ import {
 } from "../../config/style";
 
 export const Container = styled.div`
-	position: absolute;
+	position: fixed;
 	width: 100%;
-	height: 1px;
-	background: ${primaryBackgroundColor};
-	z-index: 2; /* One level above of the main page */
-	top: 62px;
+	height: 62px;
+	background: transparent;
+	z-index: 4; /* Second Top level of the main page */
+	top: 0px;
 	right: 0;
 	padding: inherit;
 	overflow: hidden;
@@ -32,6 +32,20 @@ export const SlideLineContainer = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	align-items: flex-end;
+	padding: 0 6%;
+`;
+
+export const BackgroundScreenWrapper = styled.div`
+	width: 100%;
+	height: 0%;
+	background: ${primaryBackgroundColor};
+	position: absolute;
+	padding: inherit;
+	top: 0;
+	right: 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
 `;
 
 export const Line = styled.span`
@@ -41,6 +55,7 @@ export const Line = styled.span`
 	cursor: pointer;
 	z-index: 2; /* One level above of the main page */
 	${props => (props.applyMask ? HoverMaskEffect : "")}
+	bottom: 0;
 `;
 
 export const MenuContainer = styled.div`

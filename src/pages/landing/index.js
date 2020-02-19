@@ -1,43 +1,42 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 import {
 	Container,
-	BannerContainer,
-	TitleContainer,
-	WrapperIntro,
 	ScrollDown,
-	Line
+	Line,
+	BackgroundScreenWrapper,
+	StyledSVG,
+	TitleSection
 } from "./style";
 
-import BannerLogo from "../../components/banner";
-import TitleSection from "../../components/title-section";
 import InfoSection from "../../components/info-section";
+import { animateSVG } from "../../config/animation/snap-animation";
+import FloatingScreen from "../../components/background-screen/floating-screen";
 
 const LandingPage = () => {
+	const svgRef = useRef(null);
+	useEffect(() => {
+		if (svgRef.current) {
+			animateSVG(svgRef.current);
+		}
+		return () => {};
+	});
 	return (
-		<React.Fragment>
-			{/* <BannerContainer>
-				<BannerLogo />
-			</BannerContainer> */}
+		<>
+			<BackgroundScreenWrapper>
+				<FloatingScreen withShadow={true} />
+			</BackgroundScreenWrapper>
 			<Container>
-				<WrapperIntro>
-					<TitleContainer>
-						<TitleSection />
-					</TitleContainer>
+				<TitleSection>
+					<StyledSVG ref={svgRef}></StyledSVG>
 					<InfoSection />
-				</WrapperIntro>
+				</TitleSection>
 				<ScrollDown>
 					<Line />
 				</ScrollDown>
 			</Container>
-		</React.Fragment>
+		</>
 	);
 };
 
 export default LandingPage;
-
-{
-	/* <BannerContainer>
-				<BannerLogo />
-			</BannerContainer> */
-}
