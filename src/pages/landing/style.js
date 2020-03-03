@@ -1,8 +1,11 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { secondTextColor, firstTextColor } from "../../config/style";
+import { PressEffect, NOTForCopy } from "../../config/style";
+
 import {
 	primaryBackgroundColor,
-	firstTextColor,
-	RiseUpEffect
+	RiseUpEffect,
+	HorizontalGrow
 } from "../../config/style";
 
 export const BackgroundScreenWrapper = styled.div`
@@ -14,6 +17,7 @@ export const BackgroundScreenWrapper = styled.div`
 `;
 
 export const Container = styled.div`
+	padding: 0 6%;
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -21,7 +25,6 @@ export const Container = styled.div`
 	flex-direction: column;
 	justify-content: left;
 	align-items: flex-start;
-	z-index: 1; /*above background overlay*/
 	* {
 		overflow: hidden;
 	}
@@ -29,18 +32,19 @@ export const Container = styled.div`
 
 export const TitleSection = styled.div`
 	width: 100%;
-	height: 25%;
+	height: 32%;
 	position: relative;
 	display: flex;
 	flex-direction: column;
-	top: 25%;
-	transform: translateY(50%);
+	top: 50%;
+	transform: translateY(-50%);
 
 	@media only screen and (min-device-width: 767px) {
-		width: 60%;
+		width: 55%;
 		height: 50%;
 		top: 0%;
 		transform: translateY(60%);
+		min-height: 300px;
 	}
 `;
 
@@ -81,5 +85,116 @@ export const Line = styled.div`
 		background-color: ${firstTextColor};
 		transform: scaleY(0);
 		${RiseUpEffect}
+	}
+`;
+
+/* -------------- Info Section -------------- */
+
+const BodyTextStyle = css`
+	font-size: 12px;
+	color: ${firstTextColor};
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	white-space: normal;
+	font-weight: bold;
+`;
+
+export const InfoWrapper = styled.div`
+	width: 274px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	align-self: flex-end;
+	justify-content: flex-start;
+	margin-top: 10px;
+	* {
+		${NOTForCopy}
+	}
+	@media only screen and (min-device-width: 767px) {
+		width: 100%;
+		margin-top: 0px;
+	}
+`;
+
+export const InfoContainer = styled.div`
+	width: 65%;
+	${BodyTextStyle};
+	text-align: right;
+`;
+
+export const StyledPara = styled.p`
+	white-space: normal;
+	text-align: right;
+`;
+export const StyledSpan = styled.span`
+	${BodyTextStyle};
+	text-align: right;
+	white-space: nowrap;
+`;
+
+export const RubberLine = styled.div`
+	position: relative;
+	width: 76px;
+	height: 8px;
+	background-color: transparent;
+	pointer-events: visiblePainted;
+
+	@media only screen and (min-device-width: 767px) {
+		width: 110px;
+	}
+`;
+
+export const GrowingLine = styled.div`
+	width: 100%;
+	top: 0;
+	height: 1px;
+	:after,
+	:before {
+		content: "";
+		display: block;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		transform: scaleX(0);
+		transform-origin: 100% 50%;
+		background-color: ${firstTextColor};
+		animation: ${HorizontalGrow} 1.2s ease-in-out 0.2s forwards;
+	}
+`;
+
+/*
+ *Contact Menu Button
+ */
+
+export const ContactMeButton = styled.button`
+	float: right;
+	width: 112px;
+	height: 42px;
+	padding: 4% 0;
+	margin-top: 12px;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	${BodyTextStyle};
+	background-color: transparent;
+	color: ${firstTextColor};
+	text-transform: uppercase;
+	font-weight: 500;
+	border: 1px solid ${secondTextColor};
+	cursor: pointer;
+	:focus :active {
+		outline: none;
+		cursor: pointer;
+	}
+	* {
+		text-decoration: none;
+		color: inherit;
+	}
+	:active {
+		${PressEffect}
 	}
 `;

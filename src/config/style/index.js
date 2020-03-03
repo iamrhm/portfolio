@@ -97,7 +97,7 @@ const popUp = keyframes`
 `;
 
 export const PopUpEffect = css`
-	animation: ${popUp} 1.2s ease-in-out .2s forwards;
+	animation: ${popUp} 1.2s ease-in-out 1.2s forwards;
 `;
 
 export const NOTForCopy = css`
@@ -109,3 +109,26 @@ export const NOTForCopy = css`
 		-o-user-select: none;
 	}
 `;
+
+const grow = keyframes`
+	0%{
+		height: 0%;
+	}
+	100%{
+		height: 100%;
+	}
+`;
+
+export const GrowEffect = css`
+	animation: ${grow} 1.2s ease-in-out 0s forwards;
+`;
+
+
+export const HorizontalGrow = keyframes`
+	0%{
+		transform: scaleX(0);
+	}
+	100%{
+		transform: scaleX(1);
+	}
+`

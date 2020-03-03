@@ -1,9 +1,15 @@
 import React from "react";
 
 import { IconWrapper, Line } from "./style";
-import Animate from "../animate-wrapper";
+import AnimeWrapper from "../anime-wrapper";
 
-function MenuButton({ isActive, currentAnimation, onClick, toggleMask, applyMask }) {
+function MenuButton({
+	isActive,
+	currentAnimation,
+	onClick,
+	toggleMask,
+	applyMask
+}) {
 	return (
 		<IconWrapper
 			onClick={onClick}
@@ -13,12 +19,12 @@ function MenuButton({ isActive, currentAnimation, onClick, toggleMask, applyMask
 			onTouchEnd={toggleMask}
 			applyMask={applyMask}
 		>
-			<Animate animeProps={currentAnimation.topLine}>
+			<AnimeWrapper animeProps={currentAnimation.topLine}>
 				<Line />
-			</Animate>
-			<Animate animeProps={currentAnimation.middleLine}>
+			</AnimeWrapper>
+			<AnimeWrapper animeProps={currentAnimation.middleLine}>
 				<Line />
-			</Animate>
+			</AnimeWrapper>
 		</IconWrapper>
 	);
 }

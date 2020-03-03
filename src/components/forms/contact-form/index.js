@@ -8,8 +8,8 @@ import {
 	RowContainer
 } from "./style";
 
-import Animate from "../../animate-wrapper";
-import {blinkAnimation} from '../../../config/animation'
+import AnimeWrapper from "../../anime-wrapper";
+import { blinkAnimation } from "../../../config/animation";
 
 function reducer(state, { type, payload }) {
 	switch (type) {
@@ -35,7 +35,7 @@ const ContactForm = () => {
 	const [state, dispatch] = useReducer(reducer, InitialState);
 	return (
 		<form>
-			<Animate animeProps={blinkAnimation}>
+			<AnimeWrapper animeProps={blinkAnimation}>
 				<InputSection>
 					<RowContainer>
 						<StyledInput
@@ -78,7 +78,7 @@ const ContactForm = () => {
 						SEND
 					</StyledButton>
 				</InputSection>
-			</Animate>
+			</AnimeWrapper>
 		</form>
 	);
 };

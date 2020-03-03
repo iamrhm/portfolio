@@ -7,27 +7,31 @@ import {
 	BackgroundScreenWrapper
 } from "./style";
 import MenuOptions from "../menu-options";
-import Animate from "../animate-wrapper";
+import AnimeWrapper from "../anime-wrapper";
+
+import FloatingScreen from "../background-screen/floating-screen";
 
 function Slider({ isActive, currentAnimation, onClick, applyMask }) {
 	return (
-		<Animate animeProps={currentAnimation.slider}>
+		<AnimeWrapper animeProps={currentAnimation.slider}>
 			<Container>
 				<SlideLineContainer>
-					<Animate animeProps={currentAnimation.bottomLine}>
+					<AnimeWrapper animeProps={currentAnimation.bottomLine}>
 						<Line onClick={onClick} applyMask={applyMask} />
-					</Animate>
+					</AnimeWrapper>
 				</SlideLineContainer>
-				<Animate animeProps={currentAnimation.backgroundScreen}>
-					<BackgroundScreenWrapper />
-				</Animate>
+				<AnimeWrapper animeProps={currentAnimation.backgroundScreen}>
+					<BackgroundScreenWrapper>
+						<FloatingScreen />
+					</BackgroundScreenWrapper>
+				</AnimeWrapper>
 				<MenuOptions
 					isActive={isActive}
 					currentAnimation={currentAnimation}
 					onClick={onClick}
 				/>
 			</Container>
-		</Animate>
+		</AnimeWrapper>
 	);
 }
 

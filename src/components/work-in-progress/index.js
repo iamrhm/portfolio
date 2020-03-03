@@ -10,7 +10,7 @@ import {
 } from "./style";
 import { PortfolioContext } from "../../context";
 import SocialInfoSection from "../social-info-section";
-import Animate from "../animate-wrapper";
+import AnimeWrapper from "../anime-wrapper";
 import { HEADERAnimation, blinkAnimation } from "../../config/animation";
 
 function DefaultPage() {
@@ -18,11 +18,11 @@ function DefaultPage() {
 	return (
 		<Container>
 			<Heading>
-				<Animate animeProps={HEADERAnimation}>
+				<AnimeWrapper animeProps={HEADERAnimation}>
 					<HeaderText>Work in Progress</HeaderText>
-				</Animate>
+				</AnimeWrapper>
 			</Heading>
-			<Animate animeProps={blinkAnimation}>
+			<AnimeWrapper animeProps={blinkAnimation}>
 				<InfoSection>
 					<StyledPara>{defaultPageData.firstText}</StyledPara>
 				</InfoSection>
@@ -43,7 +43,7 @@ function DefaultPage() {
 					{"       "}
 					{defaultPageData.fourthText}
 				</StyledPara>
-			</Animate>
+			</AnimeWrapper>
 		</Container>
 	);
 }

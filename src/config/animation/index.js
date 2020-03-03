@@ -27,9 +27,23 @@ export const HEADERAnimation = [
 		opacity: [0, 1],
 		easing: "easeOutCubic",
 		duration: 800,
-		delay: 500
+		delay: 1300
 	}
 ];
+
+export const HeaderAnimations = {
+	height: ["100%", "50%"],
+	easing: "linear",
+	duration: 800,
+	delay: 500
+};
+
+export const AboutMeLandingAnimation = {
+	opacity: [0, 1],
+	easing: "linear",
+	duration: 800,
+	delay: 1200
+};
 
 export const iconAnimation = {
 	scale: [0.3, 1],
@@ -39,13 +53,7 @@ export const iconAnimation = {
 	delay: (el, i) => (1900 + 320 * (i + 1)) ^ 2
 };
 
-export const textAnimation = {
-	easing: "easeInOutQuad",
-	translateY: [40, 0],
-	duration: 800,
-	loop: false,
-	delay: 1000
-};
+
 
 export const blinkAnimation = {
 	easing: "easeInOutQuad",
@@ -231,20 +239,7 @@ export const menuInitial = {
 	menuBackground: {}
 };
 
-export const loaderAnimation = {
-	line: {
-		easing: "easeInOutSine",
-		delay: 500,
-		duration: 1000,
-		strokeDashoffset: [anime.setDashoffset, 0]
-	},
-	letter: {
-		easing: "easeInOutExpo",
-		opacity: [0, 1],
-		duration: 1000,
-		delay: 1500
-	}
-};
+
 
 export const TexTAnimation = {
 	in: {

@@ -7,12 +7,12 @@ import {
 	InstagramIcon
 } from "./style";
 
-import Animate from "../animate-wrapper";
+import AnimeWrapper from "../anime-wrapper";
 import { iconAnimation } from "../../config/animation";
 
 const SocialInfoSection = () => {
 	return (
-		<Animate animeProps={iconAnimation}>
+		<AnimeWrapper animeProps={iconAnimation}>
 			<StyledIconButton>
 				<a href="https://github.com/iamrhm">
 					<GithubIcon />
@@ -28,7 +28,7 @@ const SocialInfoSection = () => {
 					<InstagramIcon />
 				</a>
 			</StyledIconButton>
-		</Animate>
+		</AnimeWrapper>
 	);
 };
 

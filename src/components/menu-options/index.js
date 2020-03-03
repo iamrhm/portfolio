@@ -9,7 +9,7 @@ import {
 	OptionTitle,
 	RubberLine
 } from "./style";
-import Animate from "../animate-wrapper";
+import AnimeWrapper from "../anime-wrapper";
 
 import { withRouter } from "react-router-dom";
 
@@ -41,7 +41,7 @@ const MenuOptions = ({ isActive, currentAnimation, onClick, history }) => {
 				key={index}
 				onClick={e => delayRoute(`${option.path}`, history, 200)}
 			>
-				<Animate
+				<AnimeWrapper
 					options={true}
 					animeProps={{ ...currentAnimation.riseAnimation, delay: delay }}
 				>
@@ -50,7 +50,7 @@ const MenuOptions = ({ isActive, currentAnimation, onClick, history }) => {
 						<RubberLine />
 						<OptionTitle>{option.name}</OptionTitle>
 					</OptionItem>
-				</Animate>
+				</AnimeWrapper>
 			</Item>
 		);
 	});

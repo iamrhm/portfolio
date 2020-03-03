@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 
 import { Title, StyledPara, StyledTextSpan, BlankSpan } from "./style";
 
-import Animate from "../animate-wrapper";
+import AnimeWrapper from "../anime-wrapper";
 import { letterAnimation } from "../../config/animation";
 import { PortfolioContext } from "../../context";
 
@@ -39,13 +39,15 @@ const TitleSection = () => {
 	return (
 		<Title>
 			<StyledPara>
-				<Animate animeProps={letterAnimation}>{textHi}</Animate>
+				<AnimeWrapper animeProps={letterAnimation}>{textHi}</AnimeWrapper>
 			</StyledPara>
 			<StyledPara>
-				<Animate animeProps={letterAnimation}>{textImRahul}</Animate>
+				<AnimeWrapper animeProps={letterAnimation}>{textImRahul}</AnimeWrapper>
 			</StyledPara>
 			<StyledPara>
-				<Animate animeProps={letterAnimation}>{textAWebDeveloper}</Animate>
+				<AnimeWrapper animeProps={letterAnimation}>
+					{textAWebDeveloper}
+				</AnimeWrapper>
 			</StyledPara>
 		</Title>
 	);

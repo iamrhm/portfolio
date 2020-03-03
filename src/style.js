@@ -2,8 +2,8 @@ import styled, { createGlobalStyle } from "styled-components";
 import { primaryBackgroundColor } from "./config/style";
 
 export const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Ibarra+Real+Nova|Lora|Muli|Nanum+Gothic|Noto+Sans|Open+Sans|Roboto+Slab|Source+Sans+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap&subset=cyrillic-ext');
+@import url('https://fonts.googleapis.com/css?family=Lato:700|PT+Sans|Roboto+Condensed:700|Roboto+Slab&display=swap');
+
 html, body, #root{
   height:100%;
 }
@@ -60,7 +60,6 @@ export const PageContainer = styled.div`
 	position: relative;
 	width: 100%;
 	height: 100%;
-	padding: 0 6%;
 	/* min-height: 480px;
 	min-width: 340px; */
 `;

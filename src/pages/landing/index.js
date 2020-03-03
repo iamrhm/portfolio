@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useContext, useEffect } from "react";
 
 import {
 	Container,
@@ -6,12 +6,20 @@ import {
 	Line,
 	BackgroundScreenWrapper,
 	StyledSVG,
-	TitleSection
+	TitleSection,
+	InfoWrapper,
+	RubberLine,
+	InfoContainer,
+	StyledPara,
+	StyledSpan,
+	GrowingLine
 } from "./style";
 
-import InfoSection from "../../components/info-section";
-import { animateSVG } from "../../config/animation/snap-animation";
+import { animateSVG, textAnimation } from "./animation";
+import { PortfolioContext } from "../../context";
+
 import FloatingScreen from "../../components/background-screen/floating-screen";
+import AnimeWrapper from "../../components/anime-wrapper";
 
 const LandingPage = () => {
 	const svgRef = useRef(null);
@@ -40,3 +48,22 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+
+const InfoSection = () => {
+	const { home } = useContext(PortfolioContext);
+	return (
+		<InfoWrapper>
+			<RubberLine>
+				<GrowingLine />
+			</RubberLine>
+			<AnimeWrapper animeProps={textAnimation}>
+				<InfoContainer>
+					<StyledPara>
+						{home.introText.firstText}
+						<StyledSpan>{home.introText.secondText}</StyledSpan>
+					</StyledPara>
+				</InfoContainer>
+			</AnimeWrapper>
+		</InfoWrapper>
+	);
+};

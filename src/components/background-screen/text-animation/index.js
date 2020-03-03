@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from "react";
+import React from "react";
 import {
 	StyledText,
 	DisplayTextContainer,
@@ -6,108 +6,58 @@ import {
 	StyledLine
 } from "./style";
 
-import Animate from "../../animate-wrapper";
+import AnimeWrapper from "../../anime-wrapper";
 import { TexTAnimation, MoveLine } from "../../../config/animation";
 
-function getRandomTexT(displayTexTArray, currentTexT) {
-	let randomIndex = Math.ceil(Math.random() * displayTexTArray.length - 1);
-
-	return currentTexT !== displayTexTArray[randomIndex]
-		? displayTexTArray[randomIndex]
-		: displayTexTArray[(randomIndex + 1) % (displayTexTArray.length - 1)];
-}
-
-function reducer(state, action) {
-	switch (action.type) {
-		case "change-text":
-			clearInterval();
-			if (
-				state.displayTexTArray !== undefined &&
-				state.displayTexTArray.length > 0
-			) {
-				const { displayTexTArray, currentTexT } = state;
-				return {
-					...state,
-					currentTexT: getRandomTexT(displayTexTArray, currentTexT),
-					prevTexT: currentTexT
-				};
-			} else {
-				return state;
-			}
-		default:
-			return state;
-	}
-}
-
-const DefaultText = "";
-
-const InitialState = {
-	prevTexT: DefaultText,
-	currentTexT: DefaultText
-};
-
-const TexTAnimationScreen = ({ TexTArray = [] }) => {
-	const [state, dispatch] = useReducer(reducer, {
-		...InitialState,
-		displayTexTArray: TexTArray
-	});
-
-	useEffect(() => {
-		const interval = setInterval(() => {
-			dispatch({ type: "change-text" });
-		}, 3200);
-		return () => {
-			clearInterval(interval);
-		};
-	});
-
+const TexTAnimate = ({ TexTArray }) => {
+	const YTranslate = window.innerWidth <= 767 ? "16px" : "24px";
 	return (
 		<DisplayTextContainer>
-			<Animate
+			<AnimeWrapper
 				animeProps={[
 					{ ...MoveLine.first },
-					{ ...MoveLine.second, translateY: "-1.825em" }
+					{
+						...MoveLine.second,
+						translateY: `-${YTranslate}`
+					}
 				]}
 			>
 				<StyledLine />
-			</Animate>
-			{getAnimatedText(state.currentTexT)}
-			<Animate
+			</AnimeWrapper>
+			{getAnimatedText(TexTArray)}
+			<AnimeWrapper
 				animeProps={[
 					{ ...MoveLine.first },
-					{ ...MoveLine.second, translateY: "1.825em" }
+					{
+						...MoveLine.second,
+						translateY: `${YTranslate}`
+					}
 				]}
 			>
 				<StyledLine />
-			</Animate>
+			</AnimeWrapper>
 		</DisplayTextContainer>
 	);
 };
 
-export default TexTAnimationScreen;
+export default TexTAnimate;
 
 function getAnimatedText(displayText) {
 	return (
 		<StyledAnimatePara>
 			{Array.prototype.map.call(displayText, (letter, index) => (
-				<Animate
+				<AnimeWrapper
 					key={index}
 					animeProps={[
 						{
 							...TexTAnimation.in,
-							translateY: index % 2 === 0 ? ["-100%", "0%"] : ["100%", "0%"],
-							delay: index * 50
-						},
-						{
-							...TexTAnimation.out,
-							translateY: index % 2 === 0 ? "100%" : "-100%",
-							delay: 500 + index * 50
+							translateY: index % 2 === 0 ? ["-200%", "0%"] : ["200%", "0%"],
+							delay: index * 50 + 3000
 						}
 					]}
-					renderOnStateUpdate={true}
 				>
 					<StyledText>{letter}</StyledText>
-				</Animate>
+				</AnimeWrapper>
 			))}
 		</StyledAnimatePara>
 	);
