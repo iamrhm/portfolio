@@ -1,47 +1,43 @@
-import React, { useRef, useContext, useEffect } from "react";
+import React, { useContext } from "react";
 
 import {
+	Wrapper,
 	Container,
-	ScrollDown,
-	Line,
-	BackgroundScreenWrapper,
-	StyledSVG,
-	TitleSection,
+	TitleContainer,
 	InfoWrapper,
-	RubberLine,
 	InfoContainer,
 	StyledPara,
 	StyledSpan,
-	GrowingLine
+	LineContainer,
+	SocialContainer
 } from "./style";
+import { textAnimation } from "./animation";
 
-import { animateSVG, textAnimation } from "./animation";
 import { PortfolioContext } from "../../context";
 
 import FloatingScreen from "../../components/background-screen/floating-screen";
 import AnimeWrapper from "../../components/anime-wrapper";
+import TitleSection from "../../components/title-section";
+import Line from "../../components/growing-line";
+import SocialInfoSection from "../../components/social-info-section";
 
 const LandingPage = () => {
-	const svgRef = useRef(null);
-	useEffect(() => {
-		if (svgRef.current) {
-			animateSVG(svgRef.current);
-		}
-		return () => {};
-	});
 	return (
 		<>
-			<BackgroundScreenWrapper>
-				<FloatingScreen withShadow={true} />
-			</BackgroundScreenWrapper>
+			<Wrapper>
+				<FloatingScreen withShadow={true} shadow={{ delay: 4, duration: 1.2 }}>
+					<Container>
+						<TitleContainer>
+							<TitleSection />
+							<InfoSection />
+						</TitleContainer>
+					</Container>
+				</FloatingScreen>
+			</Wrapper>
 			<Container>
-				<TitleSection>
-					<StyledSVG ref={svgRef}></StyledSVG>
-					<InfoSection />
-				</TitleSection>
-				<ScrollDown>
-					<Line />
-				</ScrollDown>
+				<SocialContainer>
+					<SocialInfoSection />
+				</SocialContainer>
 			</Container>
 		</>
 	);
@@ -53,9 +49,9 @@ const InfoSection = () => {
 	const { home } = useContext(PortfolioContext);
 	return (
 		<InfoWrapper>
-			<RubberLine>
-				<GrowingLine />
-			</RubberLine>
+			<LineContainer>
+				<Line delay={1.5} duration={1.2} />
+			</LineContainer>
 			<AnimeWrapper animeProps={textAnimation}>
 				<InfoContainer>
 					<StyledPara>

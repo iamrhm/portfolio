@@ -11,25 +11,32 @@ import {
 } from "../../config/animation";
 
 import FloatingScreen from "../../components/background-screen/floating-screen";
-import BackgroundLayer from "../../components/background-screen/background-layer";
 import Card from "../../components/info-section";
+import RepeatingScreen from "../../components/background-screen/repeating-screen";
+import aboutMeSVG from "../../assets/svg/about-me/about-me.svg";
+import { maskAboutMeSVG } from "./animation";
 
 function AboutPage() {
-	return (
+	return (		
 		<Wrapper>
 			<AnimeWrapper animeProps={HeaderAnimations}>
 				<Header>
-					<AnimeWrapper animeProps={HEADERAnimation}>
-						<HeaderText>About</HeaderText>
-					</AnimeWrapper>
-					<FloatingScreen withShadow={true} />
+					<FloatingScreen withShadow={true}>
+						{/* <AnimeWrapper animeProps={HEADERAnimation}>
+							<HeaderText>About</HeaderText>
+						</AnimeWrapper> */}
+						<RepeatingScreen
+							svgLayer={aboutMeSVG}
+							getMaskLayer={maskAboutMeSVG}
+						/>
+						<RepeatingScreen />
+					</FloatingScreen>
 				</Header>
 			</AnimeWrapper>
 
 			<AnimeWrapper animeProps={AboutMeLandingAnimation}>
 				<Container>
 					<FloatingScreen withShadow={false} type={"secondary"} />
-					<BackgroundLayer />
 					<AnimeWrapper animeProps={blinkAnimation}>
 						<InfoSection>
 							<DisplayCard />

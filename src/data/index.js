@@ -1,3 +1,7 @@
+import Linkedin from "../assets/svg/social/linkedin.svg";
+import Instagram from "../assets/svg/social/instagram.svg";
+import Github from "../assets/svg/social/github.svg";
+
 export const PortfolioData = {
 	home: {
 		introText: {
@@ -40,52 +44,34 @@ export const PortfolioData = {
 			]
 		}
 	],
-	slots: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16],
 	skills: [
 		"JavaScript",
 		"TypeScript",
 		"React",
 		"Redux",
 		"NodeJS",
-		"ExpressJS",
 		"MongoDB",
 		"GraphQl",
 		"HTML",
 		"CSS",
 		"VueJS"
+	],
+	social: [
+		{ label: "GitHub", url: "https://github.com/iamrhm", icon: Github },
+		{
+			label: "LinkedIn",
+			url: "https://www.linkedin.com/in/rahul-mitra-44887a107/",
+			icon: Linkedin
+		},
+		{
+			label: "Instagram",
+			url: "https://www.instagram.com/_iamrhm/",
+			icon: Instagram
+		}
 	]
 };
 
-/**
- * 
- * 
-
-	skill: {
-		firstText: `The main area of my expertise is front end development (client side of the web). HTML, CSS, JS (TypeScript), building small and medium web apps with React, redux, animations, and coding interactive layouts.`,
-		knownTechnologies: [
-			"JavaScript",
-			"React",
-			"Redux",
-			"NodeJS",
-			"MongoDB",
-			"TypeScript",
-			"HTML",
-			"CSS",
-			"GraphQl"
-		],
-		experience: [
-			{
-				clientDetails: `Norway based Insurance Project`,
-				company_timeline: `Cognizant 2018 March - 2019 Nov`,
-				project_details: `Worked on React, Redux, TypeScript`
-			},
-			{
-				clientDetails: `USA based Retail Project`,
-				company_timeline: `Cognizant 2019 Dec - Working`,
-				project_details: `Worked on JS, GraphQl, JQuery`
-			}
-		]
-	},
+/*
 	contact: {
 		firstText: `I am interested in freelance opportunities – especially ambitious or large projects. However, if you have other request or question, don’t hesitate to contact me using below form either.`
 	},

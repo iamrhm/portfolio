@@ -1,5 +1,22 @@
-import styled from "styled-components";
-import { PopUpEffect, GrowEffect } from "../../../config/style";
+import styled, { keyframes } from "styled-components";
+
+const popUp = keyframes`
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+`;
+
+const grow = keyframes`
+	0%{
+		height: 0%;
+	}
+	100%{
+		height: 100%;
+	}
+`;
 
 export const VLines = styled.div`
 	position: absolute;
@@ -7,8 +24,8 @@ export const VLines = styled.div`
 	height: 100%;
 	width: 100%;
 	left: 0;
-	${GrowEffect};
 `;
+
 export const OuterVerticalLines = styled(VLines)`
 	width: 70%;
 	left: 15%;
@@ -26,6 +43,9 @@ export const OuterVerticalLines = styled(VLines)`
 		
 		`}
 	}
+	animation: ${grow}
+		${props => (props.duration ? props.duration + "s" : "1.2s")} ease-in-out 0s
+		forwards;
 `;
 export const InnerVerticalLineContainer = styled(VLines)`
 	width: 25%;
@@ -46,8 +66,11 @@ export const InnerVerticalLineContainer = styled(VLines)`
 		border-right: 1px solid   #f2f2f2;
 		
 		`}
+		animation: ${grow} ${props =>
+	props.duration ? props.duration + "s" : "1.2s"} ease-in-out 0s forwards;
 	}
 `;
+
 export const ShadowLines = styled.div`
 	position: absolute;
 	top: 0;
@@ -64,7 +87,7 @@ export const ShadowLines = styled.div`
 		left: calc(50% + 12.5% - 1.8px);
 	}
 	opacity: 0;
-	${PopUpEffect};
+	animation: ${popUp} 2s ease-in-out 2s forwards;
 `;
 export const ShadowContainer = styled(ShadowLines)`
 	width: 25%;

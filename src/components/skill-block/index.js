@@ -1,6 +1,7 @@
 import React, { useContext, useReducer, useEffect, useRef } from "react";
 
 import { PortfolioContext } from "../../context";
+import { addSVG } from "./animation";
 
 import {
 	Container,
@@ -12,10 +13,10 @@ import {
 	LastSlot,
 	CContainer,
 	Slider,
-	IconBlock
+	IconBlock,
+	IconContainer
 } from "./style";
 
-import SkillIcon from "../skill-icon";
 
 const initialState = {
 	slides: []
@@ -93,4 +94,17 @@ function Carousel() {
 			})}
 		</CContainer>
 	);
+}
+
+
+
+function SkillIcon({ name }) {
+	const svgRef = useRef(null);
+
+	useEffect(() => {
+		if(svgRef.current)
+		addSVG(name, svgRef.current);
+	}, [name]);
+
+	return <IconContainer ref={svgRef}></IconContainer>;
 }

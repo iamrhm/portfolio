@@ -6,6 +6,7 @@ import nodejsIcon from "../../assets/svg/skills/nodejs.svg";
 import mongodbIcon from "../../assets/svg/skills/mongodb.svg";
 import typescriptIcon from "../../assets/svg/skills/typescript.svg";
 import javascriptIcon from "../../assets/svg/skills/javascript.svg";
+import vuejsIcon from "../../assets/svg/skills/vuejs.svg";
 import htmlIcon from "../../assets/svg/skills/html.svg";
 import cssIcon from "../../assets/svg/skills/css.svg";
 import graphqlIcon from "../../assets/svg/skills/graphql.svg";
@@ -19,7 +20,8 @@ const svgMapper = {
 	javascript: javascriptIcon,
 	html: htmlIcon,
 	css: cssIcon,
-	graphql: graphqlIcon
+	graphql: graphqlIcon,
+	vuejs: vuejsIcon
 };
 
 export function addSVG(name, svgRef) {
@@ -28,11 +30,7 @@ export function addSVG(name, svgRef) {
 		svgMapper[name] !== undefined && svgMapper[name] !== null
 			? svgMapper[name]
 			: svgMapper["javascript"];
-
 	let element = Snap(svgRef);
-
-	console.log(element);
-
 	Snap.load(svg, function(data) {
 		if (element) {
 			element.append(data);

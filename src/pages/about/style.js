@@ -48,7 +48,7 @@ export const Header = styled.div`
 	background-color: ${primaryBackgroundColor};
 `;
 
-export const HeaderText = styled.span`
+export const HeaderText = styled.div`
 	position: relative;
 	text-align: center;
 	width: 100%;

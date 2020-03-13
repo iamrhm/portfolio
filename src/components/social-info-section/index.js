@@ -1,35 +1,36 @@
-import React from "react";
+import React, { useContext, useRef, useEffect } from "react";
 
-import {
-	StyledIconButton,
-	GithubIcon,
-	LinkedinIcon,
-	InstagramIcon
-} from "./style";
+import { StyledIconButton, IconContainer } from "./style";
 
-import AnimeWrapper from "../anime-wrapper";
-import { iconAnimation } from "../../config/animation";
+import { PortfolioContext } from "../../context";
+import { loadIcon } from "./animation";
 
 const SocialInfoSection = () => {
-	return (
-		<AnimeWrapper animeProps={iconAnimation}>
-			<StyledIconButton>
-				<a href="https://github.com/iamrhm">
-					<GithubIcon />
-				</a>
-			</StyledIconButton>
-			<StyledIconButton>
-				<a href="https://www.linkedin.com/in/rahul-mitra-44887a107/">
-					<LinkedinIcon />
-				</a>
-			</StyledIconButton>
-			<StyledIconButton>
-				<a href="https://www.instagram.com/_iamrhm/">
-					<InstagramIcon />
-				</a>
-			</StyledIconButton>
-		</AnimeWrapper>
-	);
+	const { social } = useContext(PortfolioContext);
+
+	if (social && social.length) {
+		return (
+			<IconContainer>
+				{social.map((data, index) => {
+					return <SocialButton data={{ ...data, index: index }} key={index} />;
+				})}
+			</IconContainer>
+		);
+	} else return null;
 };
 
 export default SocialInfoSection;
+
+function SocialButton({ data }) {
+	const iconRef = useRef(null);
+	useEffect(() => {
+		if (iconRef.current) {
+			loadIcon(iconRef.current, data.icon, data.index);
+		}
+	});
+	return (
+		<a href={data.url}>
+			<StyledIconButton ref={iconRef}></StyledIconButton>
+		</a>
+	);
+}

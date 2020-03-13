@@ -1,10 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import {
-	Container,
-	TimelineHeader,
-	TimelineFrame,
-	HeaderText
-} from "./style";
+import { Container, TimelineHeader, TimelineFrame, HeaderText } from "./style";
 import { animateSVG } from "./animation";
 
 const TimelineSection = () => {
@@ -17,9 +12,6 @@ const TimelineSection = () => {
 	});
 	return (
 		<Container>
-			<TimelineHeader>
-				<HeaderText>Timeline</HeaderText>
-			</TimelineHeader>
 			<TimelineFrame ref={svgRef}></TimelineFrame>
 		</Container>
 	);
