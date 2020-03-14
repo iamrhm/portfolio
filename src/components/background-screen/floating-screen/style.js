@@ -43,9 +43,7 @@ export const OuterVerticalLines = styled(VLines)`
 		
 		`}
 	}
-	animation: ${grow}
-		${props => (props.duration ? props.duration + "s" : "1.2s")} ease-in-out 0s
-		forwards;
+	animation: ${grow} 1.2s ease-in-out 0s forwards;
 `;
 export const InnerVerticalLineContainer = styled(VLines)`
 	width: 25%;
@@ -66,8 +64,7 @@ export const InnerVerticalLineContainer = styled(VLines)`
 		border-right: 1px solid   #f2f2f2;
 		
 		`}
-		animation: ${grow} ${props =>
-	props.duration ? props.duration + "s" : "1.2s"} ease-in-out 0s forwards;
+		animation: ${grow} 1.2s ease-in-out 0s forwards;
 	}
 `;
 
@@ -87,7 +84,8 @@ export const ShadowLines = styled.div`
 		left: calc(50% + 12.5% - 1.8px);
 	}
 	opacity: 0;
-	animation: ${popUp} 2s ease-in-out 2s forwards;
+	animation: ${popUp} 2s ease-in-out
+		${props => (props.delay ? props.delay + "s" : "2s")} forwards;
 `;
 export const ShadowContainer = styled(ShadowLines)`
 	width: 25%;

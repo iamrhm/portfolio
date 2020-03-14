@@ -16,7 +16,7 @@ export function animateSVG(svgDiv, svgLayer, getMaskLayer) {
 					element.append(repeatingFragment);
 					//To Simulate Delay
 					setTimeout(() => {
-						moveRect.animate({ width: "100%" }, 5000, mina.easeinout);
+						moveRect.animate({ width: "100%" }, 6000, mina.easeinout);
 					}, 1000);
 				});
 			}

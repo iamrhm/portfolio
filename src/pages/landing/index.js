@@ -25,7 +25,7 @@ const LandingPage = () => {
 	return (
 		<>
 			<Wrapper>
-				<FloatingScreen withShadow={true} shadow={{ delay: 4, duration: 1.2 }}>
+				<FloatingScreen withShadow={true} shadowDelay={2.5}>
 					<Container>
 						<TitleContainer>
 							<TitleSection />

@@ -14,46 +14,27 @@ import Shadow from "../../../assets/image/shadow.png";
 const FloatingScreen = ({
 	withShadow = false,
 	type = "primary",
-	line = {},
-	shadow = {},
+	shadowDelay,
 	children
 }) => {
 	return (
 		<VLines>
-			<OuterVerticalLines
-				type={type}
-				duration={line.duration}
-				delay={line.delay}
-			/>
-			<InnerVerticalLineContainer
-				type={type}
-				duration={line.duration}
-				delay={line.delay}
-			/>
+			<OuterVerticalLines type={type} />
+			<InnerVerticalLineContainer type={type} />
 			{children}
-			{withShadow ? <ShadowDisplay {...shadow} /> : null}
+			{withShadow ? <ShadowDisplay delay={shadowDelay} /> : null}
 		</VLines>
 	);
 };
 
 export default FloatingScreen;
 
-const ShadowDisplay = ({ duration, delay }) => {
+const ShadowDisplay = ({ delay }) => {
 	return (
-		<ShadowLines>
-			<StyledImage
-				src={Shadow}
-				alt="shadow-image"
-				duration={duration}
-				delay={delay}
-			/>
+		<ShadowLines delay={delay}>
+			<StyledImage src={Shadow} alt="shadow-image" />
 			<ShadowContainer />
-			<StyledImage
-				src={Shadow}
-				alt="shadow-image"
-				duration={duration}
-				delay={delay}
-			/>
+			<StyledImage src={Shadow} alt="shadow-image" />
 		</ShadowLines>
 	);
 };

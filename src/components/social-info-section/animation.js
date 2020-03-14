@@ -3,7 +3,7 @@ const mina = window.mina;
 
 export const loadIcon = (iconRef, icon, index) => {
 	const element = Snap(iconRef);
-	const delay = 2000 + 600 * (index + 1);
+	const delay = 2500 + 500 * (index + 1);
 	if (element) {
 		Snap.load(icon, function(fragment) {
 			fragment.selectAll(".social-icon").attr({
