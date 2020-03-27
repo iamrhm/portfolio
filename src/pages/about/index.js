@@ -1,39 +1,34 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect } from "react";
 import { PortfolioContext } from "../../context";
-import { Container, Header, InfoSection, HeaderText, Wrapper } from "./style";
+import { Container, Header, InfoSection, Wrapper, SvgContainer } from "./style";
+
+import Card from "../../components/info-cards";
 
 import AnimeWrapper from "../../components/anime-wrapper";
 import {
-	HEADERAnimation,
 	AboutMeLandingAnimation,
 	blinkAnimation,
 	HeaderAnimations
-} from "../../config/animation";
+} from "./animation";
 
-import FloatingScreen from "../../components/background-screen/floating-screen";
-import Card from "../../components/info-section";
-import RepeatingScreen from "../../components/background-screen/repeating-screen";
 import aboutMeSVG from "../../assets/svg/about-me/about-me.svg";
 import { maskAboutMeSVG } from "./animation";
+import FloatingScreen from "../../components/dummies/background-screen/floating";
+import RepeatingScreen from "../../components/dummies/background-screen/repeating";
 
 function AboutPage() {
-	return (		
+	return (
 		<Wrapper>
 			<AnimeWrapper animeProps={HeaderAnimations}>
 				<Header>
 					<FloatingScreen withShadow={true}>
-						{/* <AnimeWrapper animeProps={HEADERAnimation}>
-							<HeaderText>About</HeaderText>
-						</AnimeWrapper> */}
 						<RepeatingScreen
 							svgLayer={aboutMeSVG}
 							getMaskLayer={maskAboutMeSVG}
 						/>
-						<RepeatingScreen />
 					</FloatingScreen>
 				</Header>
 			</AnimeWrapper>
-
 			<AnimeWrapper animeProps={AboutMeLandingAnimation}>
 				<Container>
 					<FloatingScreen withShadow={false} type={"secondary"} />

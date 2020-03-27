@@ -21,45 +21,12 @@ export const letterAnimation = {
 	delay: (el, i) => 1200 + 45 * (i + 1)
 };
 
-export const HEADERAnimation = [
-	{
-		scale: [0.92, 1],
-		opacity: [0, 1],
-		easing: "easeOutCubic",
-		duration: 800,
-		delay: 1300
-	}
-];
-
-export const HeaderAnimations = {
-	height: ["100%", "50%"],
-	easing: "linear",
-	duration: 800,
-	delay: 500
-};
-
-export const AboutMeLandingAnimation = {
-	opacity: [0, 1],
-	easing: "linear",
-	duration: 800,
-	delay: 1200
-};
-
 export const iconAnimation = {
 	scale: [0.3, 1],
 	opacity: [0, 1],
 	easing: "easeInOutExpo",
 	duration: 1000,
 	delay: (el, i) => (1900 + 320 * (i + 1)) ^ 2
-};
-
-
-
-export const blinkAnimation = {
-	easing: "easeInOutQuad",
-	opacity: [0, 1],
-	duration: 800,
-	delay: 500
 };
 
 export function getHarmonicDelay(
@@ -237,36 +204,6 @@ export const menuInitial = {
 	],
 	riseAnimation: {},
 	menuBackground: {}
-};
-
-
-
-export const TexTAnimation = {
-	in: {
-		duration: 800,
-		easing: "easeOutElastic",
-		opacity: 1
-	},
-	out: {
-		duration: 800,
-		delay: 500,
-		easing: "easeOutExpo",
-		opacity: 0
-	}
-};
-
-export const MoveLine = {
-	first: {
-		opacity: [0.5, 1],
-		scaleX: [0, 1],
-		easing: "easeInOutExpo",
-		delay: 2000,
-		duration: 700
-	},
-	second: {
-		duration: 600,
-		easing: "easeOutExpo"
-	}
 };
 
 export function delayRoute(route, history, delay) {

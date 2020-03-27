@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
 
 html, body, #root{
   height:100%;
+  width:100%
 }
 *{
     margin: 0;
@@ -50,7 +51,7 @@ html, body, #root{
 `;
 
 export const WrapperContainer = styled.div`
-	width: 100vw;
+	width: 100%;
 	height: 100%;
 	position: relative;
 	/* background: ${primaryBackgroundColor}; */

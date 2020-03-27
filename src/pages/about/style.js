@@ -96,3 +96,10 @@ export const TimelineImageFrame = styled.img`
 	max-width: 95%;
 	margin: 12px 0;
 `;
+
+export const SvgContainer = styled.div`
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+`;

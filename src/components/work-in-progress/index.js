@@ -9,9 +9,9 @@ import {
 	StyledTag
 } from "./style";
 import { PortfolioContext } from "../../context";
-import SocialInfoSection from "../social-info-section";
+import SocialInfoSection from "../social-icons";
 import AnimeWrapper from "../anime-wrapper";
-import { HEADERAnimation, blinkAnimation } from "../../config/animation";
+import { HEADERAnimation, blinkAnimation } from "./animation";
 
 function DefaultPage() {
 	const { defaultPageData } = useContext(PortfolioContext);

@@ -9,17 +9,19 @@ import {
 	StyledPara,
 	StyledSpan,
 	LineContainer,
-	SocialContainer
+	SocialContainer,
+	PortfolioBanner,
+	PortfolioText
 } from "./style";
 import { textAnimation } from "./animation";
 
 import { PortfolioContext } from "../../context";
 
-import FloatingScreen from "../../components/background-screen/floating-screen";
+import FloatingScreen from "../../components/dummies/background-screen/floating";
 import AnimeWrapper from "../../components/anime-wrapper";
 import TitleSection from "../../components/title-section";
-import Line from "../../components/growing-line";
-import SocialInfoSection from "../../components/social-info-section";
+import GrowLine from "../../components/dummies/grow-line";
+import SocialInfoSection from "../../components/social-icons";
 
 const LandingPage = () => {
 	return (
@@ -35,6 +37,11 @@ const LandingPage = () => {
 				</FloatingScreen>
 			</Wrapper>
 			<Container>
+				<PortfolioBanner>
+					<AnimeWrapper animeProps={textAnimation}>
+						<PortfolioText>Portfolio</PortfolioText>
+					</AnimeWrapper>
+				</PortfolioBanner>
 				<SocialContainer>
 					<SocialInfoSection />
 				</SocialContainer>
@@ -50,7 +57,7 @@ const InfoSection = () => {
 	return (
 		<InfoWrapper>
 			<LineContainer>
-				<Line delay={1.5} duration={1.2} />
+				<GrowLine delay={1.5} duration={1.2} />
 			</LineContainer>
 			<AnimeWrapper animeProps={textAnimation}>
 				<InfoContainer>

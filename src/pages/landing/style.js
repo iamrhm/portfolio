@@ -1,8 +1,9 @@
 import styled, { css } from "styled-components";
-import { firstTextColor } from "../../config/style";
-import { NOTForCopy } from "../../config/style";
-
-import { primaryBackgroundColor } from "../../config/style";
+import {
+	firstTextColor,
+	primaryBackgroundColor,
+	NOTForCopy
+} from "../../config/style";
 
 export const Wrapper = styled.div`
 	width: 100%;
@@ -54,6 +55,31 @@ export const SocialContainer = styled.div`
 	@media only screen and (min-device-width: 767px) {
 		bottom: 20px;
 	}
+`;
+
+export const PortfolioBanner = styled.div`
+	position: absolute;
+	width: auto;
+	height: auto;
+	bottom: 10px;
+	left: 0;
+	padding: 0 6%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 64px;
+	@media only screen and (min-device-width: 767px) {
+		bottom: 20px;
+	}
+`;
+
+export const PortfolioText = styled.p`
+	font-size: 14px;
+	color: ${firstTextColor};
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	${NOTForCopy};
 `;
 
 /* -------------- Info Section -------------- */

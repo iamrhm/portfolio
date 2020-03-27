@@ -1,7 +1,8 @@
 export const textAnimation = {
 	easing: "easeInOutQuad",
-	translateY: [40, 0],
-	duration: 800,
+	opacity: [0, 1],
+	translateY: [20, 0],
+	duration: 500,
 	loop: false,
-	delay: 2500
+	delay: 300
 };

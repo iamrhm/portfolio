@@ -5,8 +5,8 @@ import { PortfolioContext } from "../../context";
 import { Container, Heading, HeaderText, StyledPara } from "./style";
 
 import AnimeWrapper from "../../components/anime-wrapper";
-import { HEADERAnimation, blinkAnimation } from "../../config/animation";
-import ContactForm from "../../components/forms/contact-form";
+import { HEADERAnimation, blinkAnimation } from "./animation";
+import ContactForm from "../../components/forms/contact";
 
 function ContactPage() {
 	const { contact } = useContext(PortfolioContext);

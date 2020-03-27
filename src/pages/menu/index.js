@@ -1,8 +1,8 @@
 import React, { useReducer, useEffect } from "react";
 import { withRouter } from "react-router-dom";
 
-import Header from "../../components/header";
-import Slider from "../../components/slider";
+import Header from "../../components/dummies/header";
+import Slider from "../../components/menu-utils/slider";
 import { menuOpen, menuClose, menuInitial } from "../../config/animation";
 
 function reducer(state, action) {
