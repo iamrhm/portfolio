@@ -1,5 +1,3 @@
-import Snap from "snapsvg-cjs";
-import aboutMeSVG from "../../assets/svg/about-me/about-me.svg";
 
 export function maskAboutMeSVG(aboutMeFragment) {
 	let aboutMe = aboutMeFragment;

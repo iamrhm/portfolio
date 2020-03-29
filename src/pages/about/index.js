@@ -1,6 +1,6 @@
-import React, { useContext, useRef, useEffect } from "react";
+import React, { useContext } from "react";
 import { PortfolioContext } from "../../context";
-import { Container, Header, InfoSection, Wrapper, SvgContainer } from "./style";
+import { Container, Header, InfoSection, Wrapper } from "./style";
 
 import Card from "../../components/info-cards";
 

@@ -71,7 +71,15 @@ export const PortfolioData = {
 			url: "https://www.instagram.com/_iamrhm/",
 			icon: Instagram
 		}
-	]
+	],
+	contact: {
+		header: `Let's make Web a better place`,
+		titleText: `I am available for full time hire`,
+		firstText: `I have worked in different big and small industrial projects as a front-end developer. Currently working in Cognizant Technology Solution, I am interested to work in new technologies and new ideas.
+    If you are looking for the same,`,
+		secondText: `I am also highly interested in freelance opportunities – small or large projects, so incase you have different business ideas and looking for a developer or a web designer, you can contact me using below form,`,
+		email: `rahulmitra980@gmail.com`
+	}
 };
 
 /*

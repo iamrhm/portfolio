@@ -23,9 +23,9 @@ function App() {
 						<PageContainer>
 							<Route exact path="/" component={LandingPage} />
 							<Route exact path="/about" component={AboutPage} />
-							{/*
-						<Route exact path="/contact-me" component={ContactPage} />
-						<Route exact path="/work-on-progress" component={DefaultPage} /> */}
+							<Route exact path="/contact-me" component={ContactPage} />
+
+							{/*<Route exact path="/work-on-progress" component={DefaultPage} /> */}
 						</PageContainer>
 					</WrapperLoader>
 				</Router>

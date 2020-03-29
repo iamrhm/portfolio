@@ -7,7 +7,7 @@ const HeaderTextStyle = css`
 	letter-spacing: 2px;
 	font-weight: bold;
 	text-transform: uppercase;
-	font-family: "Roboto Condensed", sans-serif;
+	font-family: "Uni Sans Bold", sans-serif;
 `;
 
 const BodyTextStyle = css`

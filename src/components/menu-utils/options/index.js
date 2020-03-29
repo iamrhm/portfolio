@@ -17,15 +17,14 @@ import {
 	getHarmonicDelay,
 	getProgressiveDelay,
 	delayRoute
-} from "../../../config/animation";
+} from "../animation";
 
 const MenuOptions = ({ isActive, currentAnimation, onClick, history }) => {
 	const options = [
 		{ name: "Home", path: "/" },
 		{ name: "About", path: "/about" },
-		{ name: "Skills", path: "/skill" },
 		{ name: "Contact", path: "/contact-me" },
-		{ name: "My Work", path: "/work-on-progress" }
+		{ name: "Projects", path: "/work-on-progress" }
 	];
 
 	const list = options.map((option, index) => {

@@ -1,20 +1,21 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import {
 	firstTextColor,
-	ButtonColor,
+	primaryBackgroundColor,
 	InputBoxColor
 } from "../../../config/style";
 
 import { PressEffect } from "../../../config/style";
 
 export const InputSection = styled.div`
-	width: 95%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	background: inherit;
-	min-height: 340px;
 	align-items: center;
+	overflow-y: hidden;
+	margin: 30px 0;
 `;
 
 export const RowContainer = styled.div`
@@ -29,6 +30,7 @@ export const StyledInput = styled.input`
 	font-size: 16px;
 	color: ${firstTextColor};
 	padding: 0 20px;
+	margin: 10px 0;
 	box-sizing: border-box;
 	background-color: ${InputBoxColor};
 `;
@@ -40,6 +42,7 @@ export const StyledTextArea = styled.textarea`
 	font-size: 16px;
 	color: ${firstTextColor};
 	padding: 20px;
+	margin: 10px 0;
 	box-sizing: border-box;
 	min-height: 150px;
 	resize: vertical;
@@ -47,20 +50,15 @@ export const StyledTextArea = styled.textarea`
 `;
 
 export const StyledButton = styled.button`
-	background-color: ${ButtonColor};
-	color: ${firstTextColor};
-	width: 78px;
-	font-size: 14px;
-	padding: 8px 10px;
-	border: 1px solid ${firstTextColor};
-	float: left;
-	border-radius: 4px;
+	background-color: ${firstTextColor};
+	color: ${primaryBackgroundColor};
+	font-family: "Lato", sans-serif;
+	font-size: 12px;
+	padding: 10px 24px;
+	border: 2px solid ${firstTextColor};
+	border-radius: 20px;
 	text-transform: uppercase;
 	text-align: center;
-
-	display: flex;
-	align-self: flex-end;
-	justify-content: center;
 	cursor: pointer;
 
 	margin-top: 6px;

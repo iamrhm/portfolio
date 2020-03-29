@@ -1,28 +1,22 @@
 import styled from "styled-components";
-import { firstTextColor } from "../../../config/style";
+import { firstTextColor, NOTForCopy } from "../../../config/style";
 
 export const Container = styled.div`
 	width: 100%;
+	top: 50px;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
-
 	min-height: 500px;
 	position: relative;
 
 	/* Laptop  screen  */
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
 		align-items: center;
+		${NOTForCopy};
 	}
 	* {
 		overflow: hidden;
-	}
-	* {
-		-moz-user-select: none;
-		-webkit-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-		-o-user-select: none;
 	}
 `;
 
