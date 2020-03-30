@@ -37,6 +37,7 @@ const ProjectCarousel = () => {
 	const [repoList, setState] = useState([]);
 
 	useEffect(() => {
+		let isSubscribed = true;
 		async function fetchRepose() {
 			let reposeList = await axios.get(
 				"https://api.github.com/users/iamrhm/repos"
@@ -51,9 +52,10 @@ const ProjectCarousel = () => {
 				};
 				return repoObj;
 			});
-			setState(reposeList);
+			if (isSubscribed) setState(reposeList);
 		}
 		fetchRepose();
+		return () => (isSubscribed = false);
 	});
 	return (
 		<Slider>
