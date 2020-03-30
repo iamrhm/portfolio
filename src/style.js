@@ -5,6 +5,8 @@ export const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Lato:700|PT+Sans|Roboto+Condensed:700|Roboto+Slab&display=swap');
 @import url("//db.onlinewebfonts.com/c/0ec97688b76e8a8d3f40f37025449000?family=Uni+Sans+Bold");
 
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,900&display=swap');
+
 html, body, #root{
   height:100%;
   width:100%

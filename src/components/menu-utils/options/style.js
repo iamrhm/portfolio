@@ -1,5 +1,14 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { firstTextColor } from "../../../config/style";
+
+const OptionTextStyle = css`
+	font-size: calc(20px + (28 - 20) * ((100vw - 300px) / (1600 - 300)));
+	color: ${firstTextColor};
+	letter-spacing: 2px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: "Uni Sans Bold", sans-serif;
+`;
 
 export const Container = styled.div`
 	width: 100%;
@@ -20,7 +29,7 @@ export const Container = styled.div`
 `;
 
 export const ListContainer = styled.ul`
-	top: 74px;
+	top: 84px;
 	left: 50%;
 	transform: translateX(-50%);
 	display: flex;
@@ -92,6 +101,7 @@ export const OptionIndex = styled.div`
 	color: ${firstTextColor};
 	font-size: 14px;
 	font-weight: bold;
+	font-family: "Uni Sans Bold", sans-serif;
 	transform: rotate(-90deg);
 
 	display: flex;
@@ -131,9 +141,7 @@ export const RubberLine = styled.span`
 `;
 
 export const OptionTitle = styled.div`
-	color: ${firstTextColor};
-	font-size: 28px;
-	font-weight: bold;
+	${OptionTextStyle}
 
 	padding-left: 72px;
 `;

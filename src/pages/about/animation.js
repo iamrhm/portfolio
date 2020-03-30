@@ -5,7 +5,7 @@ export function maskAboutMeSVG(aboutMeFragment) {
 	text.attr({
 		fill: "#ffff",
 		y: window.innerHeight / 4,
-		"font-family": `"Roboto", sans-serif`,
+		"font-family": `"Uni Sans Bold", sans-serif`,
 		"font-weight": "bold",
 		"font-size": "calc(48px + (148 - 48) * ((100vw - 300px) / (1600 - 300)))"
 	});

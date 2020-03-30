@@ -24,7 +24,7 @@ const MenuOptions = ({ isActive, currentAnimation, onClick, history }) => {
 		{ name: "Home", path: "/" },
 		{ name: "About", path: "/about" },
 		{ name: "Contact", path: "/contact-me" },
-		{ name: "Projects", path: "/work-on-progress" }
+		{ name: "Projects", path: "/project" }
 	];
 
 	const list = options.map((option, index) => {
