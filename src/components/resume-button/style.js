@@ -3,6 +3,7 @@ import { firstTextColor, primaryBackgroundColor } from "../../config/style";
 
 import { Cross } from "@styled-icons/entypo/Cross";
 import { Check } from "@styled-icons/boxicons-regular/Check";
+import { Reload } from "@styled-icons/zondicons/Reload";
 
 const scaleUp = keyframes`
   0%{
@@ -106,8 +107,12 @@ export const StyledInput = styled.input`
 export const IconButtonWrapper = styled.div`
 	width: 28px;
 	height: 28px;
-	margin: 0 8px;
+	margin-left: 8px;
 	cursor: pointer;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 
 export const SuccessLabel = styled.div`
@@ -150,5 +155,14 @@ export const CrossIcon = styled(Cross)`
 
 	border-radius: 50%;
 	border: 1px solid #fff;
+	color: #fff;
+`;
+
+export const ReloadIcon = styled(Reload)`
+	width: 16px;
+	height: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	color: #fff;
 `;

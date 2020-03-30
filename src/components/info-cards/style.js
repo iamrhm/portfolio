@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { primaryBackgroundColor, NOTForCopy } from "../../config/style";
+import { primaryBackgroundColor } from "../../config/style";
 
 const HeaderTextStyle = css`
 	font-size: calc(20px + (54 - 20) * ((100vw - 300px) / (1600 - 300)));
@@ -27,10 +27,7 @@ export const Container = styled.div`
 	padding: 0 6%;
 	margin-top: 20px;
 	margin-bottom: 50px;
-	* {
-		${NOTForCopy};
-		overflow: hidden;
-	}
+
 	@media only screen and (min-device-width: 767px) {
 		width: 70%;
 		padding: 0;

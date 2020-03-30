@@ -1,26 +1,26 @@
 export const buttonAnimation = {
-	start: {
-		rotateY: ["0deg", "-90deg"],
-		easing: "linear",
-		duration: 500,
-		delay: 500
-	},
-	end: {
+	in: {
 		rotateY: ["-90deg", "0deg"],
 		easing: "linear",
 		duration: 500,
 		delay: 1000
+	},
+	out: {
+		rotateY: ["0deg", "-90deg"],
+		easing: "linear",
+		duration: 500,
+		delay: 500
 	}
 };
 
 export const inputAnimation = {
-	start: {
+	in: {
 		rotateY: ["-90deg", "0deg"],
 		easing: "linear",
 		duration: 500,
 		delay: 1000
 	},
-	end: {
+	out: {
 		rotateY: ["0deg", "-90deg"],
 		easing: "linear",
 		duration: 500,
@@ -28,16 +28,14 @@ export const inputAnimation = {
 	}
 };
 
-
-
 export const successAnimation = {
-	start: {
+	in: {
 		rotateY: ["-90deg", "0deg"],
 		easing: "linear",
 		duration: 500,
 		delay: 1000
 	},
-	end: {
+	out: {
 		rotateY: ["0deg", "-90deg"],
 		easing: "linear",
 		duration: 500,

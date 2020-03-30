@@ -9,7 +9,8 @@ import {
 	InputControl,
 	SuccessLabel,
 	CheckIcon,
-	CrossIcon
+	CrossIcon,
+	ReloadIcon
 } from "./style";
 
 import AnimeWrapper from "../anime-wrapper";
@@ -18,144 +19,157 @@ import { validateEmail } from "./utils";
 
 function reducer(state, action) {
 	switch (action.type) {
-		case "toggle-showInput":
-			return {
-				...state,
-				showInput: !state.showInput
-			};
+		case "hide-resume-btn-and-show-input":
+			return { ...state, showResumeButton: false, showInput: true, email: "" };
+		case "hide-input-and-show-resume-btn":
+			return { ...state, showResumeButton: true, showInput: false };
+		case "hide-success-and-show-resume-btn":
+			return { ...state, showResumeButton: true, isSuccess: false };
 		case "update-firstRender":
-			return {
-				...state,
-				firstRender: false
-			};
+			return { ...state, firstRender: false };
 		case "handle-input":
 			return { ...state, email: action.payload };
-		case "toggle-submit-button":
-			return { ...state, isValidEmail: action.payload };
-		case "update-isSuccess":
-			return { ...state, isSuccess: !state.isSuccess, showInput: false };
+		case "show-success-and-hide-input":
+			return { ...state, isSuccess: true, showInput: false };
 		default:
 			return state;
 	}
 }
 
 const initialState = {
+	showResumeButton: true,
 	showInput: false,
-	email: "",
 	isSuccess: false,
-	isValidEmail: false,
-	firstRender: true
+	firstRender: true,
+	email: ""
 };
 
 export default function() {
 	const [state, dispatch] = useReducer(reducer, initialState);
 
 	const handleClick = (e, source) => {
-		if (source === "resume-button") {
+		if (source === "resume-btn") {
 			if (state.firstRender) {
 				dispatch({ type: "update-firstRender" });
 			}
-			dispatch({ type: "toggle-showInput" });
-		} else if (source === "submit-button") {
+			dispatch({ type: "hide-resume-btn-and-show-input" });
+		} else if (source === "submit-btn") {
 			if (validateEmail(state.email)) {
-				dispatch({ type: "update-isSuccess" });
+				dispatch({ type: "show-success-and-hide-input" });
 			} else {
-				dispatch({ type: "toggle-showInput" });
+				dispatch({ type: "hide-input-and-show-resume-btn" });
 			}
-		} else if (source === "close-button") {
-			dispatch({ type: "update-isSuccess" });
+		} else if (source === "success-btn") {
+			dispatch({ type: "hide-success-and-show-resume-btn" });
 		}
 	};
 
 	const handleInput = e => {
 		let newEmail = e.target.value.trim();
 		dispatch({ type: "handle-input", payload: newEmail });
-		handleIconChange(newEmail);
-	};
-
-	const handleIconChange = email => {
-		if (validateEmail(email)) {
-			dispatch({ type: "toggle-submit-button", payload: true });
-		} else {
-			dispatch({ type: "toggle-submit-button", payload: false });
-		}
 	};
 
 	return (
 		<Wrapper>
-			<AnimeWrapper
-				animeProps={
-					state.showInput && !state.isSuccess
-						? buttonAnimation.start
-						: !state.showInput && !state.isSuccess
-						? buttonAnimation.end
-						: ""
-				}
-			>
-				<ButtonWrapper>
-					<StyledButton
-						onClick={e => {
-							handleClick(e, "resume-button");
-						}}
-					>
-						Ask for Resume
-					</StyledButton>
-				</ButtonWrapper>
-			</AnimeWrapper>
+			<ResumeButton state={state} handleClick={handleClick} />
 
-			<AnimeWrapper
-				animeProps={
-					state.showInput && !state.isSuccess
-						? inputAnimation.start
-						: !state.showInput && state.isSuccess
-						? inputAnimation.end
-						: ""
-				}
-			>
-				<InputControl>
-					<StyledInput
-						name="email"
-						type="email"
-						value={state.email}
-						placeholder="Enter your email address"
-						onChange={e => handleInput(e)}
-					/>
-					<IconButtonWrapper
-						onClick={e => {
-							handleClick(e, "submit-button");
-						}}
-					>
-						<ButtonIcon buttonState={state.isValidEmail} />
-					</IconButtonWrapper>
-				</InputControl>
-			</AnimeWrapper>
+			<EmailInput
+				state={state}
+				handleInput={handleInput}
+				handleClick={handleClick}
+			/>
 
-			<AnimeWrapper
-				animeProps={
-					!state.showInput && state.isSuccess
-						? successAnimation.start
-						: !state.showInput && !state.isSuccess && !state.firstRender
-						? successAnimation.end
-						: ""
-				}
-			>
-				<SuccessLabel>
-					Please check you mail box
-					<IconButtonWrapper
-						onClick={e => {
-							handleClick(e, "close-button");
-						}}
-					>
-						<CrossIcon />
-					</IconButtonWrapper>
-				</SuccessLabel>
-			</AnimeWrapper>
+			<SuccessMsg state={state} handleClick={handleClick} />
 		</Wrapper>
 	);
 }
 
-const ButtonIcon = ({ buttonState }) => {
-	if (buttonState) {
+const ResumeButton = ({ state, handleClick }) => {
+	const animeProps =
+		state.showResumeButton &&
+		!state.showInput &&
+		!state.isSuccess &&
+		!state.firstRender
+			? buttonAnimation.in
+			: !state.showResumeButton && state.showInput && !state.isSuccess
+			? buttonAnimation.out
+			: "";
+	return (
+		<AnimeWrapper animeProps={animeProps}>
+			<ButtonWrapper>
+				<StyledButton
+					onClick={e => {
+						handleClick(e, "resume-btn");
+					}}
+				>
+					Ask for Resume
+				</StyledButton>
+			</ButtonWrapper>
+		</AnimeWrapper>
+	);
+};
+
+const EmailInput = ({ state, handleInput, handleClick }) => {
+	const animeProps =
+		!state.showResumeButton && state.showInput && !state.isSuccess
+			? inputAnimation.in
+			: !state.showInput &&
+			  (state.showResumeButton || state.isSuccess) &&
+			  !state.firstRender
+			? inputAnimation.out
+			: "";
+	return (
+		<AnimeWrapper animeProps={animeProps}>
+			<InputControl>
+				<StyledInput
+					name="email"
+					type="email"
+					value={state.email}
+					placeholder="Enter your email address"
+					onChange={e => handleInput(e)}
+				/>
+				<IconButtonWrapper
+					onClick={e => {
+						handleClick(e, "submit-btn");
+					}}
+				>
+					<ButtonIcon email={state.email} />
+				</IconButtonWrapper>
+			</InputControl>
+		</AnimeWrapper>
+	);
+};
+
+const SuccessMsg = ({ state, handleClick }) => {
+	const animeProps =
+		!state.showResumeButton && !state.showInput && state.isSuccess
+			? successAnimation.in
+			: !state.showInput &&
+			  !state.isSuccess &&
+			  !state.firstRender &&
+			  state.showResumeButton &&
+			  validateEmail(state.email)
+			? successAnimation.out
+			: "";
+
+	return (
+		<AnimeWrapper animeProps={animeProps}>
+			<SuccessLabel>
+				Please check you mail box
+				<IconButtonWrapper
+					onClick={e => {
+						handleClick(e, "success-btn");
+					}}
+				>
+					<ReloadIcon />
+				</IconButtonWrapper>
+			</SuccessLabel>
+		</AnimeWrapper>
+	);
+};
+
+const ButtonIcon = ({ email }) => {
+	if (validateEmail(email)) {
 		return <CheckIcon />;
 	} else {
 		return <CrossIcon />;

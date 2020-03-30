@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { primaryBackgroundColor, NOTForCopy } from "../../config/style";
+import { primaryBackgroundColor } from "../../config/style";
 
 export const Wrapper = styled.div`
 	width: 100%;
@@ -32,9 +32,6 @@ export const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: left;
-	* {
-		${NOTForCopy}
-	}
 `;
 
 export const InfoSection = styled.div`

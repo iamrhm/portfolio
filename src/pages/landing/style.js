@@ -1,9 +1,5 @@
 import styled, { css } from "styled-components";
-import {
-	firstTextColor,
-	primaryBackgroundColor,
-	NOTForCopy
-} from "../../config/style";
+import { firstTextColor, primaryBackgroundColor } from "../../config/style";
 
 export const Wrapper = styled.div`
 	width: 100%;
@@ -79,7 +75,6 @@ export const PortfolioText = styled.p`
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-weight: bold;
-	${NOTForCopy};
 `;
 
 /* -------------- Info Section -------------- */
@@ -100,9 +95,6 @@ export const InfoWrapper = styled.div`
 	align-items: flex-end;
 	align-self: flex-end;
 	justify-content: flex-start;
-	* {
-		${NOTForCopy}
-	}
 	@media only screen and (min-device-width: 767px) {
 		width: 100%;
 	}

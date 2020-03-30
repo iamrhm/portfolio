@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { firstTextColor, NOTForCopy } from "../../../config/style";
+import { firstTextColor } from "../../../config/style";
 
 export const Container = styled.div`
 	width: 100%;
@@ -13,7 +13,6 @@ export const Container = styled.div`
 	/* Laptop  screen  */
 	@media screen and (min-width: 834px) and (max-width: 1600px) {
 		align-items: center;
-		${NOTForCopy};
 	}
 	* {
 		overflow: hidden;

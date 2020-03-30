@@ -2,7 +2,6 @@ import styled, { css, keyframes } from "styled-components";
 import {
 	firstTextColor,
 	primaryBackgroundColor,
-	NOTForCopy
 } from "../../config/style";
 
 const rise = keyframes`
@@ -80,7 +79,6 @@ export const Container = styled.div`
 	background: ${primaryBackgroundColor};
 	padding: 0 6%;
 	* {
-		${NOTForCopy}
 	}
 `;
 
@@ -107,7 +105,7 @@ export const Heading = styled.div`
 		width: 70%;
 		margin: 20px 0;
 	}
-	${NOTForCopy};
+	overflow: hidden;
 `;
 
 export const HeadingText = styled.p`
@@ -133,7 +131,6 @@ export const StyledPara = styled.p`
 	${BodyTextStyle};
 	padding: 14px 0;
 	text-align: left;
-	${NOTForCopy}
 	@media only screen and (min-device-width: 767px) {
 		width: 79%;
 	}
@@ -158,6 +155,7 @@ export const StyledTitle = styled.div`
 	@media only screen and (min-device-width: 767px) {
 		width: 79%;
 	}
+	overflow: hidden;
 `;
 
 export const TitleText = styled.p`
