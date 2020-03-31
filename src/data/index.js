@@ -1,47 +1,88 @@
+import Linkedin from "../assets/svg/social/linkedin.svg";
+import Instagram from "../assets/svg/social/instagram.svg";
+import Github from "../assets/svg/social/github.svg";
+
 export const PortfolioData = {
 	home: {
 		introText: {
-			firstText: "Hi,",
-			secondText: `I'm Rahul,`,
-			thirdText: `a Web Developer`
+			firstText: `India based`,
+			secondText: ` front-end developer`
+		}
+	},
+	about: [
+		{
+			preTitle: "Intro",
+			title: "My journey in to web ",
+			subtitle: `
+      From college life work to industrial experience, my love and excitement for web is still growing. Through out this time span I have learnt different web frameworks with a firm grip on JavaScript and HTML CSS. As a design-driven web developer I like to make Web a beautiful place.
+      For last 2 years I am working as a fullstack developer in Cognizant Technology Solution.`
 		},
-		briefText: {
-			firstText: `Front End Developer, specialized in MERN stack. If your are looking for a front end developer or web designer, get in touch`
+		{
+			preTitle: `Skills`,
+			title: `Convert ideas into pixels`,
+			subtitle: `The main area of my expertise is front end development, client side of the web. I like to work on building small and medium web apps in different JS frameworks, with fine tune animations, and coding interactive layouts.
+			The technologies I have been working with JavaScript, React, Redux, NodeJS, MongoDB, TypeScript, HTML, CSS, GraphQl
+			`
 		},
-		buttonText: `CONTACT ME`
-	},
-	about: {
-		firstText: `Currently working as a full time front end developer in Cognizant Technology Solution.`,
-		secondText: `A design-based web developer who like to make Web a beautiful place. An ambitious guy, highly interested in Physics and also fan of TV series and ancient histories.`,
-		thirdText: `Interested in the entire frontend spectrum and working on different projects.`,
-		aboutMeArray: ["developer", "designer", "coder", "programmer"]
-	},
-	skill: {
-		firstText: `The main area of my expertise is front end development (client side of the web). HTML, CSS, JS (TypeScript), building small and medium web apps with React, redux, animations, and coding interactive layouts.`,
-		knownTechnologies: [
-			"JavaScript",
-			"React",
-			"Redux",
-			"NodeJS",
-			"MongoDB",
-			"TypeScript",
-			"HTML",
-			"CSS",
-			"GraphQl"
-		],
-		experience: [
-			{
-				clientDetails: `Norway based Insurance Project`,
-				company_timeline: `Cognizant 2018 March - 2019 Nov`,
-				project_details: `Worked on React, Redux, TypeScript`
-			},
-			{
-				clientDetails: `USA based Retail Project`,
-				company_timeline: `Cognizant 2019 Dec - Working`,
-				project_details: `Worked on JS, GraphQl, JQuery`
-			}
-		]
-	},
+		{
+			preTitle: `Experience`,
+			title: `Full Stack Developer at Cognizant`,
+			subtitle: `As a design-driven web developer, I have worked in different big and small projects. For the last 2 years, I am working in Cognizant Kolkata.
+			Throughout the past 2 years I have worked in HTML, CSS, HTML5 Canvas, Web Animation, JavaScript, TypeScript, ReactJS, Redux, NodeJS (ExpressJS), MongoDB, GraphQL and a few more.`
+		}
+	],
+	skills: [
+		"JavaScript",
+		"TypeScript",
+		"React",
+		"Redux",
+		"NodeJS",
+		"MongoDB",
+		"GraphQl",
+		"HTML",
+		"CSS",
+		"VueJS"
+	],
+	experience: [
+		{
+			preTitle: `2018`,
+			title: `Worked as a Front-end developer for Norway based Insurance Project. The technologies I have worked with are React, Redux, TypeScript, Mongoose`
+		},
+		{
+			preTitle: `2019`,
+			title: `I started as MERN Stack developer for Norway based Insurance Project to handel their BB2 side. Throughout this time I have enjoyed working on JavaScript, GraphQl, NodeJS(ExpressJS)`
+		},
+		{
+			preTitle: `2020`,
+			title: `Currently I am working as a Front-end developer for USA based Retail Project.
+				The technologies I am exploring currently are, VueJS, WebGraphics, AEM Content designing and developing.
+				`
+		}
+	],
+	social: [
+		{ label: "GitHub", url: "https://github.com/iamrhm", icon: Github },
+		{
+			label: "LinkedIn",
+			url: "https://www.linkedin.com/in/rahul-mitra-44887a107/",
+			icon: Linkedin
+		},
+		{
+			label: "Instagram",
+			url: "https://www.instagram.com/_iamrhm/",
+			icon: Instagram
+		}
+	],
+	contact: {
+		header: `Let's make Web a better place`,
+		titleText: `I am available for full time hire`,
+		firstText: `I have worked in different big and small industrial projects as a front-end developer. Currently working in Cognizant Technology Solution, I am interested to work in new technologies and new ideas.
+    If you are looking for the same,`,
+		secondText: `I am also highly interested in freelance opportunities – small or large projects, so incase you have different business ideas and looking for a developer or a web designer, you can contact me using below form,`,
+		email: `rahulmitra980@gmail.com`
+	}
+};
+
+/*
 	contact: {
 		firstText: `I am interested in freelance opportunities – especially ambitious or large projects. However, if you have other request or question, don’t hesitate to contact me using below form either.`
 	},
@@ -53,4 +94,4 @@ export const PortfolioData = {
 		inspiration: `Jack`,
 		myEmail: `rahulmitra980@gmail.com`
 	}
-};
+ */

@@ -1,8 +1,16 @@
 import styled, { createGlobalStyle } from "styled-components";
-import { primaryBackgroundColor } from "./config/style"
+import { primaryBackgroundColor } from "./config/style";
 
 export const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans|Ibarra+Real+Nova|Lora|Muli|Nanum+Gothic|Noto+Sans|Open+Sans|Roboto+Slab|Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:700|PT+Sans|Roboto+Condensed:700|Roboto+Slab&display=swap');
+@import url("//db.onlinewebfonts.com/c/0ec97688b76e8a8d3f40f37025449000?family=Uni+Sans+Bold");
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,900&display=swap');
+
+html, body, #root{
+  height:100%;
+  width:100%
+}
 *{
     margin: 0;
     border:0;
@@ -13,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     padding:0;
     outline:hidden;
     outline: 0;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing:border-box;
@@ -46,20 +54,16 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const WrapperContainer = styled.div`
-	width: 100vw;
-	height: 100vh;
-	padding: 0 6%;
+	width: 100%;
+	height: 100%;
 	position: relative;
-	/* overflow: hidden; */ /* Major fix */
-	z-index: 1; /* First Elevation From Background */
-	background: ${primaryBackgroundColor};
+	/* background: ${primaryBackgroundColor}; */
 `;
 
 export const PageContainer = styled.div`
 	position: relative;
 	width: 100%;
-	height: 80%;
-	min-height: 480px;
-	min-width: 340px;
-	top: 72px;
+	height: 100%;
+	/* min-height: 480px;
+	min-width: 340px; */
 `;

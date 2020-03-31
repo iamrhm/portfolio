@@ -1,28 +1,59 @@
 import React, { useContext } from "react";
+import {
+	Container,
+	Heading,
+	StyledPara,
+	FormContainer,
+	BodyContainer,
+	StyledTitle,
+	Banner,
+	ButtonContainer,
+	StyledEmail,
+	EmailAddress,
+	HeadingText,
+	TitleText
+} from "./style";
 
 import { PortfolioContext } from "../../context";
-
-import { Container, Heading, HeaderText, StyledPara } from "./style";
-
-import Animate from "../../components/animate-wrapper";
-import { HEADERAnimation, blinkAnimation } from "../../config/animation";
-import ContactForm from "../../components/forms/contact-form";
+import ContactForm from "../../components/forms/contact";
+import FloatingScreen from "../../components/dummies/background-screen/floating";
+import ResumeButton from "../../components/resume-button";
 
 function ContactPage() {
 	const { contact } = useContext(PortfolioContext);
 	return (
-			<Container>
+		<Container>
+			<FloatingScreen />
+			<FormContainer>
 				<Heading>
-					<Animate animeProps={HEADERAnimation}>
-						<HeaderText>Contact me</HeaderText>
-					</Animate>
+					<HeadingText>{contact.header}</HeadingText>
 				</Heading>
-				<Animate animeProps={blinkAnimation}>
+				<BodyContainer>
 					<StyledPara>{contact.firstText}</StyledPara>
-				</Animate>
-				<ContactForm />
-			</Container>
+					<ContactBanner contact={contact} />
+					<StyledPara>{contact.secondText}</StyledPara>
+					<ContactForm />
+				</BodyContainer>
+			</FormContainer>
+		</Container>
 	);
 }
 
 export default ContactPage;
+
+export const ContactBanner = ({ contact }) => {
+	return (
+		<Banner>
+			<StyledTitle>
+				<TitleText>{contact.titleText}</TitleText>
+			</StyledTitle>
+			<ButtonContainer>
+				<ResumeButton />
+			</ButtonContainer>
+			<StyledEmail>
+				Or You can drop me a mail on,
+				<EmailAddress>{contact.email}</EmailAddress>
+			</StyledEmail>
+		</Banner>
+	);
+};

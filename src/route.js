@@ -4,8 +4,7 @@ import { HashRouter as Router, Route } from "react-router-dom";
 import LandingPage from "./pages/landing";
 import MenuPage from "./pages/menu";
 import AboutPage from "./pages/about";
-import SkillsAndExperience from "./pages/skills-experience";
-import DefaultPage from "./components/work-in-progress";
+import ProjectPage from "./pages/project";
 import ContactPage from "./pages/contact";
 
 import WrapperLoader from "./components/loader";
@@ -19,13 +18,12 @@ function App() {
 				<GlobalStyle />
 				<Router>
 					<WrapperLoader>
-						<MenuPage /> {/* Header all page visible*/}
+						<MenuPage />
 						<PageContainer>
 							<Route exact path="/" component={LandingPage} />
 							<Route exact path="/about" component={AboutPage} />
-							<Route exact path="/skill" component={SkillsAndExperience} />
 							<Route exact path="/contact-me" component={ContactPage} />
-							<Route exact path="/work-on-progress" component={DefaultPage} />
+							<Route exact path="/project" component={ProjectPage} />
 						</PageContainer>
 					</WrapperLoader>
 				</Router>

@@ -1,10 +1,9 @@
 import { css, keyframes } from "styled-components";
 
-export const firstTextColor = "#D3D3D3";
+export const firstTextColor = "#FFF";
 export const secondTextColor = "#A7A7A7";
-export const thirdTextColor = "#FFF";
 export const ButtonColor = "#1d1d1d";
-export const primaryBackgroundColor = "#1d1d1d";
+export const primaryBackgroundColor = "#121212";
 export const secondaryBackgroundColor = "#2E2E2E";
 export const DarkTextColor = "rgb(0, 0, 0);";
 export const InputBoxColor = "#2b2b2b";
@@ -63,3 +62,73 @@ const press = keyframes`
 export const PressEffect = css`
 	animation: ${press} 1s forwards;
 `;
+
+const riseUp = keyframes`
+	10%{
+		transform-origin: 0 0;
+		transform: scaleY(0);
+	}
+	50%{
+		transform-origin: 0 0;
+		transform: scaleY(1);
+	}
+	60%{
+		transform-origin: 0 100%;
+		transform: scaleY(1);
+	}
+	100%{
+		transform-origin: 0 100%;
+		transform: scaleY(0);
+	}
+`;
+
+export const RiseUpEffect = css`
+	animation: ${riseUp} 4s 2s forwards;
+	animation-iteration-count: infinite;
+`;
+
+const popUp = keyframes`
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+`;
+
+export const PopUpEffect = css`
+	animation: ${popUp} 1.2s ease-in-out 1.2s forwards;
+`;
+
+export const NOTForCopy = css`
+	* {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-o-user-select: none;
+	}
+`;
+
+const grow = keyframes`
+	0%{
+		height: 0%;
+	}
+	100%{
+		height: 100%;
+	}
+`;
+
+export const GrowEffect = css`
+	animation: ${grow} 1.2s ease-in-out 0s forwards;
+`;
+
+
+export const HorizontalGrow = keyframes`
+	0%{
+		transform: scaleX(0);
+	}
+	100%{
+		transform: scaleX(1);
+	}
+`
