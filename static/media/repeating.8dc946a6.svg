@@ -1,0 +1,8 @@
+<svg id="stripe-lines" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <pattern id="pattern-lines" x="0" y="0" width="20" height="100%" patternUnits="userSpaceOnUse" patternTransform="rotate(45 50 50)">
+    <g>
+      <rect x="0" y="0" width="100%" height="100%" fill="#fff" class="move_rect"/>
+    </g>
+  </pattern>
+  <rect id="maskContainer" x="0" y="0" width="100%" height="100%" fill="url(#pattern-lines)" />
+</svg>

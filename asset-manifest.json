@@ -1,27 +1,34 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.f02e8e21.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.f02e8e21.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.6ad134b2.chunk.js",
     "runtime-main.js": "/portfolio/static/js/runtime-main.86a05020.js",
-    "runtime-main.js.map": "/portfolio/static/js/runtime-main.86a05020.js.map",
-    "static/js/2.2895b5fa.chunk.js": "/portfolio/static/js/2.2895b5fa.chunk.js",
-    "static/js/2.2895b5fa.chunk.js.map": "/portfolio/static/js/2.2895b5fa.chunk.js.map",
+    "static/js/2.d26549aa.chunk.js": "/portfolio/static/js/2.d26549aa.chunk.js",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.39839c0f20bacaeae34edc77cab4eae0.js": "/portfolio/precache-manifest.39839c0f20bacaeae34edc77cab4eae0.js",
+    "precache-manifest.1febd82f6a18867444a78460eaf1d76a.js": "/portfolio/precache-manifest.1febd82f6a18867444a78460eaf1d76a.js",
     "service-worker.js": "/portfolio/service-worker.js",
-    "static/media/css.svg": "/portfolio/static/media/css.2db97d69.svg",
-    "static/media/graphql.svg": "/portfolio/static/media/graphql.9c29cb17.svg",
-    "static/media/html.svg": "/portfolio/static/media/html.4b715679.svg",
-    "static/media/javascript.svg": "/portfolio/static/media/javascript.50effcf9.svg",
-    "static/media/mongodb.svg": "/portfolio/static/media/mongodb.17946dee.svg",
-    "static/media/nodejs.svg": "/portfolio/static/media/nodejs.94cafb0d.svg",
-    "static/media/react.svg": "/portfolio/static/media/react.9a28da9f.svg",
-    "static/media/redux.svg": "/portfolio/static/media/redux.85772647.svg",
-    "static/media/typescript.svg": "/portfolio/static/media/typescript.9e8bfce4.svg"
+    "static/media/about-me.svg": "/portfolio/static/media/about-me.cfa0f11c.svg",
+    "static/media/coding.svg": "/portfolio/static/media/coding.bb6b0ecc.svg",
+    "static/media/css.svg": "/portfolio/static/media/css.c77826f0.svg",
+    "static/media/github.svg": "/portfolio/static/media/github.1aa29ed2.svg",
+    "static/media/graphql.svg": "/portfolio/static/media/graphql.635d882a.svg",
+    "static/media/html.svg": "/portfolio/static/media/html.0b577259.svg",
+    "static/media/instagram.svg": "/portfolio/static/media/instagram.2edb6554.svg",
+    "static/media/javascript.svg": "/portfolio/static/media/javascript.be42204f.svg",
+    "static/media/landing.svg": "/portfolio/static/media/landing.070679e0.svg",
+    "static/media/linkedin.svg": "/portfolio/static/media/linkedin.729a46d1.svg",
+    "static/media/mongodb.svg": "/portfolio/static/media/mongodb.5a06e16e.svg",
+    "static/media/nodejs.svg": "/portfolio/static/media/nodejs.4877442c.svg",
+    "static/media/project.svg": "/portfolio/static/media/project.6dbac8a4.svg",
+    "static/media/react.svg": "/portfolio/static/media/react.87c7eccd.svg",
+    "static/media/redux.svg": "/portfolio/static/media/redux.85b6287b.svg",
+    "static/media/repeating.svg": "/portfolio/static/media/repeating.8dc946a6.svg",
+    "static/media/timeline-updated.svg": "/portfolio/static/media/timeline-updated.5eee8c02.svg",
+    "static/media/typescript.svg": "/portfolio/static/media/typescript.42629a02.svg",
+    "static/media/vuejs.svg": "/portfolio/static/media/vuejs.f2374169.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.86a05020.js",
-    "static/js/2.2895b5fa.chunk.js",
-    "static/js/main.f02e8e21.chunk.js"
+    "static/js/2.d26549aa.chunk.js",
+    "static/js/main.6ad134b2.chunk.js"
   ]
 }
