@@ -15,7 +15,7 @@ import {
 
 import AnimeWrapper from "../anime-wrapper";
 import { buttonAnimation, inputAnimation, successAnimation } from "./animation";
-import { validateEmail } from "./utils";
+import { validateEmail, sendEmail } from "./email";
 
 function reducer(state, action) {
 	switch (action.type) {
@@ -55,6 +55,7 @@ export default function() {
 			dispatch({ type: "hide-resume-btn-and-show-input" });
 		} else if (source === "submit-btn") {
 			if (validateEmail(state.email)) {
+				sendEmail(state.email);
 				dispatch({ type: "show-success-and-hide-input" });
 			} else {
 				dispatch({ type: "hide-input-and-show-resume-btn" });

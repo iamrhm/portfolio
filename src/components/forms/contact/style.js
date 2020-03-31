@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { css } from "styled-components";
 import {
 	firstTextColor,
 	primaryBackgroundColor,
@@ -6,6 +6,14 @@ import {
 } from "../../../config/style";
 
 import { PressEffect } from "../../../config/style";
+
+const BodyTextStyle = css`
+	font-size: calc(12px + (14 - 12) * ((100vw - 300px) / (1600 - 300)));
+	position: relative;
+	font-family: "Roboto", sans-serif;
+	opacity: 0.8;
+	color: red;
+`;
 
 export const InputSection = styled.div`
 	width: 100%;
@@ -66,4 +74,9 @@ export const StyledButton = styled.button`
 	:active {
 		${PressEffect}
 	}
+`;
+
+export const ErrorMsg = styled.p`
+	${BodyTextStyle};
+	padding: 2px 0;
 `;

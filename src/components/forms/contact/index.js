@@ -5,20 +5,23 @@ import {
 	StyledTextArea,
 	InputSection,
 	StyledButton,
-	RowContainer
+	RowContainer,
+	ErrorMsg
 } from "./style";
 
 import AnimeWrapper from "../../anime-wrapper";
 import { blinkAnimation } from "./animation";
+import { validateEmail, sendEmail } from "./email";
 
 function reducer(state, { type, payload }) {
 	switch (type) {
-		case "submit-data":
-			console.log(state);
-			return state;
+		case "clear-data":
+			return { ...state, ...payload };
 		case "edit-form":
 			let el = payload;
 			return { ...state, [el.name]: el.value };
+		case "handle-invalid-mail":
+			return { ...state, isInvalidEmail: true };
 		default:
 			return state;
 	}
@@ -28,11 +31,21 @@ const InitialState = {
 	name: "",
 	email: "",
 	subject: "",
-	message: ""
+	message: "",
+	isInvalidEmail: false,
+	errorMessage: "Please check your email address"
 };
 
 const ContactForm = () => {
 	const [state, dispatch] = useReducer(reducer, InitialState);
+	function handleFormSubmit() {
+		if (validateEmail(state.email)) {
+			sendEmail(state);
+			dispatch({ type: "clear-data", payload: InitialState });
+		} else {
+			dispatch({ type: "handle-invalid-mail", payload: null });
+		}
+	}
 	return (
 		<form>
 			<AnimeWrapper animeProps={blinkAnimation}>
@@ -55,6 +68,13 @@ const ContactForm = () => {
 							placeholder="Email"
 						/>
 					</RowContainer>
+					<RowContainer>
+						{state.isInvalidEmail ? (
+							<ErrorMsg>{state.errorMessage}</ErrorMsg>
+						) : (
+							""
+						)}
+					</RowContainer>
 					<StyledInput
 						name="subject"
 						type="text"
@@ -72,7 +92,7 @@ const ContactForm = () => {
 					<StyledButton
 						onClick={e => {
 							e.preventDefault();
-							dispatch({ type: "submit-data", payload: null });
+							handleFormSubmit();
 						}}
 					>
 						SEND

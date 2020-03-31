@@ -1,6 +1,4 @@
-import styled, { css } from "styled-components";
-
-import { firstTextColor } from "../../config/style";
+import styled from "styled-components";
 
 export const IconContainer = styled.div`
 	width: 64px;

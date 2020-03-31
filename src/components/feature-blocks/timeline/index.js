@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { Container, TimelineFrame, StyledTitle } from "./style";
+import { Container, TimelineFrame } from "./style";
 import { animateSVG } from "./animation";
 
 import useIntersectionApi from "../../../hooks/useIntersectionApi";

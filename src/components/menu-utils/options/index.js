@@ -38,7 +38,7 @@ const MenuOptions = ({ isActive, currentAnimation, onClick, history }) => {
 		return (
 			<Item
 				key={index}
-				onClick={e => delayRoute(`${option.path}`, history, 200)}
+				onClick={e => delayRoute(`${option.path}`, history, 300)}
 			>
 				<AnimeWrapper
 					options={true}

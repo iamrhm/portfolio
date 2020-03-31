@@ -1,5 +1,9 @@
 import styled, { css, keyframes } from "styled-components";
-import { primaryBackgroundColor, firstTextColor } from "../../config/style";
+import {
+	primaryBackgroundColor,
+	firstTextColor,
+	NOTForCopy
+} from "../../config/style";
 
 const BodyTextStyle = css`
 	font-size: calc(16px + (18 - 16) * ((100vw - 300px) / (1600 - 300)));
@@ -25,6 +29,9 @@ export const Container = styled.div`
 	justify-content: center;
 	align-items: flex-start;
 	overflow: hidden;
+	* {
+		${NOTForCopy}
+	}
 `;
 
 export const Header = styled.div`
@@ -71,9 +78,9 @@ export const Item = styled.a`
 	padding: 5% 4%;
 
 	@media only screen and (min-device-width: 767px) {
-		width: 360px;
-		height: 45%;
-		margin-right: 50px;
+		width: 400px;
+		height: 380px;
+		margin-right: 100px;
 	}
 
 	text-decoration: none;
@@ -86,13 +93,13 @@ export const DummyItem = styled(Item)`
 	flex-shrink: 0;
 
 	@media only screen and (min-device-width: 767px) {
-		width: 320px;
+		width: 380px;
 		height: 55%;
 		margin-right: 50px;
 	}
 `;
 
-export const ItemText = styled.p`
+export const ItemText = styled.div`
 	${BodyTextStyle};
 	padding: 4% 0;
 	display: flex;
@@ -106,19 +113,22 @@ export const Title = styled.span`
 	overflow: hidden;
 `;
 
-export const SubTitle = styled.span`
+export const SubTitle = styled.p`
 	${BodyTextStyle};
 	padding: 4px 4px;
 	font-style: italic;
 	padding-left: 14px;
 	opacity: 0.8;
 
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
-
 	font-size: 14px;
 	font-weight: 300;
+
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	margin: 0;
+	width: 300px;
+	overflow: hidden;
 `;
 
 export const Avatar = styled.div`

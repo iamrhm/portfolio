@@ -45,7 +45,7 @@ const ProjectCarousel = () => {
 			reposeList = reposeList.data.map(repo => {
 				let repoObj = {
 					name: repo.name,
-					url: repo.url,
+					url: repo.html_url,
 					owner: repo.owner.login,
 					profileImage: repo.owner.avatar_url,
 					description: repo.description
