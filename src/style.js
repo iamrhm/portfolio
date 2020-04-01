@@ -1,8 +1,17 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, css } from "styled-components";
 import { primaryBackgroundColor } from "./config/style";
+import myFontURL from "./fonts/UniSansW01Bold.woff";
+
+export const fontFaces = css`
+	@font-face {
+		font-family: "Uni Sans Bold";
+		src: url(${myFontURL}) format("woff");
+		font-weight: bold;
+		font-style: normal;
+	}
+`;
 
 export const GlobalStyle = createGlobalStyle`
-  @import url("https://db.onlinewebfonts.com/c/0ec97688b76e8a8d3f40f37025449000?family=Uni+Sans+Bold");
   @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,900|Roboto|Roboto+Condensed:400,700&display=swap');
   
   html, body, #root{
@@ -49,6 +58,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
       monospace;
   }
+  ${fontFaces};
 `;
 
 export const WrapperContainer = styled.div`

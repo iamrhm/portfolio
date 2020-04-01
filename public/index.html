@@ -13,12 +13,21 @@
     -->
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
-  <link href="https://db.onlinewebfonts.com/c/0ede455aa2e9ad358fb290c14c4e073c?family=UniSansW01-Bold" rel="stylesheet"
-    type="text/css" />
-
   <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,900|Roboto|Roboto+Condensed:400,700&display=swap"
     rel="stylesheet" />
-
+  <style>
+    @font-face {
+      font-family: "Uni Sans Bold";
+      src: local('Uni Sans Bold'), local('Uni Sans Bold'),
+        url('../src/fonts/UniSansW01Bold.woff') format('woff'),
+        /* Modern Browsers */
+        url('../src/fonts/UniSansW01Bold.ttf') format('truetype'),
+        /* Safari, Android, iOS */
+      ;
+      font-weight: bold;
+      font-style: normal;
+    }
+  </style>
   <link rel="shortcut icon" type="image/x-icon" href="icon.png" />
   <!--
       Notice the use of %PUBLIC_URL% in the tags above.
