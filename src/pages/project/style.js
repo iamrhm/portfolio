@@ -66,7 +66,7 @@ export const Slider = styled.div`
 
 export const Item = styled.a`
 	width: 90%;
-	height: 236px;
+	height: 300px;
 	margin-bottom: 30px;
 	background: #252525;
 	position: relative;
