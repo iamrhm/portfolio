@@ -127,7 +127,6 @@ export const SubTitle = styled.p`
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
 	margin: 0;
-	width: 300px;
 	overflow: hidden;
 `;
 
