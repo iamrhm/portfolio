@@ -27,6 +27,9 @@ function App() {
 						</PageContainer>
 					</WrapperLoader>
 				</Router>
+				<a style={{ display: "none" }} href="http://www.onlinewebfonts.com">
+					oNline Web Fonts
+				</a>
 			</WrapperContainer>
 		</React.Fragment>
 	);
